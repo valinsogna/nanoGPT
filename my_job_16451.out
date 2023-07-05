@@ -1,0 +1,127 @@
+Collecting torch
+  Using cached torch-2.0.1-cp39-cp39-manylinux1_x86_64.whl (619.9 MB)
+Requirement already satisfied: numpy in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (1.25.0)
+Collecting transformers
+  Using cached transformers-4.30.2-py3-none-any.whl (7.2 MB)
+Collecting datasets
+  Using cached datasets-2.13.1-py3-none-any.whl (486 kB)
+Requirement already satisfied: tiktoken in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (0.4.0)
+Collecting wandb
+  Using cached wandb-0.15.4-py3-none-any.whl (2.1 MB)
+Requirement already satisfied: tqdm in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (4.65.0)
+Requirement already satisfied: filelock in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from torch) (3.12.2)
+Requirement already satisfied: typing-extensions in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from torch) (4.7.1)
+Requirement already satisfied: sympy in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from torch) (1.12)
+Requirement already satisfied: networkx in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from torch) (3.1)
+Requirement already satisfied: jinja2 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from torch) (3.1.2)
+Requirement already satisfied: nvidia-cuda-nvrtc-cu11==11.7.99 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from torch) (11.7.99)
+Requirement already satisfied: nvidia-cuda-runtime-cu11==11.7.99 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from torch) (11.7.99)
+Requirement already satisfied: nvidia-cuda-cupti-cu11==11.7.101 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from torch) (11.7.101)
+Collecting nvidia-cudnn-cu11==8.5.0.96 (from torch)
+  Using cached nvidia_cudnn_cu11-8.5.0.96-2-py3-none-manylinux1_x86_64.whl (557.1 MB)
+Requirement already satisfied: nvidia-cublas-cu11==11.10.3.66 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from torch) (11.10.3.66)
+Requirement already satisfied: nvidia-cufft-cu11==10.9.0.58 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from torch) (10.9.0.58)
+Requirement already satisfied: nvidia-curand-cu11==10.2.10.91 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from torch) (10.2.10.91)
+Requirement already satisfied: nvidia-cusolver-cu11==11.4.0.1 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from torch) (11.4.0.1)
+Requirement already satisfied: nvidia-cusparse-cu11==11.7.4.91 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from torch) (11.7.4.91)
+Requirement already satisfied: nvidia-nccl-cu11==2.14.3 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from torch) (2.14.3)
+Requirement already satisfied: nvidia-nvtx-cu11==11.7.91 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from torch) (11.7.91)
+Collecting triton==2.0.0 (from torch)
+  Using cached triton-2.0.0-1-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (63.3 MB)
+Requirement already satisfied: setuptools in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from nvidia-cublas-cu11==11.10.3.66->torch) (67.8.0)
+Requirement already satisfied: wheel in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from nvidia-cublas-cu11==11.10.3.66->torch) (0.38.4)
+Requirement already satisfied: cmake in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from triton==2.0.0->torch) (3.26.4)
+Requirement already satisfied: lit in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from triton==2.0.0->torch) (16.0.6)
+Collecting huggingface-hub<1.0,>=0.14.1 (from transformers)
+  Using cached huggingface_hub-0.16.2-py3-none-any.whl (268 kB)
+Requirement already satisfied: packaging>=20.0 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from transformers) (23.1)
+Requirement already satisfied: pyyaml>=5.1 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from transformers) (6.0)
+Requirement already satisfied: regex!=2019.12.17 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from transformers) (2023.6.3)
+Requirement already satisfied: requests in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from transformers) (2.31.0)
+Requirement already satisfied: tokenizers!=0.11.3,<0.14,>=0.11.1 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from transformers) (0.13.3)
+Requirement already satisfied: safetensors>=0.3.1 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from transformers) (0.3.1)
+Requirement already satisfied: pyarrow>=8.0.0 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from datasets) (12.0.1)
+Requirement already satisfied: dill<0.3.7,>=0.3.0 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from datasets) (0.3.6)
+Requirement already satisfied: pandas in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from datasets) (2.0.3)
+Requirement already satisfied: xxhash in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from datasets) (3.2.0)
+Collecting multiprocess (from datasets)
+  Using cached multiprocess-0.70.14-py39-none-any.whl (132 kB)
+Requirement already satisfied: fsspec[http]>=2021.11.1 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from datasets) (2023.6.0)
+Collecting aiohttp (from datasets)
+  Using cached aiohttp-3.8.4-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.0 MB)
+Requirement already satisfied: Click!=8.0.0,>=7.0 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from wandb) (8.1.3)
+Collecting GitPython!=3.1.29,>=1.0.0 (from wandb)
+  Using cached GitPython-3.1.31-py3-none-any.whl (184 kB)
+Requirement already satisfied: psutil>=5.0.0 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from wandb) (5.9.5)
+Requirement already satisfied: sentry-sdk>=1.0.0 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from wandb) (1.27.0)
+Requirement already satisfied: docker-pycreds>=0.4.0 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from wandb) (0.4.0)
+Requirement already satisfied: pathtools in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from wandb) (0.1.2)
+Requirement already satisfied: setproctitle in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from wandb) (1.3.2)
+Requirement already satisfied: appdirs>=1.4.3 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from wandb) (1.4.4)
+Requirement already satisfied: protobuf!=4.21.0,<5,>=3.15.0 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from wandb) (4.23.3)
+Requirement already satisfied: six>=1.4.0 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from docker-pycreds>=0.4.0->wandb) (1.16.0)
+Requirement already satisfied: attrs>=17.3.0 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from aiohttp->datasets) (23.1.0)
+Requirement already satisfied: charset-normalizer<4.0,>=2.0 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from aiohttp->datasets) (3.1.0)
+Requirement already satisfied: multidict<7.0,>=4.5 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from aiohttp->datasets) (6.0.4)
+Requirement already satisfied: async-timeout<5.0,>=4.0.0a3 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from aiohttp->datasets) (4.0.2)
+Requirement already satisfied: yarl<2.0,>=1.0 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from aiohttp->datasets) (1.9.2)
+Requirement already satisfied: frozenlist>=1.1.1 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from aiohttp->datasets) (1.3.3)
+Collecting aiosignal>=1.1.2 (from aiohttp->datasets)
+  Using cached aiosignal-1.3.1-py3-none-any.whl (7.6 kB)
+Collecting gitdb<5,>=4.0.1 (from GitPython!=3.1.29,>=1.0.0->wandb)
+  Using cached gitdb-4.0.10-py3-none-any.whl (62 kB)
+Requirement already satisfied: idna<4,>=2.5 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from requests->transformers) (3.4)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from requests->transformers) (2.0.3)
+Requirement already satisfied: certifi>=2017.4.17 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from requests->transformers) (2023.5.7)
+Requirement already satisfied: MarkupSafe>=2.0 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from jinja2->torch) (2.1.1)
+Requirement already satisfied: python-dateutil>=2.8.2 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from pandas->datasets) (2.8.2)
+Requirement already satisfied: pytz>=2020.1 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from pandas->datasets) (2023.3)
+Requirement already satisfied: tzdata>=2022.1 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from pandas->datasets) (2023.3)
+Requirement already satisfied: mpmath>=0.19 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from sympy->torch) (1.3.0)
+Requirement already satisfied: smmap<6,>=3.0.1 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from gitdb<5,>=4.0.1->GitPython!=3.1.29,>=1.0.0->wandb) (5.0.0)
+Installing collected packages: multiprocess, gitdb, aiosignal, nvidia-cudnn-cu11, huggingface-hub, GitPython, aiohttp, wandb, transformers, datasets, triton, torch
+Successfully installed GitPython-3.1.31 aiohttp-3.8.4 aiosignal-1.3.1 datasets-2.13.1 gitdb-4.0.10 huggingface-hub-0.16.2 multiprocess-0.70.14 nvidia-cudnn-cu11-8.5.0.96 torch-2.0.1 transformers-4.30.2 triton-2.0.0 wandb-0.15.4
+Overriding config with config/train_whatsapp2.py:
+# Train on 1 GPU
+
+#####################################################################
+# CHANGED default parameters from train.py model:
+#####################################################################
+out_dir = 'out-whatsapp2'
+dataset = 'whatsapp'
+wandb_project = 'whatsapp2'
+wandb_run_name='gpt2-124M-2'
+
+# bias = False
+min_lr = 1e-4 # learning_rate / 10 usually
+beta2 = 0.99 # make a bit bigger because number of tokens per iter is small
+max_iters = 5000
+lr_decay_iters = 5000 # make equal to max_iters usually
+
+# eval stuff
+eval_interval = 250 # keep frequent because we'll overfit
+eval_iters = 200
+log_interval = 10 # don't print too too often
+# this makes total number of tokens be 300B (recalculate for whatsapp)
+warmup_iters = 100
+
+gradient_accumulation_steps = 1
+batch_size = 64
+block_size = 256 # context of up to 256 previous characters
+
+#####################################################################
+# UNCHANGED default parameters from train.py model:
+#####################################################################
+wandb_log = False
+
+# weight decay
+weight_decay = 1e-1
+
+tokens per iteration will be: 16,384
+Initializing a new model from scratch
+defaulting to vocab_size of GPT-2 to 50304 (50257 rounded up for efficiency)
+number of parameters: 123.59M
+num decayed parameter tensors: 50, with 123,764,736 parameters
+num non-decayed parameter tensors: 25, with 19,200 parameters
+using fused AdamW: True
+compiling the model... (takes a ~minute)
