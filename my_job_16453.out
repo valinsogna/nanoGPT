@@ -1,0 +1,548 @@
+Requirement already satisfied: torch in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (2.0.1)
+Requirement already satisfied: numpy in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (1.25.0)
+Requirement already satisfied: transformers in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (4.30.2)
+Requirement already satisfied: datasets in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (2.13.1)
+Requirement already satisfied: tiktoken in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (0.4.0)
+Requirement already satisfied: wandb in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (0.15.4)
+Requirement already satisfied: tqdm in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (4.65.0)
+Requirement already satisfied: filelock in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from torch) (3.12.2)
+Requirement already satisfied: typing-extensions in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from torch) (4.7.1)
+Requirement already satisfied: sympy in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from torch) (1.12)
+Requirement already satisfied: networkx in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from torch) (3.1)
+Requirement already satisfied: jinja2 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from torch) (3.1.2)
+Requirement already satisfied: nvidia-cuda-nvrtc-cu11==11.7.99 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from torch) (11.7.99)
+Requirement already satisfied: nvidia-cuda-runtime-cu11==11.7.99 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from torch) (11.7.99)
+Requirement already satisfied: nvidia-cuda-cupti-cu11==11.7.101 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from torch) (11.7.101)
+Requirement already satisfied: nvidia-cudnn-cu11==8.5.0.96 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from torch) (8.5.0.96)
+Requirement already satisfied: nvidia-cublas-cu11==11.10.3.66 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from torch) (11.10.3.66)
+Requirement already satisfied: nvidia-cufft-cu11==10.9.0.58 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from torch) (10.9.0.58)
+Requirement already satisfied: nvidia-curand-cu11==10.2.10.91 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from torch) (10.2.10.91)
+Requirement already satisfied: nvidia-cusolver-cu11==11.4.0.1 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from torch) (11.4.0.1)
+Requirement already satisfied: nvidia-cusparse-cu11==11.7.4.91 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from torch) (11.7.4.91)
+Requirement already satisfied: nvidia-nccl-cu11==2.14.3 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from torch) (2.14.3)
+Requirement already satisfied: nvidia-nvtx-cu11==11.7.91 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from torch) (11.7.91)
+Requirement already satisfied: triton==2.0.0 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from torch) (2.0.0)
+Requirement already satisfied: setuptools in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from nvidia-cublas-cu11==11.10.3.66->torch) (67.8.0)
+Requirement already satisfied: wheel in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from nvidia-cublas-cu11==11.10.3.66->torch) (0.38.4)
+Requirement already satisfied: cmake in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from triton==2.0.0->torch) (3.26.4)
+Requirement already satisfied: lit in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from triton==2.0.0->torch) (16.0.6)
+Requirement already satisfied: huggingface-hub<1.0,>=0.14.1 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from transformers) (0.16.2)
+Requirement already satisfied: packaging>=20.0 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from transformers) (23.1)
+Requirement already satisfied: pyyaml>=5.1 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from transformers) (6.0)
+Requirement already satisfied: regex!=2019.12.17 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from transformers) (2023.6.3)
+Requirement already satisfied: requests in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from transformers) (2.31.0)
+Requirement already satisfied: tokenizers!=0.11.3,<0.14,>=0.11.1 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from transformers) (0.13.3)
+Requirement already satisfied: safetensors>=0.3.1 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from transformers) (0.3.1)
+Requirement already satisfied: pyarrow>=8.0.0 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from datasets) (12.0.1)
+Requirement already satisfied: dill<0.3.7,>=0.3.0 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from datasets) (0.3.6)
+Requirement already satisfied: pandas in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from datasets) (2.0.3)
+Requirement already satisfied: xxhash in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from datasets) (3.2.0)
+Requirement already satisfied: multiprocess in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from datasets) (0.70.14)
+Requirement already satisfied: fsspec[http]>=2021.11.1 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from datasets) (2023.6.0)
+Requirement already satisfied: aiohttp in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from datasets) (3.8.4)
+Requirement already satisfied: Click!=8.0.0,>=7.0 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from wandb) (8.1.3)
+Requirement already satisfied: GitPython!=3.1.29,>=1.0.0 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from wandb) (3.1.31)
+Requirement already satisfied: psutil>=5.0.0 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from wandb) (5.9.5)
+Requirement already satisfied: sentry-sdk>=1.0.0 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from wandb) (1.27.0)
+Requirement already satisfied: docker-pycreds>=0.4.0 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from wandb) (0.4.0)
+Requirement already satisfied: pathtools in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from wandb) (0.1.2)
+Requirement already satisfied: setproctitle in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from wandb) (1.3.2)
+Requirement already satisfied: appdirs>=1.4.3 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from wandb) (1.4.4)
+Requirement already satisfied: protobuf!=4.21.0,<5,>=3.15.0 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from wandb) (4.23.3)
+Requirement already satisfied: six>=1.4.0 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from docker-pycreds>=0.4.0->wandb) (1.16.0)
+Requirement already satisfied: attrs>=17.3.0 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from aiohttp->datasets) (23.1.0)
+Requirement already satisfied: charset-normalizer<4.0,>=2.0 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from aiohttp->datasets) (3.1.0)
+Requirement already satisfied: multidict<7.0,>=4.5 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from aiohttp->datasets) (6.0.4)
+Requirement already satisfied: async-timeout<5.0,>=4.0.0a3 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from aiohttp->datasets) (4.0.2)
+Requirement already satisfied: yarl<2.0,>=1.0 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from aiohttp->datasets) (1.9.2)
+Requirement already satisfied: frozenlist>=1.1.1 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from aiohttp->datasets) (1.3.3)
+Requirement already satisfied: aiosignal>=1.1.2 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from aiohttp->datasets) (1.3.1)
+Requirement already satisfied: gitdb<5,>=4.0.1 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from GitPython!=3.1.29,>=1.0.0->wandb) (4.0.10)
+Requirement already satisfied: idna<4,>=2.5 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from requests->transformers) (3.4)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from requests->transformers) (2.0.3)
+Requirement already satisfied: certifi>=2017.4.17 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from requests->transformers) (2023.5.7)
+Requirement already satisfied: MarkupSafe>=2.0 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from jinja2->torch) (2.1.1)
+Requirement already satisfied: python-dateutil>=2.8.2 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from pandas->datasets) (2.8.2)
+Requirement already satisfied: pytz>=2020.1 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from pandas->datasets) (2023.3)
+Requirement already satisfied: tzdata>=2022.1 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from pandas->datasets) (2023.3)
+Requirement already satisfied: mpmath>=0.19 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from sympy->torch) (1.3.0)
+Requirement already satisfied: smmap<6,>=3.0.1 in /orfeo/cephfs/home/dssc/valinsogna/.conda/envs/python/lib/python3.9/site-packages (from gitdb<5,>=4.0.1->GitPython!=3.1.29,>=1.0.0->wandb) (5.0.0)
+master_addr is only used for static rdzv_backend and when rdzv_endpoint is not specified.
+[W socket.cpp:426] [c10d] The server socket has failed to bind to [::]:29400 (errno: 98 - Address already in use).
+[W socket.cpp:426] [c10d] The server socket has failed to bind to ?UNKNOWN? (errno: 98 - Address already in use).
+[E socket.cpp:462] [c10d] The server socket has failed to listen on any local network address.
+Overriding config with config/train_whatsapp2.py:
+# Train on 1 GPU
+
+#####################################################################
+# CHANGED default parameters from train.py model:
+#####################################################################
+out_dir = 'out-whatsapp2'
+dataset = 'whatsapp'
+wandb_project = 'whatsapp2'
+wandb_run_name='gpt2-124M-2'
+
+# bias = False
+min_lr = 1e-4 # learning_rate / 10 usually
+beta2 = 0.99 # make a bit bigger because number of tokens per iter is small
+max_iters = 5000
+lr_decay_iters = 5000 # make equal to max_iters usually
+
+# eval stuff
+eval_interval = 250 # keep frequent because we'll overfit
+eval_iters = 200
+log_interval = 10 # don't print too too often
+# this makes total number of tokens be 300B (recalculate for whatsapp)
+warmup_iters = 100
+
+gradient_accumulation_steps = 1
+batch_size = 64
+block_size = 256 # context of up to 256 previous characters
+
+#####################################################################
+# UNCHANGED default parameters from train.py model:
+#####################################################################
+wandb_log = False
+
+# weight decay
+weight_decay = 1e-1
+
+tokens per iteration will be: 16,384
+Initializing a new model from scratch
+defaulting to vocab_size of GPT-2 to 50304 (50257 rounded up for efficiency)
+number of parameters: 123.59M
+num decayed parameter tensors: 50, with 123,764,736 parameters
+num non-decayed parameter tensors: 25, with 19,200 parameters
+using fused AdamW: True
+compiling the model... (takes a ~minute)
+step 0: train loss 10.9416, val loss 10.9371
+iter 0: loss 10.9442, time 29110.68ms, mfu -100.00%
+iter 10: loss 8.5397, time 104.51ms, mfu 38.68%
+iter 20: loss 7.5782, time 104.84ms, mfu 38.67%
+iter 30: loss 6.2130, time 104.42ms, mfu 38.68%
+iter 40: loss 5.4281, time 104.26ms, mfu 38.69%
+iter 50: loss 4.7369, time 104.21ms, mfu 38.70%
+iter 60: loss 4.3796, time 104.27ms, mfu 38.70%
+iter 70: loss 4.0132, time 104.61ms, mfu 38.70%
+iter 80: loss 3.6661, time 104.88ms, mfu 38.68%
+iter 90: loss 3.5825, time 104.59ms, mfu 38.68%
+iter 100: loss 3.4709, time 105.25ms, mfu 38.65%
+iter 110: loss 3.4587, time 104.15ms, mfu 38.67%
+iter 120: loss 3.1590, time 105.26ms, mfu 38.64%
+iter 130: loss 3.1920, time 105.40ms, mfu 38.61%
+iter 140: loss 3.2157, time 105.40ms, mfu 38.59%
+iter 150: loss 3.1921, time 105.02ms, mfu 38.58%
+iter 160: loss 3.1410, time 104.93ms, mfu 38.57%
+iter 170: loss 3.0119, time 104.65ms, mfu 38.58%
+iter 180: loss 3.0508, time 104.39ms, mfu 38.59%
+iter 190: loss 2.9312, time 104.97ms, mfu 38.59%
+iter 200: loss 2.9814, time 105.40ms, mfu 38.56%
+iter 210: loss 3.0116, time 105.15ms, mfu 38.55%
+iter 220: loss 2.8845, time 104.72ms, mfu 38.56%
+iter 230: loss 2.8106, time 104.78ms, mfu 38.56%
+iter 240: loss 2.8248, time 104.55ms, mfu 38.57%
+step 250: train loss 2.7967, val loss 3.6263
+saving checkpoint to out-whatsapp2
+iter 250: loss 2.7400, time 13698.16ms, mfu 34.74%
+iter 260: loss 2.7449, time 104.87ms, mfu 35.12%
+iter 270: loss 2.8201, time 105.40ms, mfu 35.45%
+iter 280: loss 2.6484, time 104.47ms, mfu 35.77%
+iter 290: loss 2.6553, time 104.91ms, mfu 36.05%
+iter 300: loss 2.6103, time 105.01ms, mfu 36.29%
+iter 310: loss 2.8038, time 104.87ms, mfu 36.52%
+iter 320: loss 2.6758, time 105.06ms, mfu 36.71%
+iter 330: loss 2.7349, time 105.22ms, mfu 36.88%
+iter 340: loss 2.6158, time 104.84ms, mfu 37.05%
+iter 350: loss 2.6188, time 104.75ms, mfu 37.21%
+iter 360: loss 2.6164, time 104.86ms, mfu 37.34%
+iter 370: loss 2.5233, time 104.73ms, mfu 37.47%
+iter 380: loss 2.5632, time 104.81ms, mfu 37.58%
+iter 390: loss 2.5651, time 104.98ms, mfu 37.67%
+iter 400: loss 2.4499, time 105.27ms, mfu 37.74%
+iter 410: loss 2.4129, time 105.34ms, mfu 37.81%
+iter 420: loss 2.5431, time 104.79ms, mfu 37.88%
+iter 430: loss 2.6061, time 104.25ms, mfu 37.97%
+iter 440: loss 2.3681, time 104.74ms, mfu 38.04%
+iter 450: loss 2.5555, time 104.75ms, mfu 38.09%
+iter 460: loss 2.3847, time 104.88ms, mfu 38.14%
+iter 470: loss 2.3883, time 104.97ms, mfu 38.17%
+iter 480: loss 2.3723, time 105.39ms, mfu 38.19%
+iter 490: loss 2.3526, time 105.19ms, mfu 38.22%
+step 500: train loss 2.3769, val loss 3.3194
+saving checkpoint to out-whatsapp2
+iter 500: loss 2.4587, time 13679.70ms, mfu 34.42%
+iter 510: loss 2.3965, time 104.84ms, mfu 34.84%
+iter 520: loss 2.4857, time 105.01ms, mfu 35.20%
+iter 530: loss 2.4407, time 104.60ms, mfu 35.55%
+iter 540: loss 2.2673, time 104.85ms, mfu 35.85%
+iter 550: loss 2.3295, time 104.83ms, mfu 36.12%
+iter 560: loss 2.2293, time 104.75ms, mfu 36.37%
+iter 570: loss 2.2693, time 104.96ms, mfu 36.58%
+iter 580: loss 2.2804, time 104.80ms, mfu 36.78%
+iter 590: loss 2.2754, time 105.21ms, mfu 36.95%
+iter 600: loss 2.4034, time 104.73ms, mfu 37.11%
+iter 610: loss 2.2261, time 105.19ms, mfu 37.24%
+iter 620: loss 2.1465, time 104.90ms, mfu 37.37%
+iter 630: loss 2.3513, time 104.94ms, mfu 37.49%
+iter 640: loss 2.2966, time 105.04ms, mfu 37.59%
+iter 650: loss 2.1486, time 105.25ms, mfu 37.67%
+iter 660: loss 2.2160, time 104.72ms, mfu 37.76%
+iter 670: loss 2.2143, time 104.85ms, mfu 37.84%
+iter 680: loss 2.2264, time 104.80ms, mfu 37.92%
+iter 690: loss 2.1562, time 104.81ms, mfu 37.98%
+iter 700: loss 2.1670, time 104.39ms, mfu 38.06%
+iter 710: loss 2.1267, time 105.37ms, mfu 38.09%
+iter 720: loss 2.1546, time 105.15ms, mfu 38.12%
+iter 730: loss 2.0982, time 104.59ms, mfu 38.18%
+iter 740: loss 2.1521, time 104.71ms, mfu 38.22%
+step 750: train loss 2.1280, val loss 3.2743
+saving checkpoint to out-whatsapp2
+iter 750: loss 2.1206, time 13708.37ms, mfu 34.43%
+iter 760: loss 2.1637, time 104.94ms, mfu 34.84%
+iter 770: loss 2.1669, time 105.03ms, mfu 35.20%
+iter 780: loss 2.0559, time 105.52ms, mfu 35.51%
+iter 790: loss 2.1480, time 104.92ms, mfu 35.81%
+iter 800: loss 2.2449, time 105.25ms, mfu 36.07%
+iter 810: loss 2.1066, time 105.22ms, mfu 36.31%
+iter 820: loss 2.0399, time 104.97ms, mfu 36.53%
+iter 830: loss 2.0442, time 104.38ms, mfu 36.75%
+iter 840: loss 2.0459, time 105.36ms, mfu 36.91%
+iter 850: loss 2.0686, time 104.74ms, mfu 37.08%
+iter 860: loss 2.0218, time 104.94ms, mfu 37.22%
+iter 870: loss 2.0017, time 104.94ms, mfu 37.35%
+iter 880: loss 2.0002, time 104.83ms, mfu 37.47%
+iter 890: loss 2.1146, time 105.56ms, mfu 37.56%
+iter 900: loss 1.9552, time 104.79ms, mfu 37.66%
+iter 910: loss 1.9121, time 104.99ms, mfu 37.74%
+iter 920: loss 1.9591, time 105.00ms, mfu 37.82%
+iter 930: loss 1.9505, time 104.71ms, mfu 37.90%
+iter 940: loss 1.9599, time 104.97ms, mfu 37.96%
+iter 950: loss 1.9489, time 104.77ms, mfu 38.02%
+iter 960: loss 1.8913, time 104.79ms, mfu 38.08%
+iter 970: loss 1.8764, time 104.79ms, mfu 38.13%
+iter 980: loss 1.8624, time 104.38ms, mfu 38.19%
+iter 990: loss 1.9157, time 105.43ms, mfu 38.20%
+step 1000: train loss 1.8666, val loss 3.3373
+saving checkpoint to out-whatsapp2
+iter 1000: loss 1.8676, time 13758.41ms, mfu 34.41%
+iter 1010: loss 1.9640, time 104.34ms, mfu 34.85%
+iter 1020: loss 1.9667, time 104.35ms, mfu 35.24%
+iter 1030: loss 1.8376, time 104.60ms, mfu 35.58%
+iter 1040: loss 1.7825, time 105.02ms, mfu 35.87%
+iter 1050: loss 1.7304, time 105.28ms, mfu 36.12%
+iter 1060: loss 1.8643, time 105.60ms, mfu 36.34%
+iter 1070: loss 1.7996, time 105.24ms, mfu 36.55%
+iter 1080: loss 1.8025, time 104.37ms, mfu 36.76%
+iter 1090: loss 1.7998, time 104.59ms, mfu 36.95%
+iter 1100: loss 1.7406, time 104.90ms, mfu 37.11%
+iter 1110: loss 1.7070, time 104.77ms, mfu 37.26%
+iter 1120: loss 1.6999, time 104.86ms, mfu 37.39%
+iter 1130: loss 1.7760, time 105.32ms, mfu 37.49%
+iter 1140: loss 1.6332, time 104.79ms, mfu 37.60%
+iter 1150: loss 1.6893, time 104.84ms, mfu 37.69%
+iter 1160: loss 1.7348, time 104.55ms, mfu 37.79%
+iter 1170: loss 1.6415, time 104.78ms, mfu 37.87%
+iter 1180: loss 1.6754, time 104.93ms, mfu 37.94%
+iter 1190: loss 1.6294, time 105.32ms, mfu 37.98%
+iter 1200: loss 1.6327, time 104.70ms, mfu 38.04%
+iter 1210: loss 1.6454, time 104.82ms, mfu 38.10%
+iter 1220: loss 1.5903, time 104.84ms, mfu 38.14%
+iter 1230: loss 1.7325, time 105.50ms, mfu 38.16%
+iter 1240: loss 1.6420, time 105.19ms, mfu 38.19%
+step 1250: train loss 1.5689, val loss 3.4405
+saving checkpoint to out-whatsapp2
+iter 1250: loss 1.5541, time 13761.95ms, mfu 34.40%
+iter 1260: loss 1.6115, time 104.59ms, mfu 34.82%
+iter 1270: loss 1.5260, time 105.17ms, mfu 35.18%
+iter 1280: loss 1.5248, time 104.38ms, mfu 35.54%
+iter 1290: loss 1.5620, time 104.70ms, mfu 35.85%
+iter 1300: loss 1.4807, time 104.39ms, mfu 36.13%
+iter 1310: loss 1.5164, time 105.20ms, mfu 36.36%
+iter 1320: loss 1.5167, time 104.74ms, mfu 36.59%
+iter 1330: loss 1.4340, time 104.76ms, mfu 36.79%
+iter 1340: loss 1.4282, time 105.23ms, mfu 36.95%
+iter 1350: loss 1.4161, time 104.70ms, mfu 37.12%
+iter 1360: loss 1.5122, time 105.02ms, mfu 37.25%
+iter 1370: loss 1.3711, time 105.06ms, mfu 37.38%
+iter 1380: loss 1.4630, time 104.73ms, mfu 37.50%
+iter 1390: loss 1.3999, time 104.72ms, mfu 37.61%
+iter 1400: loss 1.3953, time 105.07ms, mfu 37.70%
+iter 1410: loss 1.3012, time 105.19ms, mfu 37.77%
+iter 1420: loss 1.3687, time 104.72ms, mfu 37.85%
+iter 1430: loss 1.3659, time 105.11ms, mfu 37.91%
+iter 1440: loss 1.2625, time 105.10ms, mfu 37.97%
+iter 1450: loss 1.3034, time 104.75ms, mfu 38.03%
+iter 1460: loss 1.2506, time 105.26ms, mfu 38.07%
+iter 1470: loss 1.2557, time 105.10ms, mfu 38.11%
+iter 1480: loss 1.1438, time 105.27ms, mfu 38.14%
+iter 1490: loss 1.2017, time 104.37ms, mfu 38.20%
+step 1500: train loss 1.2293, val loss 3.7489
+saving checkpoint to out-whatsapp2
+iter 1500: loss 1.1600, time 13792.49ms, mfu 34.41%
+iter 1510: loss 1.2390, time 105.14ms, mfu 34.81%
+iter 1520: loss 1.1938, time 105.29ms, mfu 35.17%
+iter 1530: loss 1.1682, time 105.11ms, mfu 35.50%
+iter 1540: loss 1.1908, time 105.00ms, mfu 35.80%
+iter 1550: loss 1.2095, time 104.66ms, mfu 36.08%
+iter 1560: loss 1.1140, time 104.96ms, mfu 36.33%
+iter 1570: loss 1.2261, time 104.48ms, mfu 36.56%
+iter 1580: loss 1.1289, time 105.23ms, mfu 36.75%
+iter 1590: loss 1.1331, time 105.10ms, mfu 36.92%
+iter 1600: loss 1.0547, time 105.04ms, mfu 37.08%
+iter 1610: loss 1.0068, time 105.67ms, mfu 37.19%
+iter 1620: loss 1.0786, time 104.87ms, mfu 37.33%
+iter 1630: loss 1.1791, time 104.71ms, mfu 37.46%
+iter 1640: loss 1.0556, time 105.59ms, mfu 37.54%
+iter 1650: loss 0.9917, time 105.01ms, mfu 37.64%
+iter 1660: loss 0.9741, time 104.97ms, mfu 37.72%
+iter 1670: loss 0.9988, time 105.08ms, mfu 37.80%
+iter 1680: loss 1.0481, time 104.71ms, mfu 37.88%
+iter 1690: loss 0.9505, time 105.15ms, mfu 37.94%
+iter 1700: loss 1.0043, time 105.24ms, mfu 37.98%
+iter 1710: loss 0.9515, time 104.76ms, mfu 38.04%
+iter 1720: loss 0.9810, time 105.39ms, mfu 38.08%
+iter 1730: loss 0.8412, time 105.07ms, mfu 38.12%
+iter 1740: loss 0.8818, time 104.80ms, mfu 38.16%
+step 1750: train loss 0.9053, val loss 3.9510
+saving checkpoint to out-whatsapp2
+iter 1750: loss 0.8703, time 13782.12ms, mfu 34.37%
+iter 1760: loss 0.9134, time 104.79ms, mfu 34.80%
+iter 1770: loss 0.8727, time 105.08ms, mfu 35.16%
+iter 1780: loss 0.8176, time 105.47ms, mfu 35.48%
+iter 1790: loss 0.9001, time 104.78ms, mfu 35.79%
+iter 1800: loss 0.8676, time 104.86ms, mfu 36.07%
+iter 1810: loss 0.9164, time 105.35ms, mfu 36.30%
+iter 1820: loss 0.8279, time 104.64ms, mfu 36.53%
+iter 1830: loss 0.7531, time 104.87ms, mfu 36.73%
+iter 1840: loss 0.6809, time 104.79ms, mfu 36.92%
+iter 1850: loss 0.7625, time 105.23ms, mfu 37.07%
+iter 1860: loss 0.8105, time 104.94ms, mfu 37.21%
+iter 1870: loss 0.7685, time 105.29ms, mfu 37.33%
+iter 1880: loss 0.6731, time 104.80ms, mfu 37.46%
+iter 1890: loss 0.7538, time 105.25ms, mfu 37.55%
+iter 1900: loss 0.7534, time 104.43ms, mfu 37.67%
+iter 1910: loss 0.6630, time 104.80ms, mfu 37.76%
+iter 1920: loss 0.6823, time 104.48ms, mfu 37.85%
+iter 1930: loss 0.7965, time 105.02ms, mfu 37.92%
+iter 1940: loss 0.7309, time 107.59ms, mfu 37.88%
+iter 1950: loss 0.7277, time 104.73ms, mfu 37.95%
+iter 1960: loss 0.7336, time 104.97ms, mfu 38.01%
+iter 1970: loss 0.6389, time 105.18ms, mfu 38.05%
+iter 1980: loss 0.7786, time 105.32ms, mfu 38.09%
+iter 1990: loss 0.6592, time 104.95ms, mfu 38.13%
+step 2000: train loss 0.6473, val loss 4.1775
+saving checkpoint to out-whatsapp2
+iter 2000: loss 0.6453, time 13703.13ms, mfu 34.35%
+iter 2010: loss 0.5591, time 104.69ms, mfu 34.77%
+iter 2020: loss 0.6816, time 105.64ms, mfu 35.12%
+iter 2030: loss 0.5647, time 104.33ms, mfu 35.48%
+iter 2040: loss 0.6144, time 104.77ms, mfu 35.79%
+iter 2050: loss 0.6148, time 104.82ms, mfu 36.07%
+iter 2060: loss 0.5947, time 104.58ms, mfu 36.33%
+iter 2070: loss 0.6435, time 104.75ms, mfu 36.56%
+iter 2080: loss 0.5317, time 104.65ms, mfu 36.76%
+iter 2090: loss 0.5796, time 104.81ms, mfu 36.94%
+iter 2100: loss 0.5603, time 105.18ms, mfu 37.09%
+iter 2110: loss 0.4884, time 105.26ms, mfu 37.23%
+iter 2120: loss 0.5110, time 104.58ms, mfu 37.37%
+iter 2130: loss 0.5633, time 104.88ms, mfu 37.49%
+iter 2140: loss 0.5806, time 104.34ms, mfu 37.61%
+iter 2150: loss 0.6101, time 104.75ms, mfu 37.71%
+iter 2160: loss 0.4989, time 105.42ms, mfu 37.77%
+iter 2170: loss 0.5383, time 104.79ms, mfu 37.85%
+iter 2180: loss 0.4650, time 105.20ms, mfu 37.91%
+iter 2190: loss 0.6349, time 104.99ms, mfu 37.97%
+iter 2200: loss 0.4294, time 104.62ms, mfu 38.04%
+iter 2210: loss 0.5173, time 104.78ms, mfu 38.09%
+iter 2220: loss 0.4834, time 104.68ms, mfu 38.14%
+iter 2230: loss 0.4473, time 104.84ms, mfu 38.19%
+iter 2240: loss 0.4149, time 105.27ms, mfu 38.21%
+step 2250: train loss 0.4706, val loss 4.4374
+saving checkpoint to out-whatsapp2
+iter 2250: loss 0.4807, time 13690.53ms, mfu 34.42%
+iter 2260: loss 0.4575, time 104.50ms, mfu 34.84%
+iter 2270: loss 0.5145, time 104.89ms, mfu 35.21%
+iter 2280: loss 0.4473, time 104.44ms, mfu 35.56%
+iter 2290: loss 0.4492, time 104.89ms, mfu 35.86%
+iter 2300: loss 0.4657, time 104.86ms, mfu 36.13%
+iter 2310: loss 0.4727, time 104.86ms, mfu 36.37%
+iter 2320: loss 0.4388, time 105.36ms, mfu 36.57%
+iter 2330: loss 0.4380, time 105.02ms, mfu 36.76%
+iter 2340: loss 0.3896, time 104.98ms, mfu 36.94%
+iter 2350: loss 0.3850, time 104.53ms, mfu 37.11%
+iter 2360: loss 0.3979, time 104.56ms, mfu 37.27%
+iter 2370: loss 0.4532, time 104.94ms, mfu 37.39%
+iter 2380: loss 0.4209, time 105.15ms, mfu 37.50%
+iter 2390: loss 0.4528, time 105.60ms, mfu 37.58%
+iter 2400: loss 0.4007, time 105.36ms, mfu 37.66%
+iter 2410: loss 0.3476, time 105.27ms, mfu 37.73%
+iter 2420: loss 0.3610, time 104.82ms, mfu 37.81%
+iter 2430: loss 0.3753, time 105.24ms, mfu 37.87%
+iter 2440: loss 0.3430, time 105.37ms, mfu 37.92%
+iter 2450: loss 0.3443, time 105.04ms, mfu 37.98%
+iter 2460: loss 0.3762, time 104.43ms, mfu 38.05%
+iter 2470: loss 0.3800, time 105.01ms, mfu 38.10%
+iter 2480: loss 0.3852, time 104.89ms, mfu 38.14%
+iter 2490: loss 0.3394, time 105.27ms, mfu 38.17%
+step 2500: train loss 0.3499, val loss 4.6505
+saving checkpoint to out-whatsapp2
+iter 2500: loss 0.3552, time 13705.37ms, mfu 34.38%
+iter 2510: loss 0.3025, time 104.68ms, mfu 34.80%
+iter 2520: loss 0.3231, time 105.60ms, mfu 35.15%
+iter 2530: loss 0.4153, time 105.08ms, mfu 35.48%
+iter 2540: loss 0.3213, time 104.62ms, mfu 35.80%
+iter 2550: loss 0.3120, time 104.54ms, mfu 36.09%
+iter 2560: loss 0.3580, time 104.81ms, mfu 36.34%
+iter 2570: loss 0.3542, time 105.27ms, mfu 36.54%
+iter 2580: loss 0.2962, time 105.00ms, mfu 36.74%
+iter 2590: loss 0.2991, time 105.18ms, mfu 36.91%
+iter 2600: loss 0.3505, time 104.91ms, mfu 37.07%
+iter 2610: loss 0.3309, time 104.42ms, mfu 37.23%
+iter 2620: loss 0.2729, time 105.11ms, mfu 37.36%
+iter 2630: loss 0.2622, time 105.43ms, mfu 37.46%
+iter 2640: loss 0.2797, time 105.14ms, mfu 37.56%
+iter 2650: loss 0.2699, time 105.44ms, mfu 37.63%
+iter 2660: loss 0.2769, time 104.90ms, mfu 37.72%
+iter 2670: loss 0.2908, time 105.09ms, mfu 37.80%
+iter 2680: loss 0.2704, time 105.43ms, mfu 37.85%
+iter 2690: loss 0.3108, time 105.25ms, mfu 37.91%
+iter 2700: loss 0.3008, time 104.87ms, mfu 37.97%
+iter 2710: loss 0.3179, time 105.36ms, mfu 38.01%
+iter 2720: loss 0.2742, time 105.38ms, mfu 38.05%
+iter 2730: loss 0.2980, time 104.75ms, mfu 38.10%
+iter 2740: loss 0.2816, time 104.48ms, mfu 38.16%
+step 2750: train loss 0.2753, val loss 4.7733
+saving checkpoint to out-whatsapp2
+iter 2750: loss 0.2857, time 13739.80ms, mfu 34.37%
+iter 2760: loss 0.2446, time 104.90ms, mfu 34.79%
+iter 2770: loss 0.2886, time 105.29ms, mfu 35.15%
+iter 2780: loss 0.2667, time 104.67ms, mfu 35.50%
+iter 2790: loss 0.2804, time 104.83ms, mfu 35.81%
+iter 2800: loss 0.2872, time 105.05ms, mfu 36.07%
+iter 2810: loss 0.2432, time 104.92ms, mfu 36.32%
+iter 2820: loss 0.2659, time 105.26ms, mfu 36.53%
+iter 2830: loss 0.2759, time 105.55ms, mfu 36.70%
+iter 2840: loss 0.2457, time 105.14ms, mfu 36.88%
+iter 2850: loss 0.2371, time 105.01ms, mfu 37.04%
+iter 2860: loss 0.2520, time 104.85ms, mfu 37.19%
+iter 2870: loss 0.2566, time 105.10ms, mfu 37.32%
+iter 2880: loss 0.2399, time 105.54ms, mfu 37.42%
+iter 2890: loss 0.2510, time 104.78ms, mfu 37.53%
+iter 2900: loss 0.2515, time 104.18ms, mfu 37.66%
+iter 2910: loss 0.2458, time 104.89ms, mfu 37.75%
+iter 2920: loss 0.2229, time 104.98ms, mfu 37.83%
+iter 2930: loss 0.2343, time 105.10ms, mfu 37.89%
+iter 2940: loss 0.2295, time 105.56ms, mfu 37.93%
+iter 2950: loss 0.2399, time 105.16ms, mfu 37.98%
+iter 2960: loss 0.2336, time 104.94ms, mfu 38.04%
+iter 2970: loss 0.2355, time 104.51ms, mfu 38.10%
+iter 2980: loss 0.2222, time 105.01ms, mfu 38.14%
+iter 2990: loss 0.2077, time 105.00ms, mfu 38.18%
+step 3000: train loss 0.2205, val loss 4.9499
+saving checkpoint to out-whatsapp2
+iter 3000: loss 0.2155, time 13702.18ms, mfu 34.39%
+iter 3010: loss 0.2305, time 105.69ms, mfu 34.77%
+iter 3020: loss 0.2122, time 104.77ms, mfu 35.16%
+iter 3030: loss 0.2157, time 104.88ms, mfu 35.49%
+iter 3040: loss 0.2327, time 104.85ms, mfu 35.80%
+iter 3050: loss 0.2424, time 105.36ms, mfu 36.06%
+iter 3060: loss 0.1949, time 105.44ms, mfu 36.29%
+iter 3070: loss 0.2105, time 104.34ms, mfu 36.53%
+iter 3080: loss 0.2020, time 105.01ms, mfu 36.73%
+iter 3090: loss 0.1982, time 105.37ms, mfu 36.89%
+iter 3100: loss 0.2048, time 104.72ms, mfu 37.06%
+iter 3110: loss 0.2027, time 104.83ms, mfu 37.21%
+iter 3120: loss 0.1942, time 105.10ms, mfu 37.34%
+iter 3130: loss 0.1945, time 105.37ms, mfu 37.44%
+iter 3140: loss 0.2151, time 105.41ms, mfu 37.53%
+iter 3150: loss 0.1953, time 105.65ms, mfu 37.61%
+iter 3160: loss 0.1943, time 105.23ms, mfu 37.69%
+iter 3170: loss 0.1821, time 111.78ms, mfu 37.53%
+iter 3180: loss 0.1959, time 105.32ms, mfu 37.62%
+iter 3190: loss 0.2040, time 105.47ms, mfu 37.69%
+iter 3200: loss 0.2044, time 105.47ms, mfu 37.75%
+iter 3210: loss 0.2019, time 104.87ms, mfu 37.83%
+iter 3220: loss 0.1858, time 104.58ms, mfu 37.92%
+iter 3230: loss 0.1824, time 105.09ms, mfu 37.97%
+iter 3240: loss 0.1782, time 104.39ms, mfu 38.05%
+step 3250: train loss 0.1879, val loss 5.1158
+saving checkpoint to out-whatsapp2
+iter 3250: loss 0.1881, time 13700.31ms, mfu 34.27%
+iter 3260: loss 0.1802, time 104.90ms, mfu 34.70%
+iter 3270: loss 0.1806, time 105.27ms, mfu 35.07%
+iter 3280: loss 0.1788, time 104.89ms, mfu 35.42%
+iter 3290: loss 0.1658, time 105.11ms, mfu 35.72%
+iter 3300: loss 0.1763, time 105.25ms, mfu 35.99%
+iter 3310: loss 0.1796, time 105.24ms, mfu 36.23%
+iter 3320: loss 0.1864, time 104.80ms, mfu 36.47%
+iter 3330: loss 0.1848, time 104.43ms, mfu 36.69%
+iter 3340: loss 0.1765, time 105.06ms, mfu 36.87%
+iter 3350: loss 0.1738, time 105.40ms, mfu 37.02%
+iter 3360: loss 0.1766, time 104.62ms, mfu 37.18%
+iter 3370: loss 0.1772, time 104.62ms, mfu 37.33%
+iter 3380: loss 0.1663, time 105.49ms, mfu 37.43%
+iter 3390: loss 0.1731, time 104.69ms, mfu 37.55%
+iter 3400: loss 0.1712, time 104.78ms, mfu 37.65%
+iter 3410: loss 0.1729, time 105.04ms, mfu 37.73%
+iter 3420: loss 0.1757, time 104.79ms, mfu 37.82%
+iter 3430: loss 0.1647, time 105.24ms, mfu 37.88%
+iter 3440: loss 0.1649, time 105.65ms, mfu 37.92%
+iter 3450: loss 0.1574, time 104.80ms, mfu 37.98%
+iter 3460: loss 0.1727, time 104.62ms, mfu 38.05%
+iter 3470: loss 0.1684, time 105.07ms, mfu 38.09%
+iter 3480: loss 0.1477, time 104.83ms, mfu 38.14%
+iter 3490: loss 0.1493, time 105.01ms, mfu 38.17%
+step 3500: train loss 0.1635, val loss 5.1944
+saving checkpoint to out-whatsapp2
+iter 3500: loss 0.1576, time 13703.74ms, mfu 34.39%
+iter 3510: loss 0.1618, time 104.90ms, mfu 34.80%
+iter 3520: loss 0.1619, time 104.71ms, mfu 35.18%
+iter 3530: loss 0.1567, time 105.06ms, mfu 35.51%
+iter 3540: loss 0.1669, time 104.97ms, mfu 35.81%
+iter 3550: loss 0.1542, time 105.22ms, mfu 36.07%
+iter 3560: loss 0.1519, time 105.49ms, mfu 36.30%
+iter 3570: loss 0.1476, time 104.71ms, mfu 36.53%
+iter 3580: loss 0.1475, time 104.45ms, mfu 36.75%
+iter 3590: loss 0.1481, time 104.86ms, mfu 36.93%
+iter 3600: loss 0.1632, time 105.20ms, mfu 37.08%
+iter 3610: loss 0.1523, time 104.97ms, mfu 37.22%
+iter 3620: loss 0.1547, time 104.91ms, mfu 37.35%
+iter 3630: loss 0.1635, time 105.50ms, mfu 37.45%
+iter 3640: loss 0.1598, time 105.19ms, mfu 37.55%
+iter 3650: loss 0.1452, time 105.36ms, mfu 37.63%
+iter 3660: loss 0.1582, time 104.51ms, mfu 37.73%
+iter 3670: loss 0.1523, time 104.81ms, mfu 37.82%
+iter 3680: loss 0.1421, time 104.46ms, mfu 37.91%
+iter 3690: loss 0.1365, time 104.55ms, mfu 37.98%
+iter 3700: loss 0.1662, time 104.95ms, mfu 38.04%
+iter 3710: loss 0.1485, time 105.39ms, mfu 38.07%
+iter 3720: loss 0.1521, time 104.97ms, mfu 38.11%
+iter 3730: loss 0.1393, time 105.54ms, mfu 38.13%
+iter 3740: loss 0.1386, time 104.84ms, mfu 38.17%
+step 3750: train loss 0.1449, val loss 5.2724
+saving checkpoint to out-whatsapp2
+iter 3750: loss 0.1361, time 13718.30ms, mfu 34.39%
+iter 3760: loss 0.1246, time 104.53ms, mfu 34.82%
+iter 3770: loss 0.1460, time 105.03ms, mfu 35.18%
+iter 3780: loss 0.1487, time 105.09ms, mfu 35.51%
+iter 3790: loss 0.1363, time 105.64ms, mfu 35.79%
+iter 3800: loss 0.1304, time 105.71ms, mfu 36.03%
+iter 3810: loss 0.1453, time 105.27ms, mfu 36.27%
+iter 3820: loss 0.1473, time 105.23ms, mfu 36.48%
+iter 3830: loss 0.1420, time 104.58ms, mfu 36.70%
+iter 3840: loss 0.1371, time 104.75ms, mfu 36.89%
+iter 3850: loss 0.1281, time 104.62ms, mfu 37.07%
+iter 3860: loss 0.1436, time 104.63ms, mfu 37.22%
+iter 3870: loss 0.1395, time 105.40ms, mfu 37.34%
+iter 3880: loss 0.1339, time 105.79ms, mfu 37.42%
+iter 3890: loss 0.1367, time 105.62ms, mfu 37.51%
+iter 3900: loss 0.1312, time 105.02ms, mfu 37.61%
+iter 3910: loss 0.1411, time 104.67ms, mfu 37.71%
+iter 3920: loss 0.1314, time 104.94ms, mfu 37.79%
+iter 3930: loss 0.1322, time 104.84ms, mfu 37.87%
+iter 3940: loss 0.1308, time 104.87ms, mfu 37.94%
+iter 3950: loss 0.1358, time 105.35ms, mfu 37.98%
+iter 3960: loss 0.1382, time 104.49ms, mfu 38.05%
+iter 3970: loss 0.1264, time 104.90ms, mfu 38.10%
+iter 3980: loss 0.1343, time 104.53ms, mfu 38.16%
+iter 3990: loss 0.1269, time 104.83ms, mfu 38.20%
