@@ -1,0 +1,242 @@
+master_addr is only used for static rdzv_backend and when rdzv_endpoint is not specified.
+WARNING:torch.distributed.run:
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+Overriding config with config/train_whatsapp.py:Overriding config with config/train_whatsapp.py:
+
+# config for training GPT-2 (124M) down to very nice loss of ~2.85 on 1 node of 8X A100 40GB
+# launch as the following (e.g. in a screen session) and wait ~5 days:
+# $ torchrun --standalone --nproc_per_node=8 train.py config/train_whatsapp.py
+
+#####################################################################
+# CHANGED default parameters from train.py model:
+#####################################################################
+out_dir = 'out-whatsapp'
+dataset = 'whatsapp'
+wandb_log = False
+wandb_project = 'whatsapp'
+wandb_run_name='gpt2-124M'
+
+# bias = False
+min_lr = 1e-4 # learning_rate / 10 usually
+beta2 = 0.99 # make a bit bigger because number of tokens per iter is small
+
+# eval stuff
+eval_interval = 250 # keep frequent because we'll overfit
+eval_iters = 200
+log_interval = 10 # don't print too too often
+
+#####################################################################
+# UNCHANGED default parameters from train.py model:
+#####################################################################
+# these make the total batch size be ~0.5M (recalculate for whatsapp)
+# 12 batch size * 1024 block size * 5 gradaccum * 8 GPUs = 491,520 (recalculate for whatsapp)
+batch_size = 12
+block_size = 1024
+gradient_accumulation_steps = 5 * 8
+
+# this makes total number of tokens be 300B (recalculate for whatsapp)
+max_iters = 600000
+lr_decay_iters = 600000
+
+# weight decay
+weight_decay = 1e-1
+
+
+#tokens per iteration will be: 491,520
+#number of parameters: 123.59M
+# config for training GPT-2 (124M) down to very nice loss of ~2.85 on 1 node of 8X A100 40GB
+# launch as the following (e.g. in a screen session) and wait ~5 days:
+# $ torchrun --standalone --nproc_per_node=8 train.py config/train_whatsapp.py
+
+#####################################################################
+# CHANGED default parameters from train.py model:
+#####################################################################
+out_dir = 'out-whatsapp'
+dataset = 'whatsapp'
+wandb_log = False
+wandb_project = 'whatsapp'
+wandb_run_name='gpt2-124M'
+
+# bias = False
+min_lr = 1e-4 # learning_rate / 10 usually
+beta2 = 0.99 # make a bit bigger because number of tokens per iter is small
+
+# eval stuff
+eval_interval = 250 # keep frequent because we'll overfit
+eval_iters = 200
+log_interval = 10 # don't print too too often
+
+#####################################################################
+# UNCHANGED default parameters from train.py model:
+#####################################################################
+# these make the total batch size be ~0.5M (recalculate for whatsapp)
+# 12 batch size * 1024 block size * 5 gradaccum * 8 GPUs = 491,520 (recalculate for whatsapp)
+batch_size = 12
+block_size = 1024
+gradient_accumulation_steps = 5 * 8
+
+# this makes total number of tokens be 300B (recalculate for whatsapp)
+max_iters = 600000
+lr_decay_iters = 600000
+
+# weight decay
+weight_decay = 1e-1
+
+
+#tokens per iteration will be: 491,520
+#number of parameters: 123.59M
+Overriding config with config/train_whatsapp.py:
+# config for training GPT-2 (124M) down to very nice loss of ~2.85 on 1 node of 8X A100 40GB
+# launch as the following (e.g. in a screen session) and wait ~5 days:
+# $ torchrun --standalone --nproc_per_node=8 train.py config/train_whatsapp.py
+
+#####################################################################
+# CHANGED default parameters from train.py model:
+#####################################################################
+out_dir = 'out-whatsapp'
+dataset = 'whatsapp'
+wandb_log = False
+wandb_project = 'whatsapp'
+wandb_run_name='gpt2-124M'
+
+# bias = False
+min_lr = 1e-4 # learning_rate / 10 usually
+beta2 = 0.99 # make a bit bigger because number of tokens per iter is small
+
+# eval stuff
+eval_interval = 250 # keep frequent because we'll overfit
+eval_iters = 200
+log_interval = 10 # don't print too too often
+
+#####################################################################
+# UNCHANGED default parameters from train.py model:
+#####################################################################
+# these make the total batch size be ~0.5M (recalculate for whatsapp)
+# 12 batch size * 1024 block size * 5 gradaccum * 8 GPUs = 491,520 (recalculate for whatsapp)
+batch_size = 12
+block_size = 1024
+gradient_accumulation_steps = 5 * 8
+
+# this makes total number of tokens be 300B (recalculate for whatsapp)
+max_iters = 600000
+lr_decay_iters = 600000
+
+# weight decay
+weight_decay = 1e-1
+
+
+#tokens per iteration will be: 491,520
+#number of parameters: 123.59M
+Overriding config with config/train_whatsapp.py:
+# config for training GPT-2 (124M) down to very nice loss of ~2.85 on 1 node of 8X A100 40GB
+# launch as the following (e.g. in a screen session) and wait ~5 days:
+# $ torchrun --standalone --nproc_per_node=8 train.py config/train_whatsapp.py
+
+#####################################################################
+# CHANGED default parameters from train.py model:
+#####################################################################
+out_dir = 'out-whatsapp'
+dataset = 'whatsapp'
+wandb_log = False
+wandb_project = 'whatsapp'
+wandb_run_name='gpt2-124M'
+
+# bias = False
+min_lr = 1e-4 # learning_rate / 10 usually
+beta2 = 0.99 # make a bit bigger because number of tokens per iter is small
+
+# eval stuff
+eval_interval = 250 # keep frequent because we'll overfit
+eval_iters = 200
+log_interval = 10 # don't print too too often
+
+#####################################################################
+# UNCHANGED default parameters from train.py model:
+#####################################################################
+# these make the total batch size be ~0.5M (recalculate for whatsapp)
+# 12 batch size * 1024 block size * 5 gradaccum * 8 GPUs = 491,520 (recalculate for whatsapp)
+batch_size = 12
+block_size = 1024
+gradient_accumulation_steps = 5 * 8
+
+# this makes total number of tokens be 300B (recalculate for whatsapp)
+max_iters = 600000
+lr_decay_iters = 600000
+
+# weight decay
+weight_decay = 1e-1
+
+
+#tokens per iteration will be: 491,520
+#number of parameters: 123.59M
+tokens per iteration will be: 491,520
+tokens per iteration will be: 491,520tokens per iteration will be: 491,520
+
+tokens per iteration will be: 491,520
+Initializing a new model from scratch
+Initializing a new model from scratchInitializing a new model from scratchdefaulting to vocab_size of GPT-2 to 50304 (50257 rounded up for efficiency)
+Initializing a new model from scratch
+
+defaulting to vocab_size of GPT-2 to 50304 (50257 rounded up for efficiency)
+defaulting to vocab_size of GPT-2 to 50304 (50257 rounded up for efficiency)
+defaulting to vocab_size of GPT-2 to 50304 (50257 rounded up for efficiency)
+
+number of parameters: 123.59M
+number of parameters: 123.59M
+number of parameters: 123.59M
+number of parameters: 123.59M
+num decayed parameter tensors: 50, with 124,354,560 parameters
+num non-decayed parameter tensors: 25, with 19,200 parameters
+using fused AdamW: True
+compiling the model... (takes a ~minute)
+num decayed parameter tensors: 50, with 124,354,560 parameters
+num non-decayed parameter tensors: 25, with 19,200 parameters
+using fused AdamW: True
+compiling the model... (takes a ~minute)
+num decayed parameter tensors: 50, with 124,354,560 parameters
+num non-decayed parameter tensors: 25, with 19,200 parameters
+using fused AdamW: True
+compiling the model... (takes a ~minute)
+num decayed parameter tensors: 50, with 124,354,560 parameters
+num non-decayed parameter tensors: 25, with 19,200 parameters
+using fused AdamW: True
+compiling the model... (takes a ~minute)
+/usr/lib/python3/dist-packages/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (2.0.3) or chardet (5.1.0) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+/usr/lib/python3/dist-packages/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (2.0.3) or chardet (5.1.0) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+/usr/lib/python3/dist-packages/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (2.0.3) or chardet (5.1.0) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+/usr/lib/python3/dist-packages/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (2.0.3) or chardet (5.1.0) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+step 0: train loss 10.9786, val loss 10.9765
+iter 0: loss 10.9807, time 34819.17ms, mfu -100.00%
+iter 10: loss 10.2626, time 835.46ms, mfu 40.29%
+iter 20: loss 9.2857, time 835.31ms, mfu 40.30%
+iter 30: loss 8.9212, time 837.02ms, mfu 40.29%
+iter 40: loss 8.3362, time 838.05ms, mfu 40.28%
+iter 50: loss 7.6895, time 837.76ms, mfu 40.27%
+iter 60: loss 7.3525, time 838.64ms, mfu 40.25%
+iter 70: loss 6.8220, time 838.38ms, mfu 40.24%
+iter 80: loss 6.5586, time 838.47ms, mfu 40.24%
+iter 90: loss 6.5405, time 839.38ms, mfu 40.22%
+iter 100: loss 6.0499, time 839.77ms, mfu 40.21%
+iter 110: loss 6.0185, time 839.22ms, mfu 40.20%
+iter 120: loss 5.5227, time 839.40ms, mfu 40.19%
+iter 130: loss 5.2670, time 839.22ms, mfu 40.18%
+iter 140: loss 5.0093, time 838.97ms, mfu 40.18%
+iter 150: loss 4.7852, time 839.87ms, mfu 40.17%
+iter 160: loss 4.6014, time 839.37ms, mfu 40.16%
+iter 170: loss 4.0930, time 839.06ms, mfu 40.16%
+iter 180: loss 4.3871, time 840.11ms, mfu 40.15%
+iter 190: loss 3.9806, time 840.99ms, mfu 40.14%
+iter 200: loss 3.9256, time 842.02ms, mfu 40.12%
+iter 210: loss 3.3142, time 839.88ms, mfu 40.12%
+iter 220: loss 3.5063, time 839.86ms, mfu 40.11%
+iter 230: loss 3.5292, time 841.02ms, mfu 40.11%
+iter 240: loss 3.3870, time 840.00ms, mfu 40.10%
+step 250: train loss 3.4197, val loss 4.2895
+saving checkpoint to out-whatsapp
+iter 250: loss 3.1609, time 11662.01ms, mfu 36.38%
