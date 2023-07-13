@@ -1,14 +1,14 @@
 import time
 
-out_dir = 'out-whatsapp_finetune'
+out_dir = 'out-whatsapp_finetune_xl'
 eval_interval = 5
 eval_iters = 40
 wandb_log = False # feel free to turn on
-wandb_project = 'out-whatsapp_finetune'
+wandb_project = 'out-whatsapp_finetune_xl'
 wandb_run_name = 'ft-' + str(time.time())
 
 dataset = 'whatsapp'
-init_from = 'gpt2-large' # this is the largest GPT-2 model: other s are 'gpt2', 'gpt2-medium', 'gpt2-large', 'gpt2-xl
+init_from = 'gpt2-xl' # this is the largest GPT-2 model: other s are 'gpt2', 'gpt2-medium', 'gpt2-large', 'gpt2-xl
 
 # only save checkpoints if the validation loss improves
 always_save_checkpoint = False
@@ -18,7 +18,7 @@ always_save_checkpoint = False
 # shakespeare has 301,966 tokens, so 1 epoch ~= 9.2 iters
 batch_size = 1
 gradient_accumulation_steps = 32
-max_iters = 20
+max_iters = 50
 
 # finetune at constant LR
 learning_rate = 3e-5

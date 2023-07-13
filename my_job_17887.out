@@ -1,0 +1,412 @@
+Requirement already satisfied: torch in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (2.0.1)
+Requirement already satisfied: numpy in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (1.24.4)
+Requirement already satisfied: transformers in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (4.30.2)
+Requirement already satisfied: datasets in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (2.13.1)
+Requirement already satisfied: tiktoken in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (0.4.0)
+Requirement already satisfied: wandb in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (0.15.4)
+Requirement already satisfied: tqdm in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (4.65.0)
+Requirement already satisfied: nvidia-cublas-cu11==11.10.3.66; platform_system == "Linux" and platform_machine == "x86_64" in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from torch) (11.10.3.66)
+Requirement already satisfied: nvidia-nccl-cu11==2.14.3; platform_system == "Linux" and platform_machine == "x86_64" in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from torch) (2.14.3)
+Requirement already satisfied: nvidia-cufft-cu11==10.9.0.58; platform_system == "Linux" and platform_machine == "x86_64" in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from torch) (10.9.0.58)
+Requirement already satisfied: jinja2 in /usr/lib/python3/dist-packages (from torch) (2.10.1)
+Requirement already satisfied: networkx in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from torch) (3.1)
+Requirement already satisfied: filelock in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from torch) (3.12.2)
+Requirement already satisfied: typing-extensions in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from torch) (4.7.1)
+Requirement already satisfied: nvidia-cuda-cupti-cu11==11.7.101; platform_system == "Linux" and platform_machine == "x86_64" in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from torch) (11.7.101)
+Requirement already satisfied: nvidia-cudnn-cu11==8.5.0.96; platform_system == "Linux" and platform_machine == "x86_64" in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from torch) (8.5.0.96)
+Requirement already satisfied: nvidia-curand-cu11==10.2.10.91; platform_system == "Linux" and platform_machine == "x86_64" in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from torch) (10.2.10.91)
+Requirement already satisfied: nvidia-cuda-nvrtc-cu11==11.7.99; platform_system == "Linux" and platform_machine == "x86_64" in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from torch) (11.7.99)
+Requirement already satisfied: nvidia-cusolver-cu11==11.4.0.1; platform_system == "Linux" and platform_machine == "x86_64" in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from torch) (11.4.0.1)
+Requirement already satisfied: nvidia-cuda-runtime-cu11==11.7.99; platform_system == "Linux" and platform_machine == "x86_64" in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from torch) (11.7.99)
+Requirement already satisfied: sympy in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from torch) (1.12)
+Requirement already satisfied: triton==2.0.0; platform_system == "Linux" and platform_machine == "x86_64" in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from torch) (2.0.0)
+Requirement already satisfied: nvidia-cusparse-cu11==11.7.4.91; platform_system == "Linux" and platform_machine == "x86_64" in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from torch) (11.7.4.91)
+Requirement already satisfied: nvidia-nvtx-cu11==11.7.91; platform_system == "Linux" and platform_machine == "x86_64" in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from torch) (11.7.91)
+Requirement already satisfied: requests in /usr/lib/python3/dist-packages (from transformers) (2.22.0)
+Requirement already satisfied: huggingface-hub<1.0,>=0.14.1 in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from transformers) (0.16.2)
+Requirement already satisfied: packaging>=20.0 in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from transformers) (23.1)
+Requirement already satisfied: safetensors>=0.3.1 in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from transformers) (0.3.1)
+Requirement already satisfied: pyyaml>=5.1 in /usr/lib/python3/dist-packages (from transformers) (5.3.1)
+Requirement already satisfied: tokenizers!=0.11.3,<0.14,>=0.11.1 in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from transformers) (0.13.3)
+Requirement already satisfied: regex!=2019.12.17 in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from transformers) (2023.6.3)
+Requirement already satisfied: fsspec[http]>=2021.11.1 in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from datasets) (2023.6.0)
+Requirement already satisfied: multiprocess in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from datasets) (0.70.14)
+Requirement already satisfied: xxhash in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from datasets) (3.2.0)
+Requirement already satisfied: pyarrow>=8.0.0 in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from datasets) (12.0.1)
+Requirement already satisfied: dill<0.3.7,>=0.3.0 in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from datasets) (0.3.6)
+Requirement already satisfied: aiohttp in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from datasets) (3.8.4)
+Requirement already satisfied: pandas in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from datasets) (2.0.3)
+Requirement already satisfied: setuptools in /usr/lib/python3/dist-packages (from wandb) (45.2.0)
+Requirement already satisfied: appdirs>=1.4.3 in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from wandb) (1.4.4)
+Requirement already satisfied: docker-pycreds>=0.4.0 in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from wandb) (0.4.0)
+Requirement already satisfied: setproctitle in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from wandb) (1.3.2)
+Requirement already satisfied: Click!=8.0.0,>=7.0 in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from wandb) (8.1.3)
+Requirement already satisfied: psutil>=5.0.0 in /usr/lib/python3/dist-packages (from wandb) (5.5.1)
+Requirement already satisfied: pathtools in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from wandb) (0.1.2)
+Requirement already satisfied: GitPython!=3.1.29,>=1.0.0 in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from wandb) (3.1.31)
+Requirement already satisfied: sentry-sdk>=1.0.0 in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from wandb) (1.27.0)
+Requirement already satisfied: protobuf!=4.21.0,<5,>=3.12.0; python_version < "3.9" and sys_platform == "linux" in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from wandb) (4.23.3)
+Requirement already satisfied: wheel in /usr/lib/python3/dist-packages (from nvidia-cublas-cu11==11.10.3.66; platform_system == "Linux" and platform_machine == "x86_64"->torch) (0.34.2)
+Requirement already satisfied: mpmath>=0.19 in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from sympy->torch) (1.3.0)
+Requirement already satisfied: cmake in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from triton==2.0.0; platform_system == "Linux" and platform_machine == "x86_64"->torch) (3.26.4)
+Requirement already satisfied: lit in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from triton==2.0.0; platform_system == "Linux" and platform_machine == "x86_64"->torch) (16.0.6)
+Requirement already satisfied: aiosignal>=1.1.2 in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from aiohttp->datasets) (1.3.1)
+Requirement already satisfied: yarl<2.0,>=1.0 in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from aiohttp->datasets) (1.9.2)
+Requirement already satisfied: charset-normalizer<4.0,>=2.0 in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from aiohttp->datasets) (3.1.0)
+Requirement already satisfied: attrs>=17.3.0 in /usr/lib/python3/dist-packages (from aiohttp->datasets) (19.3.0)
+Requirement already satisfied: multidict<7.0,>=4.5 in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from aiohttp->datasets) (6.0.4)
+Requirement already satisfied: frozenlist>=1.1.1 in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from aiohttp->datasets) (1.3.3)
+Requirement already satisfied: async-timeout<5.0,>=4.0.0a3 in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from aiohttp->datasets) (4.0.2)
+Requirement already satisfied: pytz>=2020.1 in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from pandas->datasets) (2023.3)
+Requirement already satisfied: python-dateutil>=2.8.2 in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from pandas->datasets) (2.8.2)
+Requirement already satisfied: tzdata>=2022.1 in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from pandas->datasets) (2023.3)
+Requirement already satisfied: six>=1.4.0 in /usr/lib/python3/dist-packages (from docker-pycreds>=0.4.0->wandb) (1.14.0)
+Requirement already satisfied: gitdb<5,>=4.0.1 in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from GitPython!=3.1.29,>=1.0.0->wandb) (4.0.10)
+Requirement already satisfied: certifi in /usr/lib/python3/dist-packages (from sentry-sdk>=1.0.0->wandb) (2019.11.28)
+Requirement already satisfied: urllib3>=1.26.11; python_version >= "3.6" in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from sentry-sdk>=1.0.0->wandb) (2.0.3)
+Requirement already satisfied: idna>=2.0 in /usr/lib/python3/dist-packages (from yarl<2.0,>=1.0->aiohttp->datasets) (2.8)
+Requirement already satisfied: smmap<6,>=3.0.1 in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from gitdb<5,>=4.0.1->GitPython!=3.1.29,>=1.0.0->wandb) (5.0.0)
+Requirement already up-to-date: urllib3 in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (2.0.3)
+Requirement already up-to-date: chardet in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (5.1.0)
+master_addr is only used for static rdzv_backend and when rdzv_endpoint is not specified.
+WARNING:torch.distributed.run:
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+Overriding config with config/finetune_whatsapp.py:
+import time
+
+out_dir = 'out-whatsapp_finetune'
+eval_interval = 5
+eval_iters = 40
+wandb_log = False # feel free to turn on
+wandb_project = 'out-whatsapp_finetune'
+wandb_run_name = 'ft-' + str(time.time())
+
+dataset = 'whatsapp'
+init_from = 'gpt2-large' # this is the largest GPT-2 model
+
+# only save checkpoints if the validation loss improves
+always_save_checkpoint = False
+
+# the number of examples per iter:
+# 1 batch_size * 32 grad_accum * 1024 tokens = 32,768 tokens/iter
+# shakespeare has 301,966 tokens, so 1 epoch ~= 9.2 iters
+batch_size = 1
+gradient_accumulation_steps = 32
+max_iters = 20
+
+# finetune at constant LR
+learning_rate = 3e-5
+decay_lr = False
+Overriding config with config/finetune_whatsapp.py:
+import time
+
+out_dir = 'out-whatsapp_finetune'
+eval_interval = 5
+eval_iters = 40
+wandb_log = False # feel free to turn on
+wandb_project = 'out-whatsapp_finetune'
+wandb_run_name = 'ft-' + str(time.time())
+
+dataset = 'whatsapp'
+init_from = 'gpt2-large' # this is the largest GPT-2 model
+
+# only save checkpoints if the validation loss improves
+always_save_checkpoint = False
+
+# the number of examples per iter:
+# 1 batch_size * 32 grad_accum * 1024 tokens = 32,768 tokens/iter
+# shakespeare has 301,966 tokens, so 1 epoch ~= 9.2 iters
+batch_size = 1
+gradient_accumulation_steps = 32
+max_iters = 20
+
+# finetune at constant LR
+learning_rate = 3e-5
+decay_lr = False
+Overriding config with config/finetune_whatsapp.py:
+import time
+
+out_dir = 'out-whatsapp_finetune'
+eval_interval = 5
+eval_iters = 40
+wandb_log = False # feel free to turn on
+wandb_project = 'out-whatsapp_finetune'
+wandb_run_name = 'ft-' + str(time.time())
+
+dataset = 'whatsapp'
+init_from = 'gpt2-large' # this is the largest GPT-2 model
+
+# only save checkpoints if the validation loss improves
+always_save_checkpoint = False
+
+# the number of examples per iter:
+# 1 batch_size * 32 grad_accum * 1024 tokens = 32,768 tokens/iter
+# shakespeare has 301,966 tokens, so 1 epoch ~= 9.2 iters
+batch_size = 1
+gradient_accumulation_steps = 32
+max_iters = 20
+
+# finetune at constant LR
+learning_rate = 3e-5
+decay_lr = False
+Overriding config with config/finetune_whatsapp.py:
+import time
+
+out_dir = 'out-whatsapp_finetune'
+eval_interval = 5
+eval_iters = 40
+wandb_log = False # feel free to turn on
+wandb_project = 'out-whatsapp_finetune'
+wandb_run_name = 'ft-' + str(time.time())
+
+dataset = 'whatsapp'
+init_from = 'gpt2-large' # this is the largest GPT-2 model
+
+# only save checkpoints if the validation loss improves
+always_save_checkpoint = False
+
+# the number of examples per iter:
+# 1 batch_size * 32 grad_accum * 1024 tokens = 32,768 tokens/iter
+# shakespeare has 301,966 tokens, so 1 epoch ~= 9.2 iters
+batch_size = 1
+gradient_accumulation_steps = 32
+max_iters = 20
+
+# finetune at constant LR
+learning_rate = 3e-5
+decay_lr = False
+Overriding config with config/finetune_whatsapp.py:
+import time
+
+out_dir = 'out-whatsapp_finetune'
+eval_interval = 5
+eval_iters = 40
+wandb_log = False # feel free to turn on
+wandb_project = 'out-whatsapp_finetune'
+wandb_run_name = 'ft-' + str(time.time())
+
+dataset = 'whatsapp'
+init_from = 'gpt2-large' # this is the largest GPT-2 model
+
+# only save checkpoints if the validation loss improves
+always_save_checkpoint = False
+
+# the number of examples per iter:
+# 1 batch_size * 32 grad_accum * 1024 tokens = 32,768 tokens/iter
+# shakespeare has 301,966 tokens, so 1 epoch ~= 9.2 iters
+batch_size = 1
+gradient_accumulation_steps = 32
+max_iters = 20
+
+# finetune at constant LR
+learning_rate = 3e-5
+decay_lr = False
+Overriding config with config/finetune_whatsapp.py:
+import time
+
+out_dir = 'out-whatsapp_finetune'
+eval_interval = 5
+eval_iters = 40
+wandb_log = False # feel free to turn on
+wandb_project = 'out-whatsapp_finetune'
+wandb_run_name = 'ft-' + str(time.time())
+
+dataset = 'whatsapp'
+init_from = 'gpt2-large' # this is the largest GPT-2 model
+
+# only save checkpoints if the validation loss improves
+always_save_checkpoint = False
+
+# the number of examples per iter:
+# 1 batch_size * 32 grad_accum * 1024 tokens = 32,768 tokens/iter
+# shakespeare has 301,966 tokens, so 1 epoch ~= 9.2 iters
+batch_size = 1
+gradient_accumulation_steps = 32
+max_iters = 20
+
+# finetune at constant LR
+learning_rate = 3e-5
+decay_lr = False
+Overriding config with config/finetune_whatsapp.py:
+import time
+
+out_dir = 'out-whatsapp_finetune'
+eval_interval = 5
+eval_iters = 40
+wandb_log = False # feel free to turn on
+wandb_project = 'out-whatsapp_finetune'
+wandb_run_name = 'ft-' + str(time.time())
+
+dataset = 'whatsapp'
+init_from = 'gpt2-large' # this is the largest GPT-2 model
+
+# only save checkpoints if the validation loss improves
+always_save_checkpoint = False
+
+# the number of examples per iter:
+# 1 batch_size * 32 grad_accum * 1024 tokens = 32,768 tokens/iter
+# shakespeare has 301,966 tokens, so 1 epoch ~= 9.2 iters
+batch_size = 1
+gradient_accumulation_steps = 32
+max_iters = 20
+
+# finetune at constant LR
+learning_rate = 3e-5
+decay_lr = False
+Overriding config with config/finetune_whatsapp.py:
+import time
+
+out_dir = 'out-whatsapp_finetune'
+eval_interval = 5
+eval_iters = 40
+wandb_log = False # feel free to turn on
+wandb_project = 'out-whatsapp_finetune'
+wandb_run_name = 'ft-' + str(time.time())
+
+dataset = 'whatsapp'
+init_from = 'gpt2-large' # this is the largest GPT-2 model
+
+# only save checkpoints if the validation loss improves
+always_save_checkpoint = False
+
+# the number of examples per iter:
+# 1 batch_size * 32 grad_accum * 1024 tokens = 32,768 tokens/iter
+# shakespeare has 301,966 tokens, so 1 epoch ~= 9.2 iters
+batch_size = 1
+gradient_accumulation_steps = 32
+max_iters = 20
+
+# finetune at constant LR
+learning_rate = 3e-5
+decay_lr = False
+tokens per iteration will be: 32,768
+Initializing from OpenAI GPT-2 weights: gpt2-large
+tokens per iteration will be: 32,768
+Initializing from OpenAI GPT-2 weights: gpt2-large
+tokens per iteration will be: 32,768
+tokens per iteration will be: 32,768
+tokens per iteration will be: 32,768
+tokens per iteration will be: 32,768
+tokens per iteration will be: 32,768
+Initializing from OpenAI GPT-2 weights: gpt2-large
+Initializing from OpenAI GPT-2 weights: gpt2-large
+Initializing from OpenAI GPT-2 weights: gpt2-large
+Initializing from OpenAI GPT-2 weights: gpt2-large
+Initializing from OpenAI GPT-2 weights: gpt2-large
+tokens per iteration will be: 32,768
+Initializing from OpenAI GPT-2 weights: gpt2-large
+/usr/lib/python3/dist-packages/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (2.0.3) or chardet (5.1.0) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+/usr/lib/python3/dist-packages/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (2.0.3) or chardet (5.1.0) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+/usr/lib/python3/dist-packages/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (2.0.3) or chardet (5.1.0) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+/usr/lib/python3/dist-packages/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (2.0.3) or chardet (5.1.0) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+/usr/lib/python3/dist-packages/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (2.0.3) or chardet (5.1.0) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+/usr/lib/python3/dist-packages/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (2.0.3) or chardet (5.1.0) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+/usr/lib/python3/dist-packages/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (2.0.3) or chardet (5.1.0) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+/usr/lib/python3/dist-packages/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (2.0.3) or chardet (5.1.0) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+loading weights from pretrained gpt: gpt2-largeloading weights from pretrained gpt: gpt2-large
+
+forcing vocab_size=50257, block_size=1024, bias=Trueforcing vocab_size=50257, block_size=1024, bias=True
+
+overriding dropout rate to 0.0overriding dropout rate to 0.0
+
+loading weights from pretrained gpt: gpt2-largeloading weights from pretrained gpt: gpt2-large
+
+forcing vocab_size=50257, block_size=1024, bias=Trueforcing vocab_size=50257, block_size=1024, bias=True
+
+loading weights from pretrained gpt: gpt2-largeoverriding dropout rate to 0.0
+overriding dropout rate to 0.0
+
+forcing vocab_size=50257, block_size=1024, bias=True
+overriding dropout rate to 0.0
+loading weights from pretrained gpt: gpt2-largeloading weights from pretrained gpt: gpt2-largeloading weights from pretrained gpt: gpt2-large
+
+
+forcing vocab_size=50257, block_size=1024, bias=Trueforcing vocab_size=50257, block_size=1024, bias=True
+forcing vocab_size=50257, block_size=1024, bias=True
+overriding dropout rate to 0.0
+overriding dropout rate to 0.0
+overriding dropout rate to 0.0
+
+number of parameters: 772.72Mnumber of parameters: 772.72M
+number of parameters: 772.72M
+
+number of parameters: 772.72M
+number of parameters: 772.72M
+number of parameters: 772.72M
+Downloading (…)lve/main/config.json:   0%|          | 0.00/666 [00:00<?, ?B/s]number of parameters: 772.72M
+Downloading (…)lve/main/config.json: 100%|██████████| 666/666 [00:00<00:00, 10.3kB/s]
+Downloading model.safetensors:   0%|          | 0.00/3.25G [00:00<?, ?B/s]Downloading model.safetensors:   0%|          | 10.5M/3.25G [00:00<00:49, 65.9MB/s]Downloading model.safetensors:   1%|          | 21.0M/3.25G [00:00<00:42, 76.5MB/s]Downloading model.safetensors:   1%|          | 31.5M/3.25G [00:00<00:38, 83.0MB/s]Downloading model.safetensors:   1%|▏         | 41.9M/3.25G [00:00<00:36, 87.2MB/s]Downloading model.safetensors:   2%|▏         | 52.4M/3.25G [00:00<00:37, 85.7MB/s]Downloading model.safetensors:   2%|▏         | 73.4M/3.25G [00:00<00:39, 81.1MB/s]Downloading model.safetensors:   3%|▎         | 83.9M/3.25G [00:01<00:48, 65.3MB/s]Downloading model.safetensors:   3%|▎         | 94.4M/3.25G [00:01<00:53, 58.9MB/s]Downloading model.safetensors:   3%|▎         | 105M/3.25G [00:01<00:54, 57.5MB/s] Downloading model.safetensors:   4%|▎         | 115M/3.25G [00:01<00:57, 54.2MB/s]Downloading model.safetensors:   4%|▍         | 126M/3.25G [00:02<01:01, 50.8MB/s]Downloading model.safetensors:   4%|▍         | 136M/3.25G [00:02<01:01, 50.6MB/s]Downloading model.safetensors:   5%|▍         | 147M/3.25G [00:02<01:02, 50.0MB/s]Downloading model.safetensors:   5%|▍         | 157M/3.25G [00:02<01:04, 47.6MB/s]number of parameters: 772.72M
+Downloading model.safetensors:   5%|▌         | 168M/3.25G [00:02<01:07, 45.7MB/s]Downloading model.safetensors:   5%|▌         | 178M/3.25G [00:03<01:02, 48.9MB/s]Downloading model.safetensors:   6%|▌         | 189M/3.25G [00:03<01:02, 49.0MB/s]Downloading model.safetensors:   6%|▌         | 199M/3.25G [00:03<01:02, 48.8MB/s]Downloading model.safetensors:   6%|▋         | 210M/3.25G [00:03<01:04, 46.9MB/s]Downloading model.safetensors:   7%|▋         | 220M/3.25G [00:04<01:03, 47.8MB/s]Downloading model.safetensors:   7%|▋         | 231M/3.25G [00:04<01:01, 49.0MB/s]Downloading model.safetensors:   7%|▋         | 241M/3.25G [00:04<01:02, 48.4MB/s]Downloading model.safetensors:   8%|▊         | 252M/3.25G [00:04<01:01, 48.3MB/s]Downloading model.safetensors:   8%|▊         | 262M/3.25G [00:04<01:01, 48.4MB/s]Downloading model.safetensors:   8%|▊         | 273M/3.25G [00:05<01:01, 48.0MB/s]Downloading model.safetensors:   9%|▊         | 283M/3.25G [00:05<01:01, 47.8MB/s]Downloading model.safetensors:   9%|▉         | 294M/3.25G [00:05<01:01, 48.2MB/s]Downloading model.safetensors:   9%|▉         | 304M/3.25G [00:05<01:01, 47.9MB/s]Downloading model.safetensors:  10%|▉         | 315M/3.25G [00:05<01:03, 46.3MB/s]Downloading model.safetensors:  10%|█         | 325M/3.25G [00:06<00:59, 49.0MB/s]Downloading model.safetensors:  10%|█         | 336M/3.25G [00:06<00:59, 48.6MB/s]Downloading model.safetensors:  11%|█         | 346M/3.25G [00:06<00:59, 48.5MB/s]Downloading model.safetensors:  11%|█         | 357M/3.25G [00:06<01:00, 47.4MB/s]Downloading model.safetensors:  11%|█▏        | 367M/3.25G [00:07<01:00, 47.7MB/s]Downloading model.safetensors:  12%|█▏        | 377M/3.25G [00:07<00:58, 48.9MB/s]Downloading model.safetensors:  12%|█▏        | 388M/3.25G [00:07<00:59, 48.4MB/s]Downloading model.safetensors:  12%|█▏        | 398M/3.25G [00:07<00:59, 47.8MB/s]Downloading model.safetensors:  13%|█▎        | 409M/3.25G [00:07<00:58, 48.6MB/s]Downloading model.safetensors:  13%|█▎        | 419M/3.25G [00:08<00:58, 48.1MB/s]Downloading model.safetensors:  13%|█▎        | 430M/3.25G [00:08<00:59, 47.3MB/s]Downloading model.safetensors:  14%|█▎        | 440M/3.25G [00:08<00:57, 48.8MB/s]Downloading model.safetensors:  14%|█▍        | 451M/3.25G [00:08<00:57, 48.4MB/s]Downloading model.safetensors:  14%|█▍        | 461M/3.25G [00:09<00:57, 48.1MB/s]Downloading model.safetensors:  15%|█▍        | 472M/3.25G [00:09<00:57, 48.3MB/s]Downloading model.safetensors:  15%|█▍        | 482M/3.25G [00:09<00:57, 47.9MB/s]Downloading model.safetensors:  15%|█▌        | 493M/3.25G [00:09<00:57, 47.7MB/s]Downloading model.safetensors:  16%|█▌        | 503M/3.25G [00:09<00:57, 47.9MB/s]Downloading model.safetensors:  16%|█▌        | 514M/3.25G [00:10<01:12, 37.5MB/s]Downloading model.safetensors:  16%|█▌        | 524M/3.25G [00:10<01:07, 40.3MB/s]Downloading model.safetensors:  16%|█▋        | 535M/3.25G [00:10<00:57, 47.3MB/s]Downloading model.safetensors:  17%|█▋        | 545M/3.25G [00:10<00:54, 49.2MB/s]Downloading model.safetensors:  17%|█▋        | 556M/3.25G [00:11<00:54, 49.3MB/s]Downloading model.safetensors:  17%|█▋        | 566M/3.25G [00:11<00:54, 49.2MB/s]Downloading model.safetensors:  18%|█▊        | 577M/3.25G [00:11<00:55, 47.8MB/s]Downloading model.safetensors:  18%|█▊        | 587M/3.25G [00:11<00:54, 48.7MB/s]Downloading model.safetensors:  18%|█▊        | 598M/3.25G [00:11<00:54, 48.7MB/s]Downloading model.safetensors:  19%|█▊        | 608M/3.25G [00:12<00:54, 48.4MB/s]Downloading model.safetensors:  19%|█▉        | 619M/3.25G [00:12<00:54, 48.2MB/s]Downloading model.safetensors:  19%|█▉        | 629M/3.25G [00:12<00:54, 48.4MB/s]Downloading model.safetensors:  20%|█▉        | 640M/3.25G [00:12<00:54, 48.3MB/s]Downloading model.safetensors:  20%|██        | 650M/3.25G [00:13<00:53, 48.2MB/s]Downloading model.safetensors:  20%|██        | 661M/3.25G [00:13<00:53, 48.4MB/s]Downloading model.safetensors:  21%|██        | 671M/3.25G [00:13<00:53, 48.2MB/s]Downloading model.safetensors:  21%|██        | 682M/3.25G [00:13<00:53, 47.9MB/s]Downloading model.safetensors:  21%|██▏       | 692M/3.25G [00:13<00:53, 47.8MB/s]Downloading model.safetensors:  22%|██▏       | 703M/3.25G [00:14<00:52, 48.2MB/s]Downloading model.safetensors:  22%|██▏       | 713M/3.25G [00:14<00:53, 47.7MB/s]Downloading model.safetensors:  22%|██▏       | 724M/3.25G [00:14<00:52, 48.2MB/s]Downloading model.safetensors:  23%|██▎       | 734M/3.25G [00:14<00:54, 45.8MB/s]Downloading model.safetensors:  23%|██▎       | 744M/3.25G [00:15<00:54, 46.3MB/s]Downloading model.safetensors:  23%|██▎       | 755M/3.25G [00:15<00:52, 47.2MB/s]Downloading model.safetensors:  24%|██▎       | 765M/3.25G [00:15<00:51, 48.0MB/s]Downloading model.safetensors:  24%|██▍       | 776M/3.25G [00:15<00:51, 48.2MB/s]Downloading model.safetensors:  24%|██▍       | 786M/3.25G [00:15<00:50, 48.4MB/s]Downloading model.safetensors:  25%|██▍       | 797M/3.25G [00:16<00:53, 46.1MB/s]Downloading model.safetensors:  25%|██▍       | 807M/3.25G [00:16<00:51, 47.5MB/s]Downloading model.safetensors:  25%|██▌       | 818M/3.25G [00:16<00:49, 48.7MB/s]Downloading model.safetensors:  26%|██▌       | 828M/3.25G [00:16<00:50, 48.3MB/s]Downloading model.safetensors:  26%|██▌       | 839M/3.25G [00:16<00:50, 47.3MB/s]Downloading model.safetensors:  26%|██▌       | 849M/3.25G [00:17<00:49, 48.9MB/s]Downloading model.safetensors:  26%|██▋       | 860M/3.25G [00:17<00:52, 45.3MB/s]Downloading model.safetensors:  27%|██▋       | 870M/3.25G [00:17<00:51, 45.7MB/s]Downloading model.safetensors:  27%|██▋       | 881M/3.25G [00:17<00:50, 46.8MB/s]Downloading model.safetensors:  27%|██▋       | 891M/3.25G [00:18<00:48, 48.2MB/s]Downloading model.safetensors:  28%|██▊       | 902M/3.25G [00:18<00:49, 47.2MB/s]Downloading model.safetensors:  28%|██▊       | 912M/3.25G [00:18<00:49, 47.0MB/s]Downloading model.safetensors:  28%|██▊       | 923M/3.25G [00:18<00:48, 48.3MB/s]Downloading model.safetensors:  29%|██▊       | 933M/3.25G [00:18<00:47, 48.6MB/s]Downloading model.safetensors:  29%|██▉       | 944M/3.25G [00:19<00:49, 46.8MB/s]Downloading model.safetensors:  29%|██▉       | 954M/3.25G [00:19<00:51, 44.9MB/s]Downloading model.safetensors:  30%|██▉       | 965M/3.25G [00:19<00:47, 48.2MB/s]Downloading model.safetensors:  30%|███       | 975M/3.25G [00:19<00:46, 48.9MB/s]Downloading model.safetensors:  30%|███       | 986M/3.25G [00:20<00:47, 47.9MB/s]Downloading model.safetensors:  31%|███       | 996M/3.25G [00:20<00:46, 48.2MB/s]Downloading model.safetensors:  31%|███       | 1.01G/3.25G [00:20<00:46, 48.6MB/s]Downloading model.safetensors:  31%|███▏      | 1.02G/3.25G [00:21<01:02, 35.4MB/s]Downloading model.safetensors:  32%|███▏      | 1.03G/3.25G [00:21<00:57, 38.8MB/s]Downloading model.safetensors:  32%|███▏      | 1.04G/3.25G [00:21<00:49, 44.7MB/s]Downloading model.safetensors:  32%|███▏      | 1.05G/3.25G [00:21<00:44, 49.6MB/s]Downloading model.safetensors:  33%|███▎      | 1.06G/3.25G [00:21<00:43, 50.2MB/s]Downloading model.safetensors:  33%|███▎      | 1.07G/3.25G [00:21<00:45, 48.0MB/s]Downloading model.safetensors:  33%|███▎      | 1.08G/3.25G [00:22<00:47, 45.3MB/s]Downloading model.safetensors:  34%|███▎      | 1.09G/3.25G [00:22<00:44, 48.4MB/s]Downloading model.safetensors:  34%|███▍      | 1.10G/3.25G [00:22<00:43, 49.0MB/s]Downloading model.safetensors:  34%|███▍      | 1.11G/3.25G [00:22<00:45, 47.1MB/s]Downloading model.safetensors:  35%|███▍      | 1.12G/3.25G [00:23<00:47, 45.0MB/s]Downloading model.safetensors:  35%|███▍      | 1.13G/3.25G [00:23<00:43, 48.5MB/s]Downloading model.safetensors:  35%|███▌      | 1.14G/3.25G [00:23<00:43, 48.5MB/s]Downloading model.safetensors:  36%|███▌      | 1.15G/3.25G [00:23<00:43, 48.1MB/s]Downloading model.safetensors:  36%|███▌      | 1.16G/3.25G [00:23<00:43, 47.4MB/s]Downloading model.safetensors:  36%|███▌      | 1.17G/3.25G [00:24<00:45, 45.4MB/s]Downloading model.safetensors:  36%|███▋      | 1.18G/3.25G [00:24<00:44, 46.7MB/s]Downloading model.safetensors:  37%|███▋      | 1.20G/3.25G [00:24<00:43, 46.7MB/s]Downloading model.safetensors:  37%|███▋      | 1.21G/3.25G [00:24<00:41, 49.0MB/s]Downloading model.safetensors:  37%|███▋      | 1.22G/3.25G [00:25<00:41, 48.6MB/s]Downloading model.safetensors:  38%|███▊      | 1.23G/3.25G [00:25<00:42, 47.4MB/s]Downloading model.safetensors:  38%|███▊      | 1.24G/3.25G [00:25<00:42, 47.4MB/s]Downloading model.safetensors:  38%|███▊      | 1.25G/3.25G [00:25<00:41, 48.4MB/s]Downloading model.safetensors:  39%|███▉      | 1.26G/3.25G [00:25<00:41, 47.9MB/s]Downloading model.safetensors:  39%|███▉      | 1.27G/3.25G [00:26<00:43, 45.9MB/s]Downloading model.safetensors:  39%|███▉      | 1.28G/3.25G [00:26<00:41, 47.7MB/s]Downloading model.safetensors:  40%|███▉      | 1.29G/3.25G [00:26<00:40, 48.5MB/s]Downloading model.safetensors:  40%|████      | 1.30G/3.25G [00:26<00:40, 48.2MB/s]Downloading model.safetensors:  40%|████      | 1.31G/3.25G [00:27<00:40, 47.6MB/s]Downloading model.safetensors:  41%|████      | 1.32G/3.25G [00:27<00:39, 48.2MB/s]Downloading model.safetensors:  41%|████      | 1.33G/3.25G [00:27<00:41, 46.6MB/s]Downloading model.safetensors:  41%|████▏     | 1.34G/3.25G [00:27<00:42, 44.6MB/s]Downloading model.safetensors:  42%|████▏     | 1.35G/3.25G [00:27<00:39, 47.8MB/s]Downloading model.safetensors:  42%|████▏     | 1.36G/3.25G [00:28<00:50, 37.3MB/s]Downloading model.safetensors:  42%|████▏     | 1.37G/3.25G [00:28<00:40, 45.9MB/s]Downloading model.safetensors:  43%|████▎     | 1.38G/3.25G [00:28<00:38, 48.6MB/s]Downloading model.safetensors:  43%|████▎     | 1.39G/3.25G [00:28<00:38, 48.5MB/s]Downloading model.safetensors:  43%|████▎     | 1.41G/3.25G [00:29<00:38, 48.2MB/s]Downloading model.safetensors:  44%|████▎     | 1.42G/3.25G [00:29<00:38, 47.2MB/s]Downloading model.safetensors:  44%|████▍     | 1.43G/3.25G [00:29<00:40, 45.1MB/s]Downloading model.safetensors:  44%|████▍     | 1.44G/3.25G [00:29<00:39, 46.1MB/s]Downloading model.safetensors:  45%|████▍     | 1.45G/3.25G [00:30<00:37, 47.8MB/s]Downloading model.safetensors:  45%|████▍     | 1.46G/3.25G [00:30<00:36, 48.5MB/s]Downloading model.safetensors:  45%|████▌     | 1.47G/3.25G [00:30<00:37, 47.4MB/s]Downloading model.safetensors:  46%|████▌     | 1.48G/3.25G [00:30<00:39, 45.1MB/s]Downloading model.safetensors:  46%|████▌     | 1.49G/3.25G [00:30<00:36, 47.8MB/s]Downloading model.safetensors:  46%|████▌     | 1.50G/3.25G [00:31<00:35, 48.8MB/s]Downloading model.safetensors:  47%|████▋     | 1.51G/3.25G [00:31<00:35, 48.3MB/s]Downloading model.safetensors:  47%|████▋     | 1.52G/3.25G [00:31<00:46, 37.3MB/s]Downloading model.safetensors:  47%|████▋     | 1.53G/3.25G [00:31<00:39, 43.6MB/s]Downloading model.safetensors:  47%|████▋     | 1.54G/3.25G [00:32<00:36, 46.7MB/s]Downloading model.safetensors:  48%|████▊     | 1.55G/3.25G [00:32<00:34, 48.9MB/s]Downloading model.safetensors:  48%|████▊     | 1.56G/3.25G [00:32<00:35, 47.3MB/s]Downloading model.safetensors:  48%|████▊     | 1.57G/3.25G [00:32<00:35, 47.1MB/s]Downloading model.safetensors:  49%|████▉     | 1.58G/3.25G [00:32<00:35, 47.2MB/s]Downloading model.safetensors:  49%|████▉     | 1.59G/3.25G [00:33<00:33, 49.1MB/s]Downloading model.safetensors:  49%|████▉     | 1.60G/3.25G [00:33<00:33, 48.5MB/s]Downloading model.safetensors:  50%|████▉     | 1.61G/3.25G [00:33<00:34, 47.4MB/s]Downloading model.safetensors:  50%|█████     | 1.63G/3.25G [00:33<00:41, 39.3MB/s]Downloading model.safetensors:  50%|█████     | 1.64G/3.25G [00:34<00:35, 45.3MB/s]Downloading model.safetensors:  51%|█████     | 1.65G/3.25G [00:34<00:32, 49.1MB/s]Downloading model.safetensors:  51%|█████     | 1.66G/3.25G [00:34<00:32, 49.2MB/s]Downloading model.safetensors:  51%|█████▏    | 1.67G/3.25G [00:34<00:32, 48.7MB/s]Downloading model.safetensors:  52%|█████▏    | 1.68G/3.25G [00:34<00:32, 48.1MB/s]Downloading model.safetensors:  52%|█████▏    | 1.69G/3.25G [00:35<00:33, 46.8MB/s]Downloading model.safetensors:  52%|█████▏    | 1.70G/3.25G [00:35<00:32, 47.9MB/s]Downloading model.safetensors:  53%|█████▎    | 1.71G/3.25G [00:35<00:33, 46.4MB/s]Downloading model.safetensors:  53%|█████▎    | 1.72G/3.25G [00:35<00:33, 46.3MB/s]Downloading model.safetensors:  53%|█████▎    | 1.73G/3.25G [00:36<00:31, 47.6MB/s]Downloading model.safetensors:  54%|█████▎    | 1.74G/3.25G [00:36<00:31, 48.6MB/s]Downloading model.safetensors:  54%|█████▍    | 1.75G/3.25G [00:36<00:30, 48.5MB/s]Downloading model.safetensors:  54%|█████▍    | 1.76G/3.25G [00:36<00:31, 47.9MB/s]Downloading model.safetensors:  55%|█████▍    | 1.77G/3.25G [00:36<00:30, 48.5MB/s]Downloading model.safetensors:  55%|█████▍    | 1.78G/3.25G [00:37<00:31, 46.4MB/s]Downloading model.safetensors:  55%|█████▌    | 1.79G/3.25G [00:37<00:32, 44.9MB/s]Downloading model.safetensors:  56%|█████▌    | 1.80G/3.25G [00:37<00:29, 48.5MB/s]Downloading model.safetensors:  56%|█████▌    | 1.81G/3.25G [00:37<00:29, 48.5MB/s]Downloading model.safetensors:  56%|█████▌    | 1.82G/3.25G [00:38<00:29, 48.0MB/s]Downloading model.safetensors:  57%|█████▋    | 1.84G/3.25G [00:38<00:29, 47.6MB/s]Downloading model.safetensors:  57%|█████▋    | 1.85G/3.25G [00:38<00:29, 47.5MB/s]Downloading model.safetensors:  57%|█████▋    | 1.86G/3.25G [00:38<00:28, 48.4MB/s]Downloading model.safetensors:  57%|█████▋    | 1.87G/3.25G [00:38<00:28, 48.0MB/s]Downloading model.safetensors:  58%|█████▊    | 1.88G/3.25G [00:39<00:28, 48.4MB/s]Downloading model.safetensors:  58%|█████▊    | 1.89G/3.25G [00:39<00:28, 47.6MB/s]Downloading model.safetensors:  58%|█████▊    | 1.90G/3.25G [00:39<00:28, 47.8MB/s]Downloading model.safetensors:  59%|█████▉    | 1.91G/3.25G [00:39<00:27, 48.2MB/s]Downloading model.safetensors:  59%|█████▉    | 1.92G/3.25G [00:40<00:27, 48.6MB/s]Downloading model.safetensors:  59%|█████▉    | 1.93G/3.25G [00:40<00:28, 46.6MB/s]Downloading model.safetensors:  60%|█████▉    | 1.94G/3.25G [00:40<00:28, 45.2MB/s]Downloading model.safetensors:  60%|██████    | 1.95G/3.25G [00:40<00:28, 45.8MB/s]Downloading model.safetensors:  60%|██████    | 1.96G/3.25G [00:40<00:26, 49.3MB/s]Downloading model.safetensors:  61%|██████    | 1.97G/3.25G [00:41<00:27, 46.9MB/s]Downloading model.safetensors:  61%|██████    | 1.98G/3.25G [00:41<00:27, 46.8MB/s]Downloading model.safetensors:  61%|██████▏   | 1.99G/3.25G [00:41<00:26, 48.1MB/s]Downloading model.safetensors:  62%|██████▏   | 2.00G/3.25G [00:41<00:25, 48.9MB/s]Downloading model.safetensors:  62%|██████▏   | 2.01G/3.25G [00:42<00:26, 46.6MB/s]Downloading model.safetensors:  62%|██████▏   | 2.02G/3.25G [00:42<00:33, 36.4MB/s]Downloading model.safetensors:  63%|██████▎   | 2.03G/3.25G [00:42<00:29, 40.7MB/s]Downloading model.safetensors:  63%|██████▎   | 2.04G/3.25G [00:42<00:24, 48.6MB/s]Downloading model.safetensors:  63%|██████▎   | 2.06G/3.25G [00:42<00:24, 49.5MB/s]Downloading model.safetensors:  64%|██████▎   | 2.07G/3.25G [00:43<00:24, 47.8MB/s]Downloading model.safetensors:  64%|██████▍   | 2.08G/3.25G [00:43<00:24, 47.3MB/s]Downloading model.safetensors:  64%|██████▍   | 2.09G/3.25G [00:43<00:23, 48.4MB/s]Downloading model.safetensors:  65%|██████▍   | 2.10G/3.25G [00:43<00:23, 48.9MB/s]Downloading model.safetensors:  65%|██████▍   | 2.11G/3.25G [00:44<00:24, 47.1MB/s]Downloading model.safetensors:  65%|██████▌   | 2.12G/3.25G [00:44<00:23, 47.3MB/s]Downloading model.safetensors:  66%|██████▌   | 2.13G/3.25G [00:44<00:22, 48.7MB/s]Downloading model.safetensors:  66%|██████▌   | 2.14G/3.25G [00:44<00:22, 48.4MB/s]Downloading model.safetensors:  66%|██████▌   | 2.15G/3.25G [00:44<00:23, 47.5MB/s]Downloading model.safetensors:  67%|██████▋   | 2.16G/3.25G [00:45<00:22, 48.4MB/s]Downloading model.safetensors:  67%|██████▋   | 2.17G/3.25G [00:45<00:22, 46.8MB/s]Downloading model.safetensors:  67%|██████▋   | 2.18G/3.25G [00:45<00:22, 47.0MB/s]Downloading model.safetensors:  67%|██████▋   | 2.19G/3.25G [00:45<00:22, 47.8MB/s]Downloading model.safetensors:  68%|██████▊   | 2.20G/3.25G [00:46<00:21, 48.3MB/s]Downloading model.safetensors:  68%|██████▊   | 2.21G/3.25G [00:46<00:21, 48.4MB/s]Downloading model.safetensors:  68%|██████▊   | 2.22G/3.25G [00:46<00:21, 48.0MB/s]Downloading model.safetensors:  69%|██████▉   | 2.23G/3.25G [00:46<00:20, 48.4MB/s]Downloading model.safetensors:  69%|██████▉   | 2.24G/3.25G [00:46<00:21, 46.8MB/s]Downloading model.safetensors:  69%|██████▉   | 2.25G/3.25G [00:47<00:21, 45.6MB/s]Downloading model.safetensors:  70%|██████▉   | 2.26G/3.25G [00:47<00:20, 48.3MB/s]Downloading model.safetensors:  70%|███████   | 2.28G/3.25G [00:47<00:20, 48.2MB/s]Downloading model.safetensors:  70%|███████   | 2.29G/3.25G [00:47<00:20, 47.8MB/s]Downloading model.safetensors:  71%|███████   | 2.30G/3.25G [00:48<00:20, 47.5MB/s]Downloading model.safetensors:  71%|███████   | 2.31G/3.25G [00:48<00:19, 48.5MB/s]Downloading model.safetensors:  71%|███████▏  | 2.32G/3.25G [00:48<00:19, 46.6MB/s]Downloading model.safetensors:  72%|███████▏  | 2.33G/3.25G [00:48<00:19, 47.5MB/s]Downloading model.safetensors:  72%|███████▏  | 2.34G/3.25G [00:48<00:18, 48.2MB/s]Downloading model.safetensors:  72%|███████▏  | 2.35G/3.25G [00:49<00:19, 46.9MB/s]Downloading model.safetensors:  73%|███████▎  | 2.36G/3.25G [00:49<00:18, 47.2MB/s]Downloading model.safetensors:  73%|███████▎  | 2.37G/3.25G [00:49<00:18, 48.7MB/s]Downloading model.safetensors:  73%|███████▎  | 2.38G/3.25G [00:49<00:18, 48.0MB/s]Downloading model.safetensors:  74%|███████▎  | 2.39G/3.25G [00:50<00:17, 48.1MB/s]Downloading model.safetensors:  74%|███████▍  | 2.40G/3.25G [00:50<00:17, 48.5MB/s]Downloading model.safetensors:  74%|███████▍  | 2.41G/3.25G [00:50<00:17, 48.2MB/s]Downloading model.safetensors:  75%|███████▍  | 2.42G/3.25G [00:50<00:17, 48.1MB/s]Downloading model.safetensors:  75%|███████▍  | 2.43G/3.25G [00:50<00:17, 47.6MB/s]Downloading model.safetensors:  75%|███████▌  | 2.44G/3.25G [00:51<00:17, 47.3MB/s]Downloading model.safetensors:  76%|███████▌  | 2.45G/3.25G [00:51<00:16, 48.2MB/s]Downloading model.safetensors:  76%|███████▌  | 2.46G/3.25G [00:51<00:16, 48.3MB/s]Downloading model.safetensors:  76%|███████▌  | 2.47G/3.25G [00:51<00:16, 48.0MB/s]Downloading model.safetensors:  77%|███████▋  | 2.49G/3.25G [00:51<00:15, 48.0MB/s]Downloading model.safetensors:  77%|███████▋  | 2.50G/3.25G [00:52<00:15, 48.2MB/s]Downloading model.safetensors:  77%|███████▋  | 2.51G/3.25G [00:52<00:15, 47.0MB/s]Downloading model.safetensors:  78%|███████▊  | 2.52G/3.25G [00:52<00:15, 46.5MB/s]Downloading model.safetensors:  78%|███████▊  | 2.53G/3.25G [00:53<00:19, 37.4MB/s]Downloading model.safetensors:  78%|███████▊  | 2.54G/3.25G [00:53<00:17, 40.0MB/s]Downloading model.safetensors:  78%|███████▊  | 2.55G/3.25G [00:53<00:16, 41.2MB/s]Downloading model.safetensors:  79%|███████▉  | 2.56G/3.25G [00:53<00:14, 47.6MB/s]Downloading model.safetensors:  79%|███████▉  | 2.57G/3.25G [00:53<00:13, 48.5MB/s]Downloading model.safetensors:  79%|███████▉  | 2.58G/3.25G [00:54<00:13, 50.2MB/s]Downloading model.safetensors:  80%|███████▉  | 2.59G/3.25G [00:54<00:13, 47.7MB/s]Downloading model.safetensors:  80%|████████  | 2.60G/3.25G [00:54<00:13, 47.8MB/s]Downloading model.safetensors:  80%|████████  | 2.61G/3.25G [00:54<00:12, 49.2MB/s]Downloading model.safetensors:  81%|████████  | 2.62G/3.25G [00:54<00:13, 46.9MB/s]Downloading model.safetensors:  81%|████████  | 2.63G/3.25G [00:55<00:13, 45.0MB/s]Downloading model.safetensors:  81%|████████▏ | 2.64G/3.25G [00:55<00:12, 48.7MB/s]Downloading model.safetensors:  82%|████████▏ | 2.65G/3.25G [00:55<00:12, 48.4MB/s]Downloading model.safetensors:  82%|████████▏ | 2.66G/3.25G [00:55<00:12, 47.1MB/s]Downloading model.safetensors:  82%|████████▏ | 2.67G/3.25G [00:56<00:12, 46.6MB/s]Downloading model.safetensors:  83%|████████▎ | 2.68G/3.25G [00:56<00:11, 48.5MB/s]Downloading model.safetensors:  83%|████████▎ | 2.69G/3.25G [00:56<00:11, 46.5MB/s]Downloading model.safetensors:  83%|████████▎ | 2.71G/3.25G [00:56<00:12, 44.1MB/s]Downloading model.safetensors:  84%|████████▎ | 2.72G/3.25G [00:56<00:11, 48.1MB/s]Downloading model.safetensors:  84%|████████▍ | 2.73G/3.25G [00:57<00:10, 48.4MB/s]Downloading model.safetensors:  84%|████████▍ | 2.74G/3.25G [00:57<00:10, 46.4MB/s]Downloading model.safetensors:  85%|████████▍ | 2.75G/3.25G [00:57<00:11, 44.5MB/s]Downloading model.safetensors:  85%|████████▍ | 2.76G/3.25G [00:57<00:10, 47.7MB/s]Downloading model.safetensors:  85%|████████▌ | 2.77G/3.25G [00:58<00:10, 47.6MB/s]Downloading model.safetensors:  86%|████████▌ | 2.78G/3.25G [00:58<00:09, 47.7MB/s]Downloading model.safetensors:  86%|████████▌ | 2.79G/3.25G [00:58<00:09, 47.7MB/s]Downloading model.safetensors:  86%|████████▌ | 2.80G/3.25G [00:58<00:09, 45.6MB/s]Downloading model.safetensors:  87%|████████▋ | 2.81G/3.25G [00:59<00:09, 45.8MB/s]Downloading model.safetensors:  87%|████████▋ | 2.82G/3.25G [00:59<00:08, 48.0MB/s]Downloading model.safetensors:  87%|████████▋ | 2.83G/3.25G [00:59<00:08, 48.6MB/s]Downloading model.safetensors:  88%|████████▊ | 2.84G/3.25G [00:59<00:08, 48.1MB/s]Downloading model.safetensors:  88%|████████▊ | 2.85G/3.25G [00:59<00:08, 48.0MB/s]Downloading model.safetensors:  88%|████████▊ | 2.86G/3.25G [01:00<00:08, 47.1MB/s]Downloading model.safetensors:  88%|████████▊ | 2.87G/3.25G [01:00<00:07, 48.7MB/s]Downloading model.safetensors:  89%|████████▉ | 2.88G/3.25G [01:00<00:07, 48.3MB/s]Downloading model.safetensors:  89%|████████▉ | 2.89G/3.25G [01:00<00:07, 48.2MB/s]Downloading model.safetensors:  89%|████████▉ | 2.90G/3.25G [01:00<00:07, 48.2MB/s]Downloading model.safetensors:  90%|████████▉ | 2.92G/3.25G [01:01<00:06, 48.2MB/s]Downloading model.safetensors:  90%|█████████ | 2.93G/3.25G [01:01<00:06, 47.2MB/s]Downloading model.safetensors:  90%|█████████ | 2.94G/3.25G [01:01<00:06, 48.2MB/s]Downloading model.safetensors:  91%|█████████ | 2.95G/3.25G [01:01<00:06, 48.1MB/s]Downloading model.safetensors:  91%|█████████ | 2.96G/3.25G [01:02<00:06, 46.6MB/s]Downloading model.safetensors:  91%|█████████▏| 2.97G/3.25G [01:02<00:06, 45.6MB/s]Downloading model.safetensors:  92%|█████████▏| 2.98G/3.25G [01:02<00:05, 47.9MB/s]Downloading model.safetensors:  92%|█████████▏| 2.99G/3.25G [01:02<00:05, 48.4MB/s]Downloading model.safetensors:  92%|█████████▏| 3.00G/3.25G [01:02<00:05, 48.0MB/s]Downloading model.safetensors:  93%|█████████▎| 3.01G/3.25G [01:03<00:04, 48.2MB/s]Downloading model.safetensors:  93%|█████████▎| 3.02G/3.25G [01:03<00:04, 48.2MB/s]Downloading model.safetensors:  93%|█████████▎| 3.03G/3.25G [01:03<00:04, 47.2MB/s]Downloading model.safetensors:  94%|█████████▎| 3.04G/3.25G [01:03<00:04, 47.5MB/s]Downloading model.safetensors:  94%|█████████▍| 3.05G/3.25G [01:04<00:05, 37.4MB/s]Downloading model.safetensors:  94%|█████████▍| 3.06G/3.25G [01:04<00:04, 39.8MB/s]Downloading model.safetensors:  95%|█████████▍| 3.07G/3.25G [01:04<00:04, 39.5MB/s]Downloading model.safetensors:  95%|█████████▍| 3.08G/3.25G [01:04<00:03, 42.1MB/s]Downloading model.safetensors:  95%|█████████▌| 3.09G/3.25G [01:05<00:03, 48.7MB/s]Downloading model.safetensors:  96%|█████████▌| 3.10G/3.25G [01:05<00:02, 50.0MB/s]Downloading model.safetensors:  96%|█████████▌| 3.11G/3.25G [01:05<00:02, 49.2MB/s]Downloading model.safetensors:  96%|█████████▌| 3.12G/3.25G [01:05<00:02, 48.2MB/s]Downloading model.safetensors:  97%|█████████▋| 3.14G/3.25G [01:05<00:02, 46.5MB/s]Downloading model.safetensors:  97%|█████████▋| 3.15G/3.25G [01:06<00:02, 49.1MB/s]Downloading model.safetensors:  97%|█████████▋| 3.16G/3.25G [01:06<00:01, 47.8MB/s]Downloading model.safetensors:  98%|█████████▊| 3.17G/3.25G [01:06<00:01, 47.7MB/s]Downloading model.safetensors:  98%|█████████▊| 3.18G/3.25G [01:06<00:01, 48.7MB/s]Downloading model.safetensors:  98%|█████████▊| 3.19G/3.25G [01:07<00:01, 48.4MB/s]Downloading model.safetensors:  98%|█████████▊| 3.20G/3.25G [01:07<00:01, 46.4MB/s]Downloading model.safetensors:  99%|█████████▉| 3.21G/3.25G [01:07<00:00, 46.4MB/s]Downloading model.safetensors:  99%|█████████▉| 3.22G/3.25G [01:07<00:00, 48.5MB/s]Downloading model.safetensors:  99%|█████████▉| 3.23G/3.25G [01:07<00:00, 46.5MB/s]Downloading model.safetensors: 100%|█████████▉| 3.24G/3.25G [01:08<00:00, 46.1MB/s]Downloading model.safetensors: 100%|██████████| 3.25G/3.25G [01:08<00:00, 47.0MB/s]Downloading model.safetensors: 100%|██████████| 3.25G/3.25G [01:08<00:00, 47.4MB/s]
+Downloading (…)neration_config.json:   0%|          | 0.00/124 [00:00<?, ?B/s]Downloading (…)neration_config.json: 100%|██████████| 124/124 [00:00<00:00, 38.5kB/s]
+num decayed parameter tensors: 146, with 773,428,480 parameters
+num non-decayed parameter tensors: 290, with 601,600 parameters
+using fused AdamW: True
+compiling the model... (takes a ~minute)
+num decayed parameter tensors: 146, with 773,428,480 parameters
+num non-decayed parameter tensors: 290, with 601,600 parameters
+using fused AdamW: True
+compiling the model... (takes a ~minute)
+num decayed parameter tensors: 146, with 773,428,480 parameters
+num non-decayed parameter tensors: 290, with 601,600 parameters
+using fused AdamW: True
+compiling the model... (takes a ~minute)
+num decayed parameter tensors: 146, with 773,428,480 parameters
+num non-decayed parameter tensors: 290, with 601,600 parameters
+using fused AdamW: True
+compiling the model... (takes a ~minute)
+num decayed parameter tensors: 146, with 773,428,480 parameters
+num non-decayed parameter tensors: 290, with 601,600 parameters
+using fused AdamW: True
+compiling the model... (takes a ~minute)
+num decayed parameter tensors: 146, with 773,428,480 parameters
+num non-decayed parameter tensors: 290, with 601,600 parameters
+using fused AdamW: True
+compiling the model... (takes a ~minute)
+num decayed parameter tensors: 146, with 773,428,480 parameters
+num non-decayed parameter tensors: 290, with 601,600 parameters
+using fused AdamW: True
+compiling the model... (takes a ~minute)
+num decayed parameter tensors: 146, with 773,428,480 parameters
+num non-decayed parameter tensors: 290, with 601,600 parameters
+using fused AdamW: True
+compiling the model... (takes a ~minute)
+step 0: train loss 3.1892, val loss 3.1470
+iter 0: loss 2.9021, time 68480.02ms, mfu -100.00%
+iter 1: loss 3.3631, time 526.99ms, mfu -100.00%
+iter 2: loss 3.4669, time 440.42ms, mfu -100.00%
+iter 3: loss 3.0862, time 428.77ms, mfu -100.00%
+iter 4: loss 2.9242, time 429.18ms, mfu -100.00%
+step 5: train loss 2.9622, val loss 3.0624
+saving checkpoint to out-whatsapp_finetune
+iter 5: loss 3.1655, time 8970.22ms, mfu 0.76%
+iter 6: loss 3.2610, time 568.68ms, mfu 1.89%
+iter 7: loss 2.9332, time 439.01ms, mfu 3.25%
+iter 8: loss 2.5491, time 439.15ms, mfu 4.48%
+iter 9: loss 2.9411, time 440.13ms, mfu 5.59%
+step 10: train loss 2.8607, val loss 2.9208
+saving checkpoint to out-whatsapp_finetune
+iter 10: loss 2.5490, time 9835.57ms, mfu 5.10%
+iter 11: loss 2.8502, time 466.73ms, mfu 6.05%
+iter 12: loss 3.2701, time 2098.29ms, mfu 5.77%
+iter 13: loss 2.5214, time 503.10ms, mfu 6.55%
+iter 14: loss 3.1222, time 439.28ms, mfu 7.45%
+step 15: train loss 2.7925, val loss 2.7927
+saving checkpoint to out-whatsapp_finetune
+iter 15: loss 2.7951, time 11924.49ms, mfu 6.76%
+iter 16: loss 2.6345, time 431.42ms, mfu 7.67%
+iter 17: loss 3.0982, time 430.32ms, mfu 8.49%
+iter 18: loss 3.0377, time 430.03ms, mfu 9.23%
+iter 19: loss 2.4350, time 429.78ms, mfu 9.90%
+step 20: train loss 2.6682, val loss 2.7904
+saving checkpoint to out-whatsapp_finetune
+iter 20: loss 2.5060, time 9505.73ms, mfu 8.98%
