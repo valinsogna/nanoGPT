@@ -1,0 +1,1009 @@
+Requirement already satisfied: torch in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (2.0.1)
+Requirement already satisfied: numpy in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (1.24.4)
+Requirement already satisfied: transformers in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (4.30.2)
+Requirement already satisfied: datasets in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (2.13.1)
+Requirement already satisfied: tiktoken in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (0.4.0)
+Requirement already satisfied: wandb in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (0.15.4)
+Requirement already satisfied: tqdm in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (4.65.0)
+Requirement already satisfied: typing-extensions in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from torch) (4.7.1)
+Requirement already satisfied: nvidia-cudnn-cu11==8.5.0.96; platform_system == "Linux" and platform_machine == "x86_64" in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from torch) (8.5.0.96)
+Requirement already satisfied: networkx in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from torch) (3.1)
+Requirement already satisfied: nvidia-cusolver-cu11==11.4.0.1; platform_system == "Linux" and platform_machine == "x86_64" in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from torch) (11.4.0.1)
+Requirement already satisfied: nvidia-nccl-cu11==2.14.3; platform_system == "Linux" and platform_machine == "x86_64" in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from torch) (2.14.3)
+Requirement already satisfied: nvidia-cuda-nvrtc-cu11==11.7.99; platform_system == "Linux" and platform_machine == "x86_64" in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from torch) (11.7.99)
+Requirement already satisfied: nvidia-cublas-cu11==11.10.3.66; platform_system == "Linux" and platform_machine == "x86_64" in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from torch) (11.10.3.66)
+Requirement already satisfied: nvidia-nvtx-cu11==11.7.91; platform_system == "Linux" and platform_machine == "x86_64" in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from torch) (11.7.91)
+Requirement already satisfied: jinja2 in /usr/lib/python3/dist-packages (from torch) (2.10.1)
+Requirement already satisfied: nvidia-cufft-cu11==10.9.0.58; platform_system == "Linux" and platform_machine == "x86_64" in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from torch) (10.9.0.58)
+Requirement already satisfied: nvidia-cusparse-cu11==11.7.4.91; platform_system == "Linux" and platform_machine == "x86_64" in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from torch) (11.7.4.91)
+Requirement already satisfied: triton==2.0.0; platform_system == "Linux" and platform_machine == "x86_64" in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from torch) (2.0.0)
+Requirement already satisfied: filelock in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from torch) (3.12.2)
+Requirement already satisfied: sympy in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from torch) (1.12)
+Requirement already satisfied: nvidia-cuda-cupti-cu11==11.7.101; platform_system == "Linux" and platform_machine == "x86_64" in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from torch) (11.7.101)
+Requirement already satisfied: nvidia-cuda-runtime-cu11==11.7.99; platform_system == "Linux" and platform_machine == "x86_64" in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from torch) (11.7.99)
+Requirement already satisfied: nvidia-curand-cu11==10.2.10.91; platform_system == "Linux" and platform_machine == "x86_64" in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from torch) (10.2.10.91)
+Requirement already satisfied: packaging>=20.0 in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from transformers) (23.1)
+Requirement already satisfied: requests in /usr/lib/python3/dist-packages (from transformers) (2.22.0)
+Requirement already satisfied: pyyaml>=5.1 in /usr/lib/python3/dist-packages (from transformers) (5.3.1)
+Requirement already satisfied: safetensors>=0.3.1 in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from transformers) (0.3.1)
+Requirement already satisfied: regex!=2019.12.17 in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from transformers) (2023.6.3)
+Requirement already satisfied: huggingface-hub<1.0,>=0.14.1 in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from transformers) (0.16.2)
+Requirement already satisfied: tokenizers!=0.11.3,<0.14,>=0.11.1 in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from transformers) (0.13.3)
+Requirement already satisfied: aiohttp in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from datasets) (3.8.4)
+Requirement already satisfied: fsspec[http]>=2021.11.1 in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from datasets) (2023.6.0)
+Requirement already satisfied: xxhash in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from datasets) (3.2.0)
+Requirement already satisfied: pyarrow>=8.0.0 in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from datasets) (12.0.1)
+Requirement already satisfied: dill<0.3.7,>=0.3.0 in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from datasets) (0.3.6)
+Requirement already satisfied: multiprocess in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from datasets) (0.70.14)
+Requirement already satisfied: pandas in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from datasets) (2.0.3)
+Requirement already satisfied: setproctitle in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from wandb) (1.3.2)
+Requirement already satisfied: docker-pycreds>=0.4.0 in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from wandb) (0.4.0)
+Requirement already satisfied: appdirs>=1.4.3 in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from wandb) (1.4.4)
+Requirement already satisfied: sentry-sdk>=1.0.0 in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from wandb) (1.27.0)
+Requirement already satisfied: Click!=8.0.0,>=7.0 in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from wandb) (8.1.3)
+Requirement already satisfied: protobuf!=4.21.0,<5,>=3.12.0; python_version < "3.9" and sys_platform == "linux" in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from wandb) (4.23.3)
+Requirement already satisfied: psutil>=5.0.0 in /usr/lib/python3/dist-packages (from wandb) (5.5.1)
+Requirement already satisfied: GitPython!=3.1.29,>=1.0.0 in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from wandb) (3.1.31)
+Requirement already satisfied: pathtools in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from wandb) (0.1.2)
+Requirement already satisfied: setuptools in /usr/lib/python3/dist-packages (from wandb) (45.2.0)
+Requirement already satisfied: wheel in /usr/lib/python3/dist-packages (from nvidia-cublas-cu11==11.10.3.66; platform_system == "Linux" and platform_machine == "x86_64"->torch) (0.34.2)
+Requirement already satisfied: cmake in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from triton==2.0.0; platform_system == "Linux" and platform_machine == "x86_64"->torch) (3.26.4)
+Requirement already satisfied: lit in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from triton==2.0.0; platform_system == "Linux" and platform_machine == "x86_64"->torch) (16.0.6)
+Requirement already satisfied: mpmath>=0.19 in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from sympy->torch) (1.3.0)
+Requirement already satisfied: async-timeout<5.0,>=4.0.0a3 in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from aiohttp->datasets) (4.0.2)
+Requirement already satisfied: attrs>=17.3.0 in /usr/lib/python3/dist-packages (from aiohttp->datasets) (19.3.0)
+Requirement already satisfied: frozenlist>=1.1.1 in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from aiohttp->datasets) (1.3.3)
+Requirement already satisfied: multidict<7.0,>=4.5 in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from aiohttp->datasets) (6.0.4)
+Requirement already satisfied: charset-normalizer<4.0,>=2.0 in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from aiohttp->datasets) (3.1.0)
+Requirement already satisfied: yarl<2.0,>=1.0 in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from aiohttp->datasets) (1.9.2)
+Requirement already satisfied: aiosignal>=1.1.2 in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from aiohttp->datasets) (1.3.1)
+Requirement already satisfied: pytz>=2020.1 in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from pandas->datasets) (2023.3)
+Requirement already satisfied: python-dateutil>=2.8.2 in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from pandas->datasets) (2.8.2)
+Requirement already satisfied: tzdata>=2022.1 in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from pandas->datasets) (2023.3)
+Requirement already satisfied: six>=1.4.0 in /usr/lib/python3/dist-packages (from docker-pycreds>=0.4.0->wandb) (1.14.0)
+Requirement already satisfied: certifi in /usr/lib/python3/dist-packages (from sentry-sdk>=1.0.0->wandb) (2019.11.28)
+Requirement already satisfied: urllib3>=1.26.11; python_version >= "3.6" in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from sentry-sdk>=1.0.0->wandb) (2.0.3)
+Requirement already satisfied: gitdb<5,>=4.0.1 in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from GitPython!=3.1.29,>=1.0.0->wandb) (4.0.10)
+Requirement already satisfied: idna>=2.0 in /usr/lib/python3/dist-packages (from yarl<2.0,>=1.0->aiohttp->datasets) (2.8)
+Requirement already satisfied: smmap<6,>=3.0.1 in /orfeo/cephfs/home/dssc/valinsogna/.local/lib/python3.8/site-packages (from gitdb<5,>=4.0.1->GitPython!=3.1.29,>=1.0.0->wandb) (5.0.0)
+master_addr is only used for static rdzv_backend and when rdzv_endpoint is not specified.
+WARNING:torch.distributed.run:
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+Overriding config with config/finetune_whatsapp.py:
+Overriding config with config/finetune_whatsapp.py:
+import time
+
+out_dir = 'out-whatsapp_finetune'
+eval_interval = 5
+eval_iters = 40
+wandb_log = False # feel free to turn on
+wandb_project = 'out-whatsapp_finetune'
+wandb_run_name = 'ft-' + str(time.time())
+
+dataset = 'whatsapp'
+init_from = 'gpt2-xl' # this is the largest GPT-2 model
+
+# only save checkpoints if the validation loss improves
+always_save_checkpoint = False
+
+# the number of examples per iter:
+# 1 batch_size * 32 grad_accum * 1024 tokens = 32,768 tokens/iter
+# shakespeare has 301,966 tokens, so 1 epoch ~= 9.2 iters
+batch_size = 1
+gradient_accumulation_steps = 32
+max_iters = 20
+
+# finetune at constant LR
+learning_rate = 3e-5
+decay_lr = Falseimport time
+
+out_dir = 'out-whatsapp_finetune'
+eval_interval = 5
+eval_iters = 40
+wandb_log = False # feel free to turn on
+wandb_project = 'out-whatsapp_finetune'
+wandb_run_name = 'ft-' + str(time.time())
+
+dataset = 'whatsapp'
+init_from = 'gpt2-xl' # this is the largest GPT-2 model
+
+# only save checkpoints if the validation loss improves
+always_save_checkpoint = False
+
+# the number of examples per iter:
+# 1 batch_size * 32 grad_accum * 1024 tokens = 32,768 tokens/iter
+# shakespeare has 301,966 tokens, so 1 epoch ~= 9.2 iters
+batch_size = 1
+gradient_accumulation_steps = 32
+max_iters = 20
+
+# finetune at constant LR
+learning_rate = 3e-5
+decay_lr = False
+
+Overriding config with config/finetune_whatsapp.py:
+import time
+
+out_dir = 'out-whatsapp_finetune'
+eval_interval = 5
+eval_iters = 40
+wandb_log = False # feel free to turn on
+wandb_project = 'out-whatsapp_finetune'
+wandb_run_name = 'ft-' + str(time.time())
+
+dataset = 'whatsapp'
+init_from = 'gpt2-xl' # this is the largest GPT-2 model
+
+# only save checkpoints if the validation loss improves
+always_save_checkpoint = False
+
+# the number of examples per iter:
+# 1 batch_size * 32 grad_accum * 1024 tokens = 32,768 tokens/iter
+# shakespeare has 301,966 tokens, so 1 epoch ~= 9.2 iters
+batch_size = 1
+gradient_accumulation_steps = 32
+max_iters = 20
+
+# finetune at constant LR
+learning_rate = 3e-5
+decay_lr = False
+Overriding config with config/finetune_whatsapp.py:
+import time
+
+out_dir = 'out-whatsapp_finetune'
+eval_interval = 5
+eval_iters = 40
+wandb_log = False # feel free to turn on
+wandb_project = 'out-whatsapp_finetune'
+wandb_run_name = 'ft-' + str(time.time())
+
+dataset = 'whatsapp'
+init_from = 'gpt2-xl' # this is the largest GPT-2 model
+
+# only save checkpoints if the validation loss improves
+always_save_checkpoint = False
+
+# the number of examples per iter:
+# 1 batch_size * 32 grad_accum * 1024 tokens = 32,768 tokens/iter
+# shakespeare has 301,966 tokens, so 1 epoch ~= 9.2 iters
+batch_size = 1
+gradient_accumulation_steps = 32
+max_iters = 20
+
+# finetune at constant LR
+learning_rate = 3e-5
+decay_lr = False
+Overriding config with config/finetune_whatsapp.py:
+import time
+
+out_dir = 'out-whatsapp_finetune'
+eval_interval = 5
+eval_iters = 40
+wandb_log = False # feel free to turn on
+wandb_project = 'out-whatsapp_finetune'
+wandb_run_name = 'ft-' + str(time.time())
+
+dataset = 'whatsapp'
+init_from = 'gpt2-xl' # this is the largest GPT-2 model
+
+# only save checkpoints if the validation loss improves
+always_save_checkpoint = False
+
+# the number of examples per iter:
+# 1 batch_size * 32 grad_accum * 1024 tokens = 32,768 tokens/iter
+# shakespeare has 301,966 tokens, so 1 epoch ~= 9.2 iters
+batch_size = 1
+gradient_accumulation_steps = 32
+max_iters = 20
+
+# finetune at constant LR
+learning_rate = 3e-5
+decay_lr = False
+Overriding config with config/finetune_whatsapp.py:
+import time
+
+out_dir = 'out-whatsapp_finetune'
+eval_interval = 5
+eval_iters = 40
+wandb_log = False # feel free to turn on
+wandb_project = 'out-whatsapp_finetune'
+wandb_run_name = 'ft-' + str(time.time())
+
+dataset = 'whatsapp'
+init_from = 'gpt2-xl' # this is the largest GPT-2 model
+
+# only save checkpoints if the validation loss improves
+always_save_checkpoint = False
+
+# the number of examples per iter:
+# 1 batch_size * 32 grad_accum * 1024 tokens = 32,768 tokens/iter
+# shakespeare has 301,966 tokens, so 1 epoch ~= 9.2 iters
+batch_size = 1
+gradient_accumulation_steps = 32
+max_iters = 20
+
+# finetune at constant LR
+learning_rate = 3e-5
+decay_lr = False
+Overriding config with config/finetune_whatsapp.py:
+import time
+
+out_dir = 'out-whatsapp_finetune'
+eval_interval = 5
+eval_iters = 40
+wandb_log = False # feel free to turn on
+wandb_project = 'out-whatsapp_finetune'
+wandb_run_name = 'ft-' + str(time.time())
+
+dataset = 'whatsapp'
+init_from = 'gpt2-xl' # this is the largest GPT-2 model
+
+# only save checkpoints if the validation loss improves
+always_save_checkpoint = False
+
+# the number of examples per iter:
+# 1 batch_size * 32 grad_accum * 1024 tokens = 32,768 tokens/iter
+# shakespeare has 301,966 tokens, so 1 epoch ~= 9.2 iters
+batch_size = 1
+gradient_accumulation_steps = 32
+max_iters = 20
+
+# finetune at constant LR
+learning_rate = 3e-5
+decay_lr = False
+Overriding config with config/finetune_whatsapp.py:
+import time
+
+out_dir = 'out-whatsapp_finetune'
+eval_interval = 5
+eval_iters = 40
+wandb_log = False # feel free to turn on
+wandb_project = 'out-whatsapp_finetune'
+wandb_run_name = 'ft-' + str(time.time())
+
+dataset = 'whatsapp'
+init_from = 'gpt2-xl' # this is the largest GPT-2 model
+
+# only save checkpoints if the validation loss improves
+always_save_checkpoint = False
+
+# the number of examples per iter:
+# 1 batch_size * 32 grad_accum * 1024 tokens = 32,768 tokens/iter
+# shakespeare has 301,966 tokens, so 1 epoch ~= 9.2 iters
+batch_size = 1
+gradient_accumulation_steps = 32
+max_iters = 20
+
+# finetune at constant LR
+learning_rate = 3e-5
+decay_lr = False
+tokens per iteration will be: 32,768
+tokens per iteration will be: 32,768
+tokens per iteration will be: 32,768
+tokens per iteration will be: 32,768
+tokens per iteration will be: 32,768
+tokens per iteration will be: 32,768
+tokens per iteration will be: 32,768
+tokens per iteration will be: 32,768
+Initializing from OpenAI GPT-2 weights: gpt2-xlInitializing from OpenAI GPT-2 weights: gpt2-xlInitializing from OpenAI GPT-2 weights: gpt2-xlInitializing from OpenAI GPT-2 weights: gpt2-xlInitializing from OpenAI GPT-2 weights: gpt2-xlInitializing from OpenAI GPT-2 weights: gpt2-xlInitializing from OpenAI GPT-2 weights: gpt2-xlInitializing from OpenAI GPT-2 weights: gpt2-xl
+
+
+
+
+
+
+
+/usr/lib/python3/dist-packages/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (2.0.3) or chardet (5.1.0) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+/usr/lib/python3/dist-packages/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (2.0.3) or chardet (5.1.0) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+/usr/lib/python3/dist-packages/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (2.0.3) or chardet (5.1.0) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+/usr/lib/python3/dist-packages/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (2.0.3) or chardet (5.1.0) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+/usr/lib/python3/dist-packages/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (2.0.3) or chardet (5.1.0) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+/usr/lib/python3/dist-packages/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (2.0.3) or chardet (5.1.0) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+/usr/lib/python3/dist-packages/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (2.0.3) or chardet (5.1.0) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+/usr/lib/python3/dist-packages/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (2.0.3) or chardet (5.1.0) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+loading weights from pretrained gpt: gpt2-xl
+loading weights from pretrained gpt: gpt2-xlforcing vocab_size=50257, block_size=1024, bias=True
+
+forcing vocab_size=50257, block_size=1024, bias=Trueoverriding dropout rate to 0.0
+
+loading weights from pretrained gpt: gpt2-xloverriding dropout rate to 0.0loading weights from pretrained gpt: gpt2-xl
+
+
+forcing vocab_size=50257, block_size=1024, bias=True
+forcing vocab_size=50257, block_size=1024, bias=True
+overriding dropout rate to 0.0
+overriding dropout rate to 0.0
+loading weights from pretrained gpt: gpt2-xlloading weights from pretrained gpt: gpt2-xl
+loading weights from pretrained gpt: gpt2-xl
+loading weights from pretrained gpt: gpt2-xlforcing vocab_size=50257, block_size=1024, bias=True
+forcing vocab_size=50257, block_size=1024, bias=True
+
+forcing vocab_size=50257, block_size=1024, bias=True
+
+forcing vocab_size=50257, block_size=1024, bias=Trueoverriding dropout rate to 0.0
+overriding dropout rate to 0.0
+overriding dropout rate to 0.0
+overriding dropout rate to 0.0
+
+number of parameters: 1555.97M
+number of parameters: 1555.97M
+number of parameters: 1555.97M
+number of parameters: 1555.97M
+number of parameters: 1555.97M
+number of parameters: 1555.97M
+number of parameters: 1555.97M
+
+Downloading (…)lve/main/config.json:   0%|          | 0.00/689 [00:00<?, ?B/s]
+Downloading (…)lve/main/config.json: 100%|██████████| 689/689 [00:00<00:00, 209kB/s]
+number of parameters: 1555.97M
+
+Downloading pytorch_model.bin:   0%|          | 0.00/6.43G [00:00<?, ?B/s]
+Downloading pytorch_model.bin:   0%|          | 10.5M/6.43G [00:00<01:33, 68.6MB/s]
+Downloading pytorch_model.bin:   0%|          | 21.0M/6.43G [00:00<01:22, 77.6MB/s]
+Downloading pytorch_model.bin:   0%|          | 31.5M/6.43G [00:00<01:15, 84.3MB/s]
+Downloading pytorch_model.bin:   1%|          | 41.9M/6.43G [00:00<01:16, 83.4MB/s]
+Downloading pytorch_model.bin:   1%|          | 52.4M/6.43G [00:00<01:19, 80.0MB/s]
+Downloading pytorch_model.bin:   1%|          | 62.9M/6.43G [00:00<01:15, 84.7MB/s]
+Downloading pytorch_model.bin:   1%|          | 73.4M/6.43G [00:00<01:23, 75.8MB/s]
+Downloading pytorch_model.bin:   1%|▏         | 83.9M/6.43G [00:01<01:36, 65.9MB/s]
+Downloading pytorch_model.bin:   1%|▏         | 94.4M/6.43G [00:01<01:46, 59.5MB/s]
+Downloading pytorch_model.bin:   2%|▏         | 105M/6.43G [00:01<01:55, 54.9MB/s] 
+Downloading pytorch_model.bin:   2%|▏         | 115M/6.43G [00:01<01:59, 52.9MB/s]
+Downloading pytorch_model.bin:   2%|▏         | 126M/6.43G [00:02<02:02, 51.4MB/s]
+Downloading pytorch_model.bin:   2%|▏         | 136M/6.43G [00:02<02:04, 50.5MB/s]
+Downloading pytorch_model.bin:   2%|▏         | 147M/6.43G [00:02<02:07, 49.4MB/s]
+Downloading pytorch_model.bin:   2%|▏         | 157M/6.43G [00:02<02:08, 49.0MB/s]
+Downloading pytorch_model.bin:   3%|▎         | 168M/6.43G [00:02<02:08, 48.7MB/s]
+Downloading pytorch_model.bin:   3%|▎         | 178M/6.43G [00:03<02:08, 48.8MB/s]
+Downloading pytorch_model.bin:   3%|▎         | 189M/6.43G [00:03<02:08, 48.7MB/s]
+Downloading pytorch_model.bin:   3%|▎         | 199M/6.43G [00:03<02:10, 47.7MB/s]
+Downloading pytorch_model.bin:   3%|▎         | 210M/6.43G [00:03<02:08, 48.4MB/s]
+Downloading pytorch_model.bin:   3%|▎         | 220M/6.43G [00:03<02:08, 48.3MB/s]
+Downloading pytorch_model.bin:   4%|▎         | 231M/6.43G [00:04<02:11, 47.3MB/s]
+Downloading pytorch_model.bin:   4%|▎         | 241M/6.43G [00:04<02:07, 48.6MB/s]
+Downloading pytorch_model.bin:   4%|▍         | 252M/6.43G [00:04<02:06, 48.7MB/s]
+Downloading pytorch_model.bin:   4%|▍         | 262M/6.43G [00:04<02:08, 48.1MB/s]
+Downloading pytorch_model.bin:   4%|▍         | 273M/6.43G [00:05<02:07, 48.1MB/s]
+Downloading pytorch_model.bin:   4%|▍         | 283M/6.43G [00:05<02:07, 48.3MB/s]
+Downloading pytorch_model.bin:   5%|▍         | 294M/6.43G [00:05<02:08, 47.9MB/s]
+Downloading pytorch_model.bin:   5%|▍         | 304M/6.43G [00:05<02:07, 48.2MB/s]
+Downloading pytorch_model.bin:   5%|▍         | 315M/6.43G [00:05<02:07, 48.0MB/s]
+Downloading pytorch_model.bin:   5%|▌         | 325M/6.43G [00:06<02:08, 47.7MB/s]
+Downloading pytorch_model.bin:   5%|▌         | 336M/6.43G [00:06<02:06, 48.3MB/s]
+Downloading pytorch_model.bin:   5%|▌         | 346M/6.43G [00:06<02:05, 48.4MB/s]
+Downloading pytorch_model.bin:   6%|▌         | 357M/6.43G [00:06<02:06, 48.2MB/s]
+Downloading pytorch_model.bin:   6%|▌         | 367M/6.43G [00:07<02:06, 47.9MB/s]
+Downloading pytorch_model.bin:   6%|▌         | 377M/6.43G [00:07<02:05, 48.3MB/s]
+Downloading pytorch_model.bin:   6%|▌         | 388M/6.43G [00:07<02:05, 48.1MB/s]
+Downloading pytorch_model.bin:   6%|▌         | 398M/6.43G [00:07<02:05, 48.0MB/s]
+Downloading pytorch_model.bin:   6%|▋         | 409M/6.43G [00:07<02:06, 47.7MB/s]
+Downloading pytorch_model.bin:   7%|▋         | 419M/6.43G [00:08<02:08, 46.9MB/s]
+Downloading pytorch_model.bin:   7%|▋         | 430M/6.43G [00:08<02:05, 47.8MB/s]
+Downloading pytorch_model.bin:   7%|▋         | 440M/6.43G [00:08<02:03, 48.6MB/s]
+Downloading pytorch_model.bin:   7%|▋         | 451M/6.43G [00:08<02:04, 48.1MB/s]
+Downloading pytorch_model.bin:   7%|▋         | 461M/6.43G [00:08<02:03, 48.4MB/s]
+Downloading pytorch_model.bin:   7%|▋         | 472M/6.43G [00:09<02:03, 48.4MB/s]
+Downloading pytorch_model.bin:   7%|▋         | 482M/6.43G [00:09<02:04, 47.6MB/s]
+Downloading pytorch_model.bin:   8%|▊         | 493M/6.43G [00:09<02:02, 48.3MB/s]
+Downloading pytorch_model.bin:   8%|▊         | 503M/6.43G [00:09<02:02, 48.2MB/s]
+Downloading pytorch_model.bin:   8%|▊         | 514M/6.43G [00:10<02:32, 38.7MB/s]
+Downloading pytorch_model.bin:   8%|▊         | 524M/6.43G [00:10<02:05, 47.2MB/s]
+Downloading pytorch_model.bin:   8%|▊         | 535M/6.43G [00:10<02:00, 48.9MB/s]
+Downloading pytorch_model.bin:   8%|▊         | 545M/6.43G [00:10<02:01, 48.6MB/s]
+Downloading pytorch_model.bin:   9%|▊         | 556M/6.43G [00:10<02:01, 48.3MB/s]
+Downloading pytorch_model.bin:   9%|▉         | 566M/6.43G [00:11<02:00, 48.6MB/s]
+Downloading pytorch_model.bin:   9%|▉         | 577M/6.43G [00:11<02:00, 48.6MB/s]
+Downloading pytorch_model.bin:   9%|▉         | 587M/6.43G [00:11<02:02, 47.9MB/s]
+Downloading pytorch_model.bin:   9%|▉         | 598M/6.43G [00:11<02:01, 47.9MB/s]
+Downloading pytorch_model.bin:   9%|▉         | 608M/6.43G [00:12<01:59, 48.5MB/s]
+Downloading pytorch_model.bin:  10%|▉         | 619M/6.43G [00:12<02:00, 48.2MB/s]
+Downloading pytorch_model.bin:  10%|▉         | 629M/6.43G [00:12<02:00, 48.3MB/s]
+Downloading pytorch_model.bin:  10%|▉         | 640M/6.43G [00:12<01:59, 48.3MB/s]
+Downloading pytorch_model.bin:  10%|█         | 650M/6.43G [00:12<02:01, 47.7MB/s]
+Downloading pytorch_model.bin:  10%|█         | 661M/6.43G [00:13<01:59, 48.2MB/s]
+Downloading pytorch_model.bin:  10%|█         | 671M/6.43G [00:13<01:59, 48.2MB/s]
+Downloading pytorch_model.bin:  11%|█         | 682M/6.43G [00:13<01:59, 48.0MB/s]
+Downloading pytorch_model.bin:  11%|█         | 692M/6.43G [00:13<02:01, 47.4MB/s]
+Downloading pytorch_model.bin:  11%|█         | 703M/6.43G [00:14<01:58, 48.5MB/s]
+Downloading pytorch_model.bin:  11%|█         | 713M/6.43G [00:14<01:58, 48.2MB/s]
+Downloading pytorch_model.bin:  11%|█         | 724M/6.43G [00:14<01:58, 48.3MB/s]
+Downloading pytorch_model.bin:  11%|█▏        | 734M/6.43G [00:14<01:58, 48.2MB/s]
+Downloading pytorch_model.bin:  12%|█▏        | 744M/6.43G [00:14<01:58, 47.9MB/s]
+Downloading pytorch_model.bin:  12%|█▏        | 755M/6.43G [00:15<01:58, 48.1MB/s]
+Downloading pytorch_model.bin:  12%|█▏        | 765M/6.43G [00:15<01:57, 48.2MB/s]
+Downloading pytorch_model.bin:  12%|█▏        | 776M/6.43G [00:15<01:57, 48.0MB/s]
+Downloading pytorch_model.bin:  12%|█▏        | 786M/6.43G [00:15<01:57, 48.2MB/s]
+Downloading pytorch_model.bin:  12%|█▏        | 797M/6.43G [00:16<01:57, 48.1MB/s]
+Downloading pytorch_model.bin:  13%|█▎        | 807M/6.43G [00:16<01:57, 47.9MB/s]
+Downloading pytorch_model.bin:  13%|█▎        | 818M/6.43G [00:16<01:55, 48.4MB/s]
+Downloading pytorch_model.bin:  13%|█▎        | 828M/6.43G [00:16<01:56, 48.1MB/s]
+Downloading pytorch_model.bin:  13%|█▎        | 839M/6.43G [00:16<01:58, 47.2MB/s]
+Downloading pytorch_model.bin:  13%|█▎        | 849M/6.43G [00:17<01:55, 48.5MB/s]
+Downloading pytorch_model.bin:  13%|█▎        | 860M/6.43G [00:17<01:55, 48.2MB/s]
+Downloading pytorch_model.bin:  14%|█▎        | 870M/6.43G [00:17<01:56, 47.7MB/s]
+Downloading pytorch_model.bin:  14%|█▎        | 881M/6.43G [00:17<01:55, 48.3MB/s]
+Downloading pytorch_model.bin:  14%|█▍        | 891M/6.43G [00:17<01:55, 47.9MB/s]
+Downloading pytorch_model.bin:  14%|█▍        | 902M/6.43G [00:18<01:54, 48.3MB/s]
+Downloading pytorch_model.bin:  14%|█▍        | 912M/6.43G [00:18<01:53, 48.5MB/s]
+Downloading pytorch_model.bin:  14%|█▍        | 923M/6.43G [00:18<01:54, 48.2MB/s]
+Downloading pytorch_model.bin:  15%|█▍        | 933M/6.43G [00:18<01:54, 48.1MB/s]
+Downloading pytorch_model.bin:  15%|█▍        | 944M/6.43G [00:19<01:53, 48.2MB/s]
+Downloading pytorch_model.bin:  15%|█▍        | 954M/6.43G [00:19<01:53, 48.4MB/s]
+Downloading pytorch_model.bin:  15%|█▍        | 965M/6.43G [00:19<01:53, 48.1MB/s]
+Downloading pytorch_model.bin:  15%|█▌        | 975M/6.43G [00:19<01:53, 48.2MB/s]
+Downloading pytorch_model.bin:  15%|█▌        | 986M/6.43G [00:19<01:53, 48.1MB/s]
+Downloading pytorch_model.bin:  15%|█▌        | 996M/6.43G [00:20<01:53, 48.1MB/s]
+Downloading pytorch_model.bin:  16%|█▌        | 1.01G/6.43G [00:20<01:53, 47.9MB/s]
+Downloading pytorch_model.bin:  16%|█▌        | 1.02G/6.43G [00:20<02:25, 37.1MB/s]
+Downloading pytorch_model.bin:  16%|█▌        | 1.03G/6.43G [00:20<02:06, 42.8MB/s]
+Downloading pytorch_model.bin:  16%|█▌        | 1.04G/6.43G [00:21<01:53, 47.7MB/s]
+Downloading pytorch_model.bin:  16%|█▋        | 1.05G/6.43G [00:21<01:48, 49.5MB/s]
+Downloading pytorch_model.bin:  16%|█▋        | 1.06G/6.43G [00:21<01:52, 47.7MB/s]
+Downloading pytorch_model.bin:  17%|█▋        | 1.07G/6.43G [00:21<01:52, 47.7MB/s]
+Downloading pytorch_model.bin:  17%|█▋        | 1.08G/6.43G [00:21<01:49, 48.8MB/s]
+Downloading pytorch_model.bin:  17%|█▋        | 1.09G/6.43G [00:22<01:53, 47.0MB/s]
+Downloading pytorch_model.bin:  17%|█▋        | 1.10G/6.43G [00:22<01:52, 47.5MB/s]
+Downloading pytorch_model.bin:  17%|█▋        | 1.11G/6.43G [00:22<01:49, 48.6MB/s]
+Downloading pytorch_model.bin:  17%|█▋        | 1.12G/6.43G [00:22<01:53, 46.8MB/s]
+Downloading pytorch_model.bin:  18%|█▊        | 1.13G/6.43G [00:23<01:49, 48.3MB/s]
+Downloading pytorch_model.bin:  18%|█▊        | 1.14G/6.43G [00:23<01:49, 48.4MB/s]
+Downloading pytorch_model.bin:  18%|█▊        | 1.15G/6.43G [00:23<01:52, 47.0MB/s]
+Downloading pytorch_model.bin:  18%|█▊        | 1.16G/6.43G [00:23<01:56, 45.3MB/s]
+Downloading pytorch_model.bin:  18%|█▊        | 1.17G/6.43G [00:23<01:47, 48.9MB/s]
+Downloading pytorch_model.bin:  18%|█▊        | 1.18G/6.43G [00:24<01:50, 47.6MB/s]
+Downloading pytorch_model.bin:  19%|█▊        | 1.20G/6.43G [00:24<01:47, 48.6MB/s]
+Downloading pytorch_model.bin:  19%|█▊        | 1.21G/6.43G [00:24<01:47, 48.4MB/s]
+Downloading pytorch_model.bin:  19%|█▉        | 1.22G/6.43G [00:24<01:51, 46.7MB/s]
+Downloading pytorch_model.bin:  19%|█▉        | 1.23G/6.43G [00:25<01:50, 47.0MB/s]
+Downloading pytorch_model.bin:  19%|█▉        | 1.24G/6.43G [00:25<01:47, 48.5MB/s]
+Downloading pytorch_model.bin:  19%|█▉        | 1.25G/6.43G [00:25<01:49, 47.2MB/s]
+Downloading pytorch_model.bin:  20%|█▉        | 1.26G/6.43G [00:25<01:50, 47.0MB/s]
+Downloading pytorch_model.bin:  20%|█▉        | 1.27G/6.43G [00:25<01:48, 47.8MB/s]
+Downloading pytorch_model.bin:  20%|█▉        | 1.28G/6.43G [00:26<01:46, 48.4MB/s]
+Downloading pytorch_model.bin:  20%|██        | 1.29G/6.43G [00:26<01:48, 47.2MB/s]
+Downloading pytorch_model.bin:  20%|██        | 1.30G/6.43G [00:26<01:48, 47.3MB/s]
+Downloading pytorch_model.bin:  20%|██        | 1.31G/6.43G [00:26<01:46, 48.3MB/s]
+Downloading pytorch_model.bin:  21%|██        | 1.32G/6.43G [00:27<01:48, 47.3MB/s]
+Downloading pytorch_model.bin:  21%|██        | 1.33G/6.43G [00:27<01:48, 47.1MB/s]
+Downloading pytorch_model.bin:  21%|██        | 1.34G/6.43G [00:27<01:46, 48.0MB/s]
+Downloading pytorch_model.bin:  21%|██        | 1.35G/6.43G [00:27<01:44, 48.5MB/s]
+Downloading pytorch_model.bin:  21%|██        | 1.36G/6.43G [00:27<01:45, 48.0MB/s]
+Downloading pytorch_model.bin:  21%|██▏       | 1.37G/6.43G [00:28<01:45, 48.1MB/s]
+Downloading pytorch_model.bin:  22%|██▏       | 1.38G/6.43G [00:28<01:44, 48.4MB/s]
+Downloading pytorch_model.bin:  22%|██▏       | 1.39G/6.43G [00:28<01:47, 47.0MB/s]
+Downloading pytorch_model.bin:  22%|██▏       | 1.41G/6.43G [00:28<01:44, 48.0MB/s]
+Downloading pytorch_model.bin:  22%|██▏       | 1.42G/6.43G [00:29<01:44, 48.2MB/s]
+Downloading pytorch_model.bin:  22%|██▏       | 1.43G/6.43G [00:29<01:48, 45.9MB/s]
+Downloading pytorch_model.bin:  22%|██▏       | 1.44G/6.43G [00:29<01:45, 47.5MB/s]
+Downloading pytorch_model.bin:  22%|██▏       | 1.45G/6.43G [00:29<01:42, 48.5MB/s]
+Downloading pytorch_model.bin:  23%|██▎       | 1.46G/6.43G [00:29<01:45, 47.1MB/s]
+Downloading pytorch_model.bin:  23%|██▎       | 1.47G/6.43G [00:30<01:45, 47.3MB/s]
+Downloading pytorch_model.bin:  23%|██▎       | 1.48G/6.43G [00:30<01:42, 48.4MB/s]
+Downloading pytorch_model.bin:  23%|██▎       | 1.49G/6.43G [00:30<01:44, 47.3MB/s]
+Downloading pytorch_model.bin:  23%|██▎       | 1.50G/6.43G [00:30<01:45, 46.6MB/s]
+Downloading pytorch_model.bin:  23%|██▎       | 1.51G/6.43G [00:31<01:41, 48.6MB/s]
+Downloading pytorch_model.bin:  24%|██▎       | 1.52G/6.43G [00:31<02:13, 36.7MB/s]
+Downloading pytorch_model.bin:  24%|██▍       | 1.53G/6.43G [00:31<02:08, 38.0MB/s]
+Downloading pytorch_model.bin:  24%|██▍       | 1.54G/6.43G [00:31<01:52, 43.4MB/s]
+Downloading pytorch_model.bin:  24%|██▍       | 1.55G/6.43G [00:32<01:38, 49.3MB/s]
+Downloading pytorch_model.bin:  24%|██▍       | 1.56G/6.43G [00:32<01:37, 49.7MB/s]
+Downloading pytorch_model.bin:  24%|██▍       | 1.57G/6.43G [00:32<01:40, 48.3MB/s]
+Downloading pytorch_model.bin:  25%|██▍       | 1.58G/6.43G [00:32<01:41, 48.0MB/s]
+Downloading pytorch_model.bin:  25%|██▍       | 1.59G/6.43G [00:32<01:39, 48.8MB/s]
+Downloading pytorch_model.bin:  25%|██▍       | 1.60G/6.43G [00:33<01:41, 47.8MB/s]
+Downloading pytorch_model.bin:  25%|██▌       | 1.61G/6.43G [00:33<01:41, 47.5MB/s]
+Downloading pytorch_model.bin:  25%|██▌       | 1.63G/6.43G [00:33<01:40, 47.6MB/s]
+Downloading pytorch_model.bin:  25%|██▌       | 1.64G/6.43G [00:33<01:38, 48.8MB/s]
+Downloading pytorch_model.bin:  26%|██▌       | 1.65G/6.43G [00:33<01:41, 47.3MB/s]
+Downloading pytorch_model.bin:  26%|██▌       | 1.66G/6.43G [00:34<01:56, 41.1MB/s]
+Downloading pytorch_model.bin:  26%|██▌       | 1.67G/6.43G [00:34<01:51, 42.7MB/s]
+Downloading pytorch_model.bin:  26%|██▌       | 1.68G/6.43G [00:34<01:38, 48.1MB/s]
+Downloading pytorch_model.bin:  26%|██▌       | 1.69G/6.43G [00:34<01:35, 49.5MB/s]
+Downloading pytorch_model.bin:  26%|██▋       | 1.70G/6.43G [00:35<01:38, 48.2MB/s]
+Downloading pytorch_model.bin:  27%|██▋       | 1.71G/6.43G [00:35<01:38, 47.9MB/s]
+Downloading pytorch_model.bin:  27%|██▋       | 1.72G/6.43G [00:35<01:37, 48.6MB/s]
+Downloading pytorch_model.bin:  27%|██▋       | 1.73G/6.43G [00:35<01:39, 47.1MB/s]
+Downloading pytorch_model.bin:  27%|██▋       | 1.74G/6.43G [00:36<01:39, 47.1MB/s]
+Downloading pytorch_model.bin:  27%|██▋       | 1.75G/6.43G [00:36<01:36, 48.6MB/s]
+Downloading pytorch_model.bin:  27%|██▋       | 1.76G/6.43G [00:36<01:38, 47.4MB/s]
+Downloading pytorch_model.bin:  28%|██▊       | 1.77G/6.43G [00:36<01:37, 48.0MB/s]
+Downloading pytorch_model.bin:  28%|██▊       | 1.78G/6.43G [00:36<01:36, 48.2MB/s]
+Downloading pytorch_model.bin:  28%|██▊       | 1.79G/6.43G [00:37<01:38, 46.9MB/s]
+Downloading pytorch_model.bin:  28%|██▊       | 1.80G/6.43G [00:37<01:38, 46.8MB/s]
+Downloading pytorch_model.bin:  28%|██▊       | 1.81G/6.43G [00:37<01:35, 48.3MB/s]
+Downloading pytorch_model.bin:  28%|██▊       | 1.82G/6.43G [00:37<01:35, 48.5MB/s]
+Downloading pytorch_model.bin:  29%|██▊       | 1.84G/6.43G [00:37<01:35, 48.2MB/s]
+Downloading pytorch_model.bin:  29%|██▊       | 1.85G/6.43G [00:38<01:36, 47.3MB/s]
+Downloading pytorch_model.bin:  29%|██▉       | 1.86G/6.43G [00:38<01:40, 45.6MB/s]
+Downloading pytorch_model.bin:  29%|██▉       | 1.87G/6.43G [00:38<01:39, 45.8MB/s]
+Downloading pytorch_model.bin:  29%|██▉       | 1.88G/6.43G [00:38<01:33, 48.5MB/s]
+Downloading pytorch_model.bin:  29%|██▉       | 1.89G/6.43G [00:39<01:34, 48.0MB/s]
+Downloading pytorch_model.bin:  30%|██▉       | 1.90G/6.43G [00:39<01:33, 48.4MB/s]
+Downloading pytorch_model.bin:  30%|██▉       | 1.91G/6.43G [00:39<01:43, 43.8MB/s]
+Downloading pytorch_model.bin:  30%|██▉       | 1.92G/6.43G [00:39<01:32, 48.7MB/s]
+Downloading pytorch_model.bin:  30%|██▉       | 1.93G/6.43G [00:39<01:33, 48.4MB/s]
+Downloading pytorch_model.bin:  30%|███       | 1.94G/6.43G [00:40<01:36, 46.7MB/s]
+Downloading pytorch_model.bin:  30%|███       | 1.95G/6.43G [00:40<01:33, 48.0MB/s]
+Downloading pytorch_model.bin:  30%|███       | 1.96G/6.43G [00:40<01:33, 47.9MB/s]
+Downloading pytorch_model.bin:  31%|███       | 1.97G/6.43G [00:40<01:32, 48.1MB/s]
+Downloading pytorch_model.bin:  31%|███       | 1.98G/6.43G [00:41<01:32, 48.1MB/s]
+Downloading pytorch_model.bin:  31%|███       | 1.99G/6.43G [00:41<01:31, 48.3MB/s]
+Downloading pytorch_model.bin:  31%|███       | 2.00G/6.43G [00:41<01:32, 47.6MB/s]
+Downloading pytorch_model.bin:  31%|███▏      | 2.01G/6.43G [00:41<01:32, 47.6MB/s]
+Downloading pytorch_model.bin:  31%|███▏      | 2.02G/6.43G [00:41<01:31, 48.1MB/s]
+Downloading pytorch_model.bin:  32%|███▏      | 2.03G/6.43G [00:42<01:57, 37.3MB/s]
+Downloading pytorch_model.bin:  32%|███▏      | 2.04G/6.43G [00:42<01:50, 39.7MB/s]
+Downloading pytorch_model.bin:  32%|███▏      | 2.06G/6.43G [00:42<01:44, 41.8MB/s]
+Downloading pytorch_model.bin:  32%|███▏      | 2.07G/6.43G [00:43<01:35, 45.6MB/s]
+Downloading pytorch_model.bin:  32%|███▏      | 2.08G/6.43G [00:43<01:28, 49.3MB/s]
+Downloading pytorch_model.bin:  32%|███▏      | 2.09G/6.43G [00:43<01:27, 49.7MB/s]
+Downloading pytorch_model.bin:  33%|███▎      | 2.10G/6.43G [00:43<01:31, 47.4MB/s]
+Downloading pytorch_model.bin:  33%|███▎      | 2.11G/6.43G [00:43<01:28, 48.9MB/s]
+Downloading pytorch_model.bin:  33%|███▎      | 2.12G/6.43G [00:44<01:28, 48.7MB/s]
+Downloading pytorch_model.bin:  33%|███▎      | 2.13G/6.43G [00:44<01:31, 47.1MB/s]
+Downloading pytorch_model.bin:  33%|███▎      | 2.14G/6.43G [00:44<01:30, 47.2MB/s]
+Downloading pytorch_model.bin:  33%|███▎      | 2.15G/6.43G [00:44<01:29, 48.1MB/s]
+Downloading pytorch_model.bin:  34%|███▎      | 2.16G/6.43G [00:44<01:30, 47.0MB/s]
+Downloading pytorch_model.bin:  34%|███▎      | 2.17G/6.43G [00:45<01:30, 47.0MB/s]
+Downloading pytorch_model.bin:  34%|███▍      | 2.18G/6.43G [00:45<01:29, 47.7MB/s]
+Downloading pytorch_model.bin:  34%|███▍      | 2.19G/6.43G [00:45<01:27, 48.6MB/s]
+Downloading pytorch_model.bin:  34%|███▍      | 2.20G/6.43G [00:45<01:29, 47.5MB/s]
+Downloading pytorch_model.bin:  34%|███▍      | 2.21G/6.43G [00:46<01:29, 47.3MB/s]
+Downloading pytorch_model.bin:  35%|███▍      | 2.22G/6.43G [00:46<01:26, 48.5MB/s]
+Downloading pytorch_model.bin:  35%|███▍      | 2.23G/6.43G [00:46<01:28, 47.4MB/s]
+Downloading pytorch_model.bin:  35%|███▍      | 2.24G/6.43G [00:46<01:26, 48.2MB/s]
+Downloading pytorch_model.bin:  35%|███▌      | 2.25G/6.43G [00:46<01:27, 48.0MB/s]
+Downloading pytorch_model.bin:  35%|███▌      | 2.26G/6.43G [00:47<01:25, 48.5MB/s]
+Downloading pytorch_model.bin:  35%|███▌      | 2.28G/6.43G [00:47<01:27, 47.6MB/s]
+Downloading pytorch_model.bin:  36%|███▌      | 2.29G/6.43G [00:47<01:27, 47.6MB/s]
+Downloading pytorch_model.bin:  36%|███▌      | 2.30G/6.43G [00:47<01:25, 48.4MB/s]
+Downloading pytorch_model.bin:  36%|███▌      | 2.31G/6.43G [00:48<01:25, 48.1MB/s]
+Downloading pytorch_model.bin:  36%|███▌      | 2.32G/6.43G [00:48<01:25, 48.3MB/s]
+Downloading pytorch_model.bin:  36%|███▌      | 2.33G/6.43G [00:48<01:26, 47.4MB/s]
+Downloading pytorch_model.bin:  36%|███▋      | 2.34G/6.43G [00:48<01:26, 47.1MB/s]
+Downloading pytorch_model.bin:  37%|███▋      | 2.35G/6.43G [00:48<01:25, 48.0MB/s]
+Downloading pytorch_model.bin:  37%|███▋      | 2.36G/6.43G [00:49<01:23, 48.6MB/s]
+Downloading pytorch_model.bin:  37%|███▋      | 2.37G/6.43G [00:49<01:26, 47.0MB/s]
+Downloading pytorch_model.bin:  37%|███▋      | 2.38G/6.43G [00:49<01:23, 48.3MB/s]
+Downloading pytorch_model.bin:  37%|███▋      | 2.39G/6.43G [00:49<01:23, 48.4MB/s]
+Downloading pytorch_model.bin:  37%|███▋      | 2.40G/6.43G [00:49<01:25, 47.2MB/s]
+Downloading pytorch_model.bin:  37%|███▋      | 2.41G/6.43G [00:50<01:24, 47.7MB/s]
+Downloading pytorch_model.bin:  38%|███▊      | 2.42G/6.43G [00:50<01:23, 48.3MB/s]
+Downloading pytorch_model.bin:  38%|███▊      | 2.43G/6.43G [00:50<01:25, 46.8MB/s]
+Downloading pytorch_model.bin:  38%|███▊      | 2.44G/6.43G [00:50<01:24, 47.5MB/s]
+Downloading pytorch_model.bin:  38%|███▊      | 2.45G/6.43G [00:51<01:22, 48.3MB/s]
+Downloading pytorch_model.bin:  38%|███▊      | 2.46G/6.43G [00:51<01:22, 48.2MB/s]
+Downloading pytorch_model.bin:  38%|███▊      | 2.47G/6.43G [00:51<01:22, 47.9MB/s]
+Downloading pytorch_model.bin:  39%|███▊      | 2.49G/6.43G [00:51<01:21, 48.2MB/s]
+Downloading pytorch_model.bin:  39%|███▉      | 2.50G/6.43G [00:51<01:23, 47.0MB/s]
+Downloading pytorch_model.bin:  39%|███▉      | 2.51G/6.43G [00:52<01:21, 48.0MB/s]
+Downloading pytorch_model.bin:  39%|███▉      | 2.52G/6.43G [00:52<02:00, 32.6MB/s]
+Downloading pytorch_model.bin:  39%|███▉      | 2.53G/6.43G [00:52<01:37, 40.0MB/s]
+Downloading pytorch_model.bin:  39%|███▉      | 2.54G/6.43G [00:52<01:21, 47.6MB/s]
+Downloading pytorch_model.bin:  40%|███▉      | 2.55G/6.43G [00:53<01:19, 48.8MB/s]
+Downloading pytorch_model.bin:  40%|███▉      | 2.56G/6.43G [00:53<01:20, 48.0MB/s]
+Downloading pytorch_model.bin:  40%|███▉      | 2.57G/6.43G [00:53<01:21, 47.5MB/s]
+Downloading pytorch_model.bin:  40%|████      | 2.58G/6.43G [00:53<01:19, 48.6MB/s]
+Downloading pytorch_model.bin:  40%|████      | 2.59G/6.43G [00:54<01:19, 48.1MB/s]
+Downloading pytorch_model.bin:  40%|████      | 2.60G/6.43G [00:54<01:19, 48.0MB/s]
+Downloading pytorch_model.bin:  41%|████      | 2.61G/6.43G [00:54<01:18, 48.6MB/s]
+Downloading pytorch_model.bin:  41%|████      | 2.62G/6.43G [00:54<01:18, 48.5MB/s]
+Downloading pytorch_model.bin:  41%|████      | 2.63G/6.43G [00:54<01:21, 46.9MB/s]
+Downloading pytorch_model.bin:  41%|████      | 2.64G/6.43G [00:55<01:20, 47.1MB/s]
+Downloading pytorch_model.bin:  41%|████      | 2.65G/6.43G [00:55<01:17, 48.5MB/s]
+Downloading pytorch_model.bin:  41%|████▏     | 2.66G/6.43G [00:55<01:18, 48.3MB/s]
+Downloading pytorch_model.bin:  42%|████▏     | 2.67G/6.43G [00:55<01:20, 46.6MB/s]
+Downloading pytorch_model.bin:  42%|████▏     | 2.68G/6.43G [00:56<01:18, 47.6MB/s]
+Downloading pytorch_model.bin:  42%|████▏     | 2.69G/6.43G [00:56<01:18, 47.6MB/s]
+Downloading pytorch_model.bin:  42%|████▏     | 2.71G/6.43G [00:56<01:20, 46.1MB/s]
+Downloading pytorch_model.bin:  42%|████▏     | 2.72G/6.43G [00:56<01:18, 47.1MB/s]
+Downloading pytorch_model.bin:  42%|████▏     | 2.73G/6.43G [00:56<01:16, 48.3MB/s]
+Downloading pytorch_model.bin:  43%|████▎     | 2.74G/6.43G [00:57<01:18, 47.2MB/s]
+Downloading pytorch_model.bin:  43%|████▎     | 2.75G/6.43G [00:57<01:18, 46.9MB/s]
+Downloading pytorch_model.bin:  43%|████▎     | 2.76G/6.43G [00:57<01:16, 48.3MB/s]
+Downloading pytorch_model.bin:  43%|████▎     | 2.77G/6.43G [00:57<01:15, 48.3MB/s]
+Downloading pytorch_model.bin:  43%|████▎     | 2.78G/6.43G [00:58<01:17, 46.9MB/s]
+Downloading pytorch_model.bin:  43%|████▎     | 2.79G/6.43G [00:58<01:19, 46.0MB/s]
+Downloading pytorch_model.bin:  44%|████▎     | 2.80G/6.43G [00:58<01:14, 48.7MB/s]
+Downloading pytorch_model.bin:  44%|████▎     | 2.81G/6.43G [00:58<01:16, 47.1MB/s]
+Downloading pytorch_model.bin:  44%|████▍     | 2.82G/6.43G [00:58<01:15, 47.8MB/s]
+Downloading pytorch_model.bin:  44%|████▍     | 2.83G/6.43G [00:59<01:14, 48.5MB/s]
+Downloading pytorch_model.bin:  44%|████▍     | 2.84G/6.43G [00:59<01:16, 46.9MB/s]
+Downloading pytorch_model.bin:  44%|████▍     | 2.85G/6.43G [00:59<01:16, 47.0MB/s]
+Downloading pytorch_model.bin:  45%|████▍     | 2.86G/6.43G [00:59<01:13, 48.6MB/s]
+Downloading pytorch_model.bin:  45%|████▍     | 2.87G/6.43G [01:00<01:15, 47.3MB/s]
+Downloading pytorch_model.bin:  45%|████▍     | 2.88G/6.43G [01:00<01:15, 47.1MB/s]
+Downloading pytorch_model.bin:  45%|████▍     | 2.89G/6.43G [01:00<01:13, 47.9MB/s]
+Downloading pytorch_model.bin:  45%|████▌     | 2.90G/6.43G [01:00<01:13, 48.1MB/s]
+Downloading pytorch_model.bin:  45%|████▌     | 2.92G/6.43G [01:00<01:14, 47.3MB/s]
+Downloading pytorch_model.bin:  45%|████▌     | 2.93G/6.43G [01:01<01:12, 48.3MB/s]
+Downloading pytorch_model.bin:  46%|████▌     | 2.94G/6.43G [01:01<01:12, 48.2MB/s]
+Downloading pytorch_model.bin:  46%|████▌     | 2.95G/6.43G [01:01<01:14, 46.7MB/s]
+Downloading pytorch_model.bin:  46%|████▌     | 2.96G/6.43G [01:01<01:13, 47.1MB/s]
+Downloading pytorch_model.bin:  46%|████▌     | 2.97G/6.43G [01:01<01:11, 48.7MB/s]
+Downloading pytorch_model.bin:  46%|████▋     | 2.98G/6.43G [01:02<01:13, 47.2MB/s]
+Downloading pytorch_model.bin:  46%|████▋     | 2.99G/6.43G [01:02<01:12, 47.7MB/s]
+Downloading pytorch_model.bin:  47%|████▋     | 3.00G/6.43G [01:02<01:31, 37.6MB/s]
+Downloading pytorch_model.bin:  47%|████▋     | 3.01G/6.43G [01:03<01:26, 39.4MB/s]
+Downloading pytorch_model.bin:  47%|████▋     | 3.02G/6.43G [01:03<01:20, 42.6MB/s]
+Downloading pytorch_model.bin:  47%|████▋     | 3.03G/6.43G [01:03<01:08, 49.5MB/s]
+Downloading pytorch_model.bin:  47%|████▋     | 3.04G/6.43G [01:03<01:07, 50.3MB/s]
+Downloading pytorch_model.bin:  47%|████▋     | 3.05G/6.43G [01:03<01:10, 47.9MB/s]
+Downloading pytorch_model.bin:  48%|████▊     | 3.06G/6.43G [01:04<01:11, 47.5MB/s]
+Downloading pytorch_model.bin:  48%|████▊     | 3.07G/6.43G [01:04<01:08, 49.0MB/s]
+Downloading pytorch_model.bin:  48%|████▊     | 3.08G/6.43G [01:04<01:09, 48.2MB/s]
+Downloading pytorch_model.bin:  48%|████▊     | 3.09G/6.43G [01:04<01:09, 48.0MB/s]
+Downloading pytorch_model.bin:  48%|████▊     | 3.10G/6.43G [01:04<01:08, 48.5MB/s]
+Downloading pytorch_model.bin:  48%|████▊     | 3.11G/6.43G [01:05<01:10, 47.1MB/s]
+Downloading pytorch_model.bin:  49%|████▊     | 3.12G/6.43G [01:05<01:10, 46.9MB/s]
+Downloading pytorch_model.bin:  49%|████▊     | 3.14G/6.43G [01:05<01:08, 48.4MB/s]
+Downloading pytorch_model.bin:  49%|████▉     | 3.15G/6.43G [01:05<01:07, 48.5MB/s]
+Downloading pytorch_model.bin:  49%|████▉     | 3.16G/6.43G [01:06<01:08, 47.5MB/s]
+Downloading pytorch_model.bin:  49%|████▉     | 3.17G/6.43G [01:06<01:08, 48.0MB/s]
+Downloading pytorch_model.bin:  49%|████▉     | 3.18G/6.43G [01:06<01:07, 48.2MB/s]
+Downloading pytorch_model.bin:  50%|████▉     | 3.19G/6.43G [01:06<01:09, 46.6MB/s]
+Downloading pytorch_model.bin:  50%|████▉     | 3.20G/6.43G [01:06<01:08, 47.2MB/s]
+Downloading pytorch_model.bin:  50%|████▉     | 3.21G/6.43G [01:07<01:06, 48.5MB/s]
+Downloading pytorch_model.bin:  50%|█████     | 3.22G/6.43G [01:07<01:07, 47.5MB/s]
+Downloading pytorch_model.bin:  50%|█████     | 3.23G/6.43G [01:07<01:07, 47.5MB/s]
+Downloading pytorch_model.bin:  50%|█████     | 3.24G/6.43G [01:07<01:05, 48.6MB/s]
+Downloading pytorch_model.bin:  51%|█████     | 3.25G/6.43G [01:08<01:07, 47.4MB/s]
+Downloading pytorch_model.bin:  51%|█████     | 3.26G/6.43G [01:08<01:07, 47.2MB/s]
+Downloading pytorch_model.bin:  51%|█████     | 3.27G/6.43G [01:08<01:05, 48.3MB/s]
+Downloading pytorch_model.bin:  51%|█████     | 3.28G/6.43G [01:08<01:05, 48.4MB/s]
+Downloading pytorch_model.bin:  51%|█████     | 3.29G/6.43G [01:08<01:05, 48.2MB/s]
+Downloading pytorch_model.bin:  51%|█████▏    | 3.30G/6.43G [01:09<01:05, 47.7MB/s]
+Downloading pytorch_model.bin:  52%|█████▏    | 3.31G/6.43G [01:09<01:04, 48.3MB/s]
+Downloading pytorch_model.bin:  52%|█████▏    | 3.32G/6.43G [01:09<01:06, 46.5MB/s]
+Downloading pytorch_model.bin:  52%|█████▏    | 3.33G/6.43G [01:09<01:05, 47.0MB/s]
+Downloading pytorch_model.bin:  52%|█████▏    | 3.34G/6.43G [01:10<01:19, 38.9MB/s]
+Downloading pytorch_model.bin:  52%|█████▏    | 3.36G/6.43G [01:10<01:22, 37.1MB/s]
+Downloading pytorch_model.bin:  52%|█████▏    | 3.37G/6.43G [01:10<01:21, 37.5MB/s]
+Downloading pytorch_model.bin:  52%|█████▏    | 3.38G/6.43G [01:10<01:06, 46.1MB/s]
+Downloading pytorch_model.bin:  53%|█████▎    | 3.39G/6.43G [01:11<01:00, 50.5MB/s]
+Downloading pytorch_model.bin:  53%|█████▎    | 3.40G/6.43G [01:11<01:01, 49.5MB/s]
+Downloading pytorch_model.bin:  53%|█████▎    | 3.41G/6.43G [01:11<01:03, 47.4MB/s]
+Downloading pytorch_model.bin:  53%|█████▎    | 3.42G/6.43G [01:11<01:01, 48.9MB/s]
+Downloading pytorch_model.bin:  53%|█████▎    | 3.43G/6.43G [01:11<01:01, 48.9MB/s]
+Downloading pytorch_model.bin:  53%|█████▎    | 3.44G/6.43G [01:12<01:01, 48.9MB/s]
+Downloading pytorch_model.bin:  54%|█████▎    | 3.45G/6.43G [01:12<01:03, 47.1MB/s]
+Downloading pytorch_model.bin:  54%|█████▍    | 3.46G/6.43G [01:12<01:02, 47.4MB/s]
+Downloading pytorch_model.bin:  54%|█████▍    | 3.47G/6.43G [01:12<01:01, 47.8MB/s]
+Downloading pytorch_model.bin:  54%|█████▍    | 3.48G/6.43G [01:13<01:00, 48.4MB/s]
+Downloading pytorch_model.bin:  54%|█████▍    | 3.49G/6.43G [01:13<01:01, 48.0MB/s]
+Downloading pytorch_model.bin:  54%|█████▍    | 3.50G/6.43G [01:13<01:00, 48.6MB/s]
+Downloading pytorch_model.bin:  55%|█████▍    | 3.51G/6.43G [01:13<01:18, 37.4MB/s]
+Downloading pytorch_model.bin:  55%|█████▍    | 3.52G/6.43G [01:14<01:14, 39.1MB/s]
+Downloading pytorch_model.bin:  55%|█████▍    | 3.53G/6.43G [01:14<01:08, 42.5MB/s]
+Downloading pytorch_model.bin:  55%|█████▌    | 3.54G/6.43G [01:14<01:00, 47.4MB/s]
+Downloading pytorch_model.bin:  55%|█████▌    | 3.55G/6.43G [01:14<00:57, 50.1MB/s]
+Downloading pytorch_model.bin:  55%|█████▌    | 3.57G/6.43G [01:14<00:58, 48.6MB/s]
+Downloading pytorch_model.bin:  56%|█████▌    | 3.58G/6.43G [01:15<00:59, 47.9MB/s]
+Downloading pytorch_model.bin:  56%|█████▌    | 3.59G/6.43G [01:15<00:58, 48.5MB/s]
+Downloading pytorch_model.bin:  56%|█████▌    | 3.60G/6.43G [01:15<00:58, 48.3MB/s]
+Downloading pytorch_model.bin:  56%|█████▌    | 3.61G/6.43G [01:15<00:58, 48.1MB/s]
+Downloading pytorch_model.bin:  56%|█████▌    | 3.62G/6.43G [01:15<00:58, 48.0MB/s]
+Downloading pytorch_model.bin:  56%|█████▋    | 3.63G/6.43G [01:16<00:57, 48.9MB/s]
+Downloading pytorch_model.bin:  57%|█████▋    | 3.64G/6.43G [01:16<00:59, 47.0MB/s]
+Downloading pytorch_model.bin:  57%|█████▋    | 3.65G/6.43G [01:16<00:59, 46.6MB/s]
+Downloading pytorch_model.bin:  57%|█████▋    | 3.66G/6.43G [01:16<00:56, 48.7MB/s]
+Downloading pytorch_model.bin:  57%|█████▋    | 3.67G/6.43G [01:17<00:57, 48.3MB/s]
+Downloading pytorch_model.bin:  57%|█████▋    | 3.68G/6.43G [01:17<00:56, 48.8MB/s]
+Downloading pytorch_model.bin:  57%|█████▋    | 3.69G/6.43G [01:17<00:56, 48.6MB/s]
+Downloading pytorch_model.bin:  58%|█████▊    | 3.70G/6.43G [01:17<00:58, 46.6MB/s]
+Downloading pytorch_model.bin:  58%|█████▊    | 3.71G/6.43G [01:17<00:58, 46.6MB/s]
+Downloading pytorch_model.bin:  58%|█████▊    | 3.72G/6.43G [01:18<00:56, 48.3MB/s]
+Downloading pytorch_model.bin:  58%|█████▊    | 3.73G/6.43G [01:18<00:55, 48.2MB/s]
+Downloading pytorch_model.bin:  58%|█████▊    | 3.74G/6.43G [01:18<00:57, 46.9MB/s]
+Downloading pytorch_model.bin:  58%|█████▊    | 3.75G/6.43G [01:18<00:56, 47.8MB/s]
+Downloading pytorch_model.bin:  59%|█████▊    | 3.76G/6.43G [01:19<00:55, 48.2MB/s]
+Downloading pytorch_model.bin:  59%|█████▊    | 3.77G/6.43G [01:19<00:56, 46.7MB/s]
+Downloading pytorch_model.bin:  59%|█████▉    | 3.79G/6.43G [01:19<00:57, 46.2MB/s]
+Downloading pytorch_model.bin:  59%|█████▉    | 3.80G/6.43G [01:19<00:55, 47.2MB/s]
+Downloading pytorch_model.bin:  59%|█████▉    | 3.81G/6.43G [01:19<00:55, 46.9MB/s]
+Downloading pytorch_model.bin:  59%|█████▉    | 3.82G/6.43G [01:20<00:55, 47.0MB/s]
+Downloading pytorch_model.bin:  60%|█████▉    | 3.83G/6.43G [01:20<00:55, 47.0MB/s]
+Downloading pytorch_model.bin:  60%|█████▉    | 3.84G/6.43G [01:20<00:53, 48.9MB/s]
+Downloading pytorch_model.bin:  60%|█████▉    | 3.85G/6.43G [01:20<00:53, 48.4MB/s]
+Downloading pytorch_model.bin:  60%|█████▉    | 3.86G/6.43G [01:21<00:53, 48.5MB/s]
+Downloading pytorch_model.bin:  60%|██████    | 3.87G/6.43G [01:21<00:52, 48.4MB/s]
+Downloading pytorch_model.bin:  60%|██████    | 3.88G/6.43G [01:21<00:53, 48.0MB/s]
+Downloading pytorch_model.bin:  60%|██████    | 3.89G/6.43G [01:21<00:54, 46.4MB/s]
+Downloading pytorch_model.bin:  61%|██████    | 3.90G/6.43G [01:21<00:52, 48.6MB/s]
+Downloading pytorch_model.bin:  61%|██████    | 3.91G/6.43G [01:22<00:52, 48.0MB/s]
+Downloading pytorch_model.bin:  61%|██████    | 3.92G/6.43G [01:22<00:51, 48.6MB/s]
+Downloading pytorch_model.bin:  61%|██████    | 3.93G/6.43G [01:22<00:51, 48.6MB/s]
+Downloading pytorch_model.bin:  61%|██████▏   | 3.94G/6.43G [01:22<00:52, 47.8MB/s]
+Downloading pytorch_model.bin:  61%|██████▏   | 3.95G/6.43G [01:23<00:51, 48.2MB/s]
+Downloading pytorch_model.bin:  62%|██████▏   | 3.96G/6.43G [01:23<00:51, 48.4MB/s]
+Downloading pytorch_model.bin:  62%|██████▏   | 3.97G/6.43G [01:23<00:51, 48.0MB/s]
+Downloading pytorch_model.bin:  62%|██████▏   | 3.98G/6.43G [01:23<00:50, 48.3MB/s]
+Downloading pytorch_model.bin:  62%|██████▏   | 4.00G/6.43G [01:24<01:05, 37.5MB/s]
+Downloading pytorch_model.bin:  62%|██████▏   | 4.01G/6.43G [01:24<00:57, 42.0MB/s]
+Downloading pytorch_model.bin:  62%|██████▏   | 4.02G/6.43G [01:24<00:49, 49.0MB/s]
+Downloading pytorch_model.bin:  63%|██████▎   | 4.03G/6.43G [01:24<00:47, 50.5MB/s]
+Downloading pytorch_model.bin:  63%|██████▎   | 4.04G/6.43G [01:24<00:48, 49.4MB/s]
+Downloading pytorch_model.bin:  63%|██████▎   | 4.05G/6.43G [01:25<00:48, 48.7MB/s]
+Downloading pytorch_model.bin:  63%|██████▎   | 4.06G/6.43G [01:25<00:48, 49.1MB/s]
+Downloading pytorch_model.bin:  63%|██████▎   | 4.07G/6.43G [01:25<00:48, 48.7MB/s]
+Downloading pytorch_model.bin:  63%|██████▎   | 4.08G/6.43G [01:25<00:48, 48.4MB/s]
+Downloading pytorch_model.bin:  64%|██████▎   | 4.09G/6.43G [01:25<00:48, 48.6MB/s]
+Downloading pytorch_model.bin:  64%|██████▎   | 4.10G/6.43G [01:26<00:48, 48.4MB/s]
+Downloading pytorch_model.bin:  64%|██████▍   | 4.11G/6.43G [01:26<00:48, 48.1MB/s]
+Downloading pytorch_model.bin:  64%|██████▍   | 4.12G/6.43G [01:26<00:47, 48.2MB/s]
+Downloading pytorch_model.bin:  64%|██████▍   | 4.13G/6.43G [01:26<00:47, 48.1MB/s]
+Downloading pytorch_model.bin:  64%|██████▍   | 4.14G/6.43G [01:26<00:47, 47.8MB/s]
+Downloading pytorch_model.bin:  65%|██████▍   | 4.15G/6.43G [01:27<00:47, 48.3MB/s]
+Downloading pytorch_model.bin:  65%|██████▍   | 4.16G/6.43G [01:27<00:47, 48.1MB/s]
+Downloading pytorch_model.bin:  65%|██████▍   | 4.17G/6.43G [01:27<00:47, 47.9MB/s]
+Downloading pytorch_model.bin:  65%|██████▌   | 4.18G/6.43G [01:27<00:46, 48.4MB/s]
+Downloading pytorch_model.bin:  65%|██████▌   | 4.19G/6.43G [01:28<00:46, 48.2MB/s]
+Downloading pytorch_model.bin:  65%|██████▌   | 4.20G/6.43G [01:28<00:46, 48.1MB/s]
+Downloading pytorch_model.bin:  66%|██████▌   | 4.22G/6.43G [01:28<00:46, 47.8MB/s]
+Downloading pytorch_model.bin:  66%|██████▌   | 4.23G/6.43G [01:28<00:45, 48.1MB/s]
+Downloading pytorch_model.bin:  66%|██████▌   | 4.24G/6.43G [01:28<00:45, 48.3MB/s]
+Downloading pytorch_model.bin:  66%|██████▌   | 4.25G/6.43G [01:29<00:45, 48.4MB/s]
+Downloading pytorch_model.bin:  66%|██████▌   | 4.26G/6.43G [01:29<00:45, 47.7MB/s]
+Downloading pytorch_model.bin:  66%|██████▋   | 4.27G/6.43G [01:29<00:44, 48.3MB/s]
+Downloading pytorch_model.bin:  67%|██████▋   | 4.28G/6.43G [01:29<00:44, 48.4MB/s]
+Downloading pytorch_model.bin:  67%|██████▋   | 4.29G/6.43G [01:30<00:44, 48.0MB/s]
+Downloading pytorch_model.bin:  67%|██████▋   | 4.30G/6.43G [01:30<00:44, 48.0MB/s]
+Downloading pytorch_model.bin:  67%|██████▋   | 4.31G/6.43G [01:30<00:44, 48.0MB/s]
+Downloading pytorch_model.bin:  67%|██████▋   | 4.32G/6.43G [01:30<00:43, 48.4MB/s]
+Downloading pytorch_model.bin:  67%|██████▋   | 4.33G/6.43G [01:30<00:43, 48.3MB/s]
+Downloading pytorch_model.bin:  67%|██████▋   | 4.34G/6.43G [01:31<00:43, 48.1MB/s]
+Downloading pytorch_model.bin:  68%|██████▊   | 4.35G/6.43G [01:31<00:43, 48.3MB/s]
+Downloading pytorch_model.bin:  68%|██████▊   | 4.36G/6.43G [01:31<00:43, 48.0MB/s]
+Downloading pytorch_model.bin:  68%|██████▊   | 4.37G/6.43G [01:31<00:43, 47.7MB/s]
+Downloading pytorch_model.bin:  68%|██████▊   | 4.38G/6.43G [01:32<00:42, 48.2MB/s]
+Downloading pytorch_model.bin:  68%|██████▊   | 4.39G/6.43G [01:32<00:42, 48.1MB/s]
+Downloading pytorch_model.bin:  68%|██████▊   | 4.40G/6.43G [01:32<00:42, 48.0MB/s]
+Downloading pytorch_model.bin:  69%|██████▊   | 4.41G/6.43G [01:32<00:41, 48.4MB/s]
+Downloading pytorch_model.bin:  69%|██████▉   | 4.42G/6.43G [01:32<00:41, 48.1MB/s]
+Downloading pytorch_model.bin:  69%|██████▉   | 4.44G/6.43G [01:33<00:41, 48.1MB/s]
+Downloading pytorch_model.bin:  69%|██████▉   | 4.45G/6.43G [01:33<00:41, 48.1MB/s]
+Downloading pytorch_model.bin:  69%|██████▉   | 4.46G/6.43G [01:33<00:41, 48.1MB/s]
+Downloading pytorch_model.bin:  69%|██████▉   | 4.47G/6.43G [01:33<00:41, 47.7MB/s]
+Downloading pytorch_model.bin:  70%|██████▉   | 4.48G/6.43G [01:33<00:40, 48.4MB/s]
+Downloading pytorch_model.bin:  70%|██████▉   | 4.49G/6.43G [01:34<00:40, 48.2MB/s]
+Downloading pytorch_model.bin:  70%|██████▉   | 4.50G/6.43G [01:34<00:40, 47.4MB/s]
+Downloading pytorch_model.bin:  70%|███████   | 4.51G/6.43G [01:34<00:51, 37.3MB/s]
+Downloading pytorch_model.bin:  70%|███████   | 4.52G/6.43G [01:35<00:48, 39.8MB/s]
+Downloading pytorch_model.bin:  70%|███████   | 4.53G/6.43G [01:35<00:41, 45.5MB/s]
+Downloading pytorch_model.bin:  71%|███████   | 4.54G/6.43G [01:35<00:38, 49.1MB/s]
+Downloading pytorch_model.bin:  71%|███████   | 4.55G/6.43G [01:35<00:37, 49.7MB/s]
+Downloading pytorch_model.bin:  71%|███████   | 4.56G/6.43G [01:35<00:38, 48.4MB/s]
+Downloading pytorch_model.bin:  71%|███████   | 4.57G/6.43G [01:36<00:37, 49.3MB/s]
+Downloading pytorch_model.bin:  71%|███████   | 4.58G/6.43G [01:36<00:37, 49.0MB/s]
+Downloading pytorch_model.bin:  71%|███████▏  | 4.59G/6.43G [01:36<00:38, 48.2MB/s]
+Downloading pytorch_model.bin:  72%|███████▏  | 4.60G/6.43G [01:36<00:38, 48.0MB/s]
+Downloading pytorch_model.bin:  72%|███████▏  | 4.61G/6.43G [01:36<00:38, 46.9MB/s]
+Downloading pytorch_model.bin:  72%|███████▏  | 4.62G/6.43G [01:37<00:36, 48.9MB/s]
+Downloading pytorch_model.bin:  72%|███████▏  | 4.63G/6.43G [01:37<00:37, 47.8MB/s]
+Downloading pytorch_model.bin:  72%|███████▏  | 4.65G/6.43G [01:37<00:37, 47.7MB/s]
+Downloading pytorch_model.bin:  72%|███████▏  | 4.66G/6.43G [01:37<00:36, 48.3MB/s]
+Downloading pytorch_model.bin:  73%|███████▎  | 4.67G/6.43G [01:38<00:36, 48.0MB/s]
+Downloading pytorch_model.bin:  73%|███████▎  | 4.68G/6.43G [01:38<00:37, 47.3MB/s]
+Downloading pytorch_model.bin:  73%|███████▎  | 4.69G/6.43G [01:38<00:36, 47.8MB/s]
+Downloading pytorch_model.bin:  73%|███████▎  | 4.70G/6.43G [01:38<00:35, 48.3MB/s]
+Downloading pytorch_model.bin:  73%|███████▎  | 4.71G/6.43G [01:38<00:36, 46.8MB/s]
+Downloading pytorch_model.bin:  73%|███████▎  | 4.72G/6.43G [01:39<00:35, 47.7MB/s]
+Downloading pytorch_model.bin:  74%|███████▎  | 4.73G/6.43G [01:39<00:35, 48.4MB/s]
+Downloading pytorch_model.bin:  74%|███████▎  | 4.74G/6.43G [01:39<00:35, 47.8MB/s]
+Downloading pytorch_model.bin:  74%|███████▍  | 4.75G/6.43G [01:39<00:35, 47.2MB/s]
+Downloading pytorch_model.bin:  74%|███████▍  | 4.76G/6.43G [01:39<00:34, 48.1MB/s]
+Downloading pytorch_model.bin:  74%|███████▍  | 4.77G/6.43G [01:40<00:34, 48.2MB/s]
+Downloading pytorch_model.bin:  74%|███████▍  | 4.78G/6.43G [01:40<00:34, 47.9MB/s]
+Downloading pytorch_model.bin:  75%|███████▍  | 4.79G/6.43G [01:40<00:33, 48.5MB/s]
+Downloading pytorch_model.bin:  75%|███████▍  | 4.80G/6.43G [01:40<00:34, 47.2MB/s]
+Downloading pytorch_model.bin:  75%|███████▍  | 4.81G/6.43G [01:41<00:34, 47.1MB/s]
+Downloading pytorch_model.bin:  75%|███████▍  | 4.82G/6.43G [01:41<00:33, 48.6MB/s]
+Downloading pytorch_model.bin:  75%|███████▌  | 4.83G/6.43G [01:41<00:33, 47.5MB/s]
+Downloading pytorch_model.bin:  75%|███████▌  | 4.84G/6.43G [01:41<00:33, 47.7MB/s]
+Downloading pytorch_model.bin:  75%|███████▌  | 4.85G/6.43G [01:41<00:32, 48.5MB/s]
+Downloading pytorch_model.bin:  76%|███████▌  | 4.87G/6.43G [01:42<00:33, 46.3MB/s]
+Downloading pytorch_model.bin:  76%|███████▌  | 4.88G/6.43G [01:42<00:32, 47.7MB/s]
+Downloading pytorch_model.bin:  76%|███████▌  | 4.89G/6.43G [01:42<00:32, 48.2MB/s]
+Downloading pytorch_model.bin:  76%|███████▌  | 4.90G/6.43G [01:43<00:43, 35.0MB/s]
+Downloading pytorch_model.bin:  76%|███████▋  | 4.91G/6.43G [01:43<00:40, 37.2MB/s]
+Downloading pytorch_model.bin:  76%|███████▋  | 4.92G/6.43G [01:43<00:35, 43.2MB/s]
+Downloading pytorch_model.bin:  77%|███████▋  | 4.93G/6.43G [01:43<00:29, 50.1MB/s]
+Downloading pytorch_model.bin:  77%|███████▋  | 4.94G/6.43G [01:43<00:30, 49.4MB/s]
+Downloading pytorch_model.bin:  77%|███████▋  | 4.95G/6.43G [01:44<00:30, 48.9MB/s]
+Downloading pytorch_model.bin:  77%|███████▋  | 4.96G/6.43G [01:44<00:30, 47.7MB/s]
+Downloading pytorch_model.bin:  77%|███████▋  | 4.97G/6.43G [01:44<00:30, 48.5MB/s]
+Downloading pytorch_model.bin:  77%|███████▋  | 4.98G/6.43G [01:44<00:29, 48.7MB/s]
+Downloading pytorch_model.bin:  78%|███████▊  | 4.99G/6.43G [01:44<00:30, 47.1MB/s]
+Downloading pytorch_model.bin:  78%|███████▊  | 5.00G/6.43G [01:45<00:37, 38.4MB/s]
+Downloading pytorch_model.bin:  78%|███████▊  | 5.01G/6.43G [01:45<00:30, 46.3MB/s]
+Downloading pytorch_model.bin:  78%|███████▊  | 5.02G/6.43G [01:45<00:29, 48.0MB/s]
+Downloading pytorch_model.bin:  78%|███████▊  | 5.03G/6.43G [01:45<00:29, 47.2MB/s]
+Downloading pytorch_model.bin:  78%|███████▊  | 5.04G/6.43G [01:46<00:29, 47.2MB/s]
+Downloading pytorch_model.bin:  79%|███████▊  | 5.05G/6.43G [01:46<00:28, 48.3MB/s]
+Downloading pytorch_model.bin:  79%|███████▊  | 5.06G/6.43G [01:46<00:28, 48.5MB/s]
+Downloading pytorch_model.bin:  79%|███████▉  | 5.08G/6.43G [01:46<00:28, 47.8MB/s]
+Downloading pytorch_model.bin:  79%|███████▉  | 5.09G/6.43G [01:46<00:28, 47.9MB/s]
+Downloading pytorch_model.bin:  79%|███████▉  | 5.10G/6.43G [01:47<00:27, 48.4MB/s]
+Downloading pytorch_model.bin:  79%|███████▉  | 5.11G/6.43G [01:47<00:27, 47.7MB/s]
+Downloading pytorch_model.bin:  80%|███████▉  | 5.12G/6.43G [01:47<00:27, 47.6MB/s]
+Downloading pytorch_model.bin:  80%|███████▉  | 5.13G/6.43G [01:47<00:26, 48.5MB/s]
+Downloading pytorch_model.bin:  80%|███████▉  | 5.14G/6.43G [01:48<00:27, 47.0MB/s]
+Downloading pytorch_model.bin:  80%|████████  | 5.15G/6.43G [01:48<00:27, 47.3MB/s]
+Downloading pytorch_model.bin:  80%|████████  | 5.16G/6.43G [01:48<00:26, 48.3MB/s]
+Downloading pytorch_model.bin:  80%|████████  | 5.17G/6.43G [01:48<00:26, 48.1MB/s]
+Downloading pytorch_model.bin:  81%|████████  | 5.18G/6.43G [01:48<00:26, 47.8MB/s]
+Downloading pytorch_model.bin:  81%|████████  | 5.19G/6.43G [01:49<00:26, 47.3MB/s]
+Downloading pytorch_model.bin:  81%|████████  | 5.20G/6.43G [01:49<00:25, 48.2MB/s]
+Downloading pytorch_model.bin:  81%|████████  | 5.21G/6.43G [01:49<00:25, 48.0MB/s]
+Downloading pytorch_model.bin:  81%|████████  | 5.22G/6.43G [01:49<00:25, 47.6MB/s]
+Downloading pytorch_model.bin:  81%|████████▏ | 5.23G/6.43G [01:50<00:25, 46.7MB/s]
+Downloading pytorch_model.bin:  82%|████████▏ | 5.24G/6.43G [01:50<00:25, 46.6MB/s]
+Downloading pytorch_model.bin:  82%|████████▏ | 5.25G/6.43G [01:50<00:24, 48.4MB/s]
+Downloading pytorch_model.bin:  82%|████████▏ | 5.26G/6.43G [01:50<00:24, 48.5MB/s]
+Downloading pytorch_model.bin:  82%|████████▏ | 5.27G/6.43G [01:50<00:24, 47.6MB/s]
+Downloading pytorch_model.bin:  82%|████████▏ | 5.28G/6.43G [01:51<00:23, 47.8MB/s]
+Downloading pytorch_model.bin:  82%|████████▏ | 5.30G/6.43G [01:51<00:23, 47.9MB/s]
+Downloading pytorch_model.bin:  82%|████████▏ | 5.31G/6.43G [01:51<00:23, 47.8MB/s]
+Downloading pytorch_model.bin:  83%|████████▎ | 5.32G/6.43G [01:51<00:23, 48.5MB/s]
+Downloading pytorch_model.bin:  83%|████████▎ | 5.33G/6.43G [01:52<00:22, 48.3MB/s]
+Downloading pytorch_model.bin:  83%|████████▎ | 5.34G/6.43G [01:52<00:23, 46.9MB/s]
+Downloading pytorch_model.bin:  83%|████████▎ | 5.35G/6.43G [01:52<00:22, 48.4MB/s]
+Downloading pytorch_model.bin:  83%|████████▎ | 5.36G/6.43G [01:52<00:22, 48.3MB/s]
+Downloading pytorch_model.bin:  83%|████████▎ | 5.37G/6.43G [01:52<00:22, 47.3MB/s]
+Downloading pytorch_model.bin:  84%|████████▎ | 5.38G/6.43G [01:53<00:22, 47.7MB/s]
+Downloading pytorch_model.bin:  84%|████████▍ | 5.39G/6.43G [01:53<00:21, 48.1MB/s]
+Downloading pytorch_model.bin:  84%|████████▍ | 5.40G/6.43G [01:53<00:21, 47.1MB/s]
+Downloading pytorch_model.bin:  84%|████████▍ | 5.41G/6.43G [01:53<00:21, 47.2MB/s]
+Downloading pytorch_model.bin:  84%|████████▍ | 5.42G/6.43G [01:54<00:20, 48.2MB/s]
+Downloading pytorch_model.bin:  84%|████████▍ | 5.43G/6.43G [01:54<00:21, 46.1MB/s]
+Downloading pytorch_model.bin:  85%|████████▍ | 5.44G/6.43G [01:54<00:21, 46.3MB/s]
+Downloading pytorch_model.bin:  85%|████████▍ | 5.45G/6.43G [01:54<00:20, 48.1MB/s]
+Downloading pytorch_model.bin:  85%|████████▍ | 5.46G/6.43G [01:54<00:20, 48.3MB/s]
+Downloading pytorch_model.bin:  85%|████████▌ | 5.47G/6.43G [01:55<00:20, 47.0MB/s]
+Downloading pytorch_model.bin:  85%|████████▌ | 5.48G/6.43G [01:55<00:20, 47.1MB/s]
+Downloading pytorch_model.bin:  85%|████████▌ | 5.49G/6.43G [01:55<00:30, 30.7MB/s]
+Downloading pytorch_model.bin:  86%|████████▌ | 5.51G/6.43G [01:56<00:24, 37.4MB/s]
+Downloading pytorch_model.bin:  86%|████████▌ | 5.52G/6.43G [01:56<00:20, 45.6MB/s]
+Downloading pytorch_model.bin:  86%|████████▌ | 5.53G/6.43G [01:56<00:17, 51.9MB/s]
+Downloading pytorch_model.bin:  86%|████████▌ | 5.54G/6.43G [01:56<00:17, 51.6MB/s]
+Downloading pytorch_model.bin:  86%|████████▌ | 5.55G/6.43G [01:56<00:17, 49.3MB/s]
+Downloading pytorch_model.bin:  86%|████████▋ | 5.56G/6.43G [01:57<00:17, 49.4MB/s]
+Downloading pytorch_model.bin:  87%|████████▋ | 5.57G/6.43G [01:57<00:17, 49.6MB/s]
+Downloading pytorch_model.bin:  87%|████████▋ | 5.58G/6.43G [01:57<00:17, 49.0MB/s]
+Downloading pytorch_model.bin:  87%|████████▋ | 5.59G/6.43G [01:57<00:17, 48.3MB/s]
+Downloading pytorch_model.bin:  87%|████████▋ | 5.60G/6.43G [01:57<00:17, 48.5MB/s]
+Downloading pytorch_model.bin:  87%|████████▋ | 5.61G/6.43G [01:58<00:16, 48.8MB/s]
+Downloading pytorch_model.bin:  87%|████████▋ | 5.62G/6.43G [01:58<00:17, 47.5MB/s]
+Downloading pytorch_model.bin:  88%|████████▊ | 5.63G/6.43G [01:58<00:16, 47.5MB/s]
+Downloading pytorch_model.bin:  88%|████████▊ | 5.64G/6.43G [01:58<00:16, 47.7MB/s]
+Downloading pytorch_model.bin:  88%|████████▊ | 5.65G/6.43G [01:59<00:17, 45.7MB/s]
+Downloading pytorch_model.bin:  88%|████████▊ | 5.66G/6.43G [01:59<00:17, 45.0MB/s]
+Downloading pytorch_model.bin:  88%|████████▊ | 5.67G/6.43G [01:59<00:15, 48.0MB/s]
+Downloading pytorch_model.bin:  88%|████████▊ | 5.68G/6.43G [01:59<00:15, 48.4MB/s]
+Downloading pytorch_model.bin:  89%|████████▊ | 5.69G/6.43G [01:59<00:15, 47.6MB/s]
+Downloading pytorch_model.bin:  89%|████████▊ | 5.70G/6.43G [02:00<00:15, 47.7MB/s]
+Downloading pytorch_model.bin:  89%|████████▉ | 5.71G/6.43G [02:00<00:14, 48.4MB/s]
+Downloading pytorch_model.bin:  89%|████████▉ | 5.73G/6.43G [02:00<00:14, 47.8MB/s]
+Downloading pytorch_model.bin:  89%|████████▉ | 5.74G/6.43G [02:00<00:14, 47.7MB/s]
+Downloading pytorch_model.bin:  89%|████████▉ | 5.75G/6.43G [02:00<00:14, 48.4MB/s]
+Downloading pytorch_model.bin:  90%|████████▉ | 5.76G/6.43G [02:01<00:14, 47.3MB/s]
+Downloading pytorch_model.bin:  90%|████████▉ | 5.77G/6.43G [02:01<00:13, 48.3MB/s]
+Downloading pytorch_model.bin:  90%|████████▉ | 5.78G/6.43G [02:01<00:13, 48.3MB/s]
+Downloading pytorch_model.bin:  90%|████████▉ | 5.79G/6.43G [02:01<00:13, 47.2MB/s]
+Downloading pytorch_model.bin:  90%|█████████ | 5.80G/6.43G [02:02<00:13, 47.9MB/s]
+Downloading pytorch_model.bin:  90%|█████████ | 5.81G/6.43G [02:02<00:12, 48.1MB/s]
+Downloading pytorch_model.bin:  90%|█████████ | 5.82G/6.43G [02:02<00:13, 46.3MB/s]
+Downloading pytorch_model.bin:  91%|█████████ | 5.83G/6.43G [02:02<00:12, 46.7MB/s]
+Downloading pytorch_model.bin:  91%|█████████ | 5.84G/6.43G [02:02<00:12, 48.0MB/s]
+Downloading pytorch_model.bin:  91%|█████████ | 5.85G/6.43G [02:03<00:12, 47.6MB/s]
+Downloading pytorch_model.bin:  91%|█████████ | 5.86G/6.43G [02:03<00:11, 47.5MB/s]
+Downloading pytorch_model.bin:  91%|█████████▏| 5.87G/6.43G [02:03<00:11, 47.6MB/s]
+Downloading pytorch_model.bin:  91%|█████████▏| 5.88G/6.43G [02:03<00:11, 48.7MB/s]
+Downloading pytorch_model.bin:  92%|█████████▏| 5.89G/6.43G [02:04<00:11, 47.8MB/s]
+Downloading pytorch_model.bin:  92%|█████████▏| 5.90G/6.43G [02:04<00:10, 48.2MB/s]
+Downloading pytorch_model.bin:  92%|█████████▏| 5.91G/6.43G [02:04<00:10, 48.2MB/s]
+Downloading pytorch_model.bin:  92%|█████████▏| 5.92G/6.43G [02:04<00:10, 47.2MB/s]
+Downloading pytorch_model.bin:  92%|█████████▏| 5.93G/6.43G [02:04<00:10, 48.1MB/s]
+Downloading pytorch_model.bin:  92%|█████████▏| 5.95G/6.43G [02:05<00:10, 47.9MB/s]
+Downloading pytorch_model.bin:  93%|█████████▎| 5.96G/6.43G [02:05<00:09, 47.7MB/s]
+Downloading pytorch_model.bin:  93%|█████████▎| 5.97G/6.43G [02:05<00:09, 48.4MB/s]
+Downloading pytorch_model.bin:  93%|█████████▎| 5.98G/6.43G [02:05<00:09, 48.1MB/s]
+Downloading pytorch_model.bin:  93%|█████████▎| 5.99G/6.43G [02:06<00:09, 48.1MB/s]
+Downloading pytorch_model.bin:  93%|█████████▎| 6.00G/6.43G [02:06<00:09, 47.1MB/s]
+Downloading pytorch_model.bin:  93%|█████████▎| 6.01G/6.43G [02:06<00:10, 40.3MB/s]
+Downloading pytorch_model.bin:  94%|█████████▎| 6.02G/6.43G [02:06<00:08, 47.4MB/s]
+Downloading pytorch_model.bin:  94%|█████████▎| 6.03G/6.43G [02:06<00:08, 48.9MB/s]
+Downloading pytorch_model.bin:  94%|█████████▍| 6.04G/6.43G [02:07<00:08, 47.0MB/s]
+Downloading pytorch_model.bin:  94%|█████████▍| 6.05G/6.43G [02:07<00:08, 46.8MB/s]
+Downloading pytorch_model.bin:  94%|█████████▍| 6.06G/6.43G [02:07<00:07, 47.6MB/s]
+Downloading pytorch_model.bin:  94%|█████████▍| 6.07G/6.43G [02:07<00:07, 48.8MB/s]
+Downloading pytorch_model.bin:  95%|█████████▍| 6.08G/6.43G [02:08<00:07, 47.5MB/s]
+Downloading pytorch_model.bin:  95%|█████████▍| 6.09G/6.43G [02:08<00:06, 48.5MB/s]
+Downloading pytorch_model.bin:  95%|█████████▍| 6.10G/6.43G [02:08<00:06, 48.5MB/s]
+Downloading pytorch_model.bin:  95%|█████████▌| 6.11G/6.43G [02:08<00:06, 48.3MB/s]
+Downloading pytorch_model.bin:  95%|█████████▌| 6.12G/6.43G [02:08<00:06, 48.0MB/s]
+Downloading pytorch_model.bin:  95%|█████████▌| 6.13G/6.43G [02:09<00:06, 47.8MB/s]
+Downloading pytorch_model.bin:  96%|█████████▌| 6.14G/6.43G [02:09<00:05, 48.2MB/s]
+Downloading pytorch_model.bin:  96%|█████████▌| 6.16G/6.43G [02:09<00:05, 48.4MB/s]
+Downloading pytorch_model.bin:  96%|█████████▌| 6.17G/6.43G [02:09<00:05, 48.1MB/s]
+Downloading pytorch_model.bin:  96%|█████████▌| 6.18G/6.43G [02:09<00:05, 48.1MB/s]
+Downloading pytorch_model.bin:  96%|█████████▌| 6.19G/6.43G [02:10<00:05, 48.1MB/s]
+Downloading pytorch_model.bin:  96%|█████████▋| 6.20G/6.43G [02:10<00:05, 46.0MB/s]
+Downloading pytorch_model.bin:  97%|█████████▋| 6.21G/6.43G [02:10<00:04, 48.1MB/s]
+Downloading pytorch_model.bin:  97%|█████████▋| 6.22G/6.43G [02:10<00:04, 48.3MB/s]
+Downloading pytorch_model.bin:  97%|█████████▋| 6.23G/6.43G [02:11<00:04, 47.3MB/s]
+Downloading pytorch_model.bin:  97%|█████████▋| 6.24G/6.43G [02:11<00:04, 47.4MB/s]
+Downloading pytorch_model.bin:  97%|█████████▋| 6.25G/6.43G [02:11<00:03, 48.2MB/s]
+Downloading pytorch_model.bin:  97%|█████████▋| 6.26G/6.43G [02:11<00:03, 47.0MB/s]
+Downloading pytorch_model.bin:  97%|█████████▋| 6.27G/6.43G [02:11<00:03, 46.7MB/s]
+Downloading pytorch_model.bin:  98%|█████████▊| 6.28G/6.43G [02:12<00:03, 48.5MB/s]
+Downloading pytorch_model.bin:  98%|█████████▊| 6.29G/6.43G [02:12<00:02, 47.5MB/s]
+Downloading pytorch_model.bin:  98%|█████████▊| 6.30G/6.43G [02:12<00:02, 47.6MB/s]
+Downloading pytorch_model.bin:  98%|█████████▊| 6.31G/6.43G [02:12<00:02, 48.1MB/s]
+Downloading pytorch_model.bin:  98%|█████████▊| 6.32G/6.43G [02:13<00:02, 46.7MB/s]
+Downloading pytorch_model.bin:  98%|█████████▊| 6.33G/6.43G [02:13<00:02, 46.7MB/s]
+Downloading pytorch_model.bin:  99%|█████████▊| 6.34G/6.43G [02:13<00:01, 47.9MB/s]
+Downloading pytorch_model.bin:  99%|█████████▉| 6.35G/6.43G [02:13<00:01, 48.5MB/s]
+Downloading pytorch_model.bin:  99%|█████████▉| 6.36G/6.43G [02:13<00:01, 47.2MB/s]
+Downloading pytorch_model.bin:  99%|█████████▉| 6.38G/6.43G [02:14<00:01, 47.6MB/s]
+Downloading pytorch_model.bin:  99%|█████████▉| 6.39G/6.43G [02:14<00:00, 48.4MB/s]
+Downloading pytorch_model.bin:  99%|█████████▉| 6.40G/6.43G [02:14<00:00, 47.0MB/s]
+Downloading pytorch_model.bin: 100%|█████████▉| 6.41G/6.43G [02:14<00:00, 45.9MB/s]
+Downloading pytorch_model.bin: 100%|█████████▉| 6.42G/6.43G [02:15<00:00, 48.9MB/s]
+Downloading pytorch_model.bin: 100%|█████████▉| 6.43G/6.43G [02:15<00:00, 47.6MB/s]
+Downloading pytorch_model.bin: 100%|██████████| 6.43G/6.43G [02:15<00:00, 47.5MB/s]
+WARNING:torch.distributed.elastic.multiprocessing.api:Sending process 2201241 closing signal SIGTERM
+WARNING:torch.distributed.elastic.multiprocessing.api:Sending process 2201242 closing signal SIGTERM
+WARNING:torch.distributed.elastic.multiprocessing.api:Sending process 2201243 closing signal SIGTERM
+WARNING:torch.distributed.elastic.multiprocessing.api:Sending process 2201244 closing signal SIGTERM
+WARNING:torch.distributed.elastic.multiprocessing.api:Sending process 2201245 closing signal SIGTERM
+WARNING:torch.distributed.elastic.multiprocessing.api:Sending process 2201246 closing signal SIGTERM
+ERROR:torch.distributed.elastic.multiprocessing.api:failed (exitcode: -9) local_rank: 6 (pid: 2201247) of binary: /usr/bin/python3
+/usr/lib/python3/dist-packages/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (2.0.3) or chardet (5.1.0) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+Traceback (most recent call last):
+  File "/u/dssc/valinsogna//.local/bin/torchrun", line 8, in <module>
+    sys.exit(main())
+  File "/u/dssc/valinsogna/.local/lib/python3.8/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 346, in wrapper
+    return f(*args, **kwargs)
+  File "/u/dssc/valinsogna/.local/lib/python3.8/site-packages/torch/distributed/run.py", line 794, in main
+    run(args)
+  File "/u/dssc/valinsogna/.local/lib/python3.8/site-packages/torch/distributed/run.py", line 785, in run
+    elastic_launch(
+  File "/u/dssc/valinsogna/.local/lib/python3.8/site-packages/torch/distributed/launcher/api.py", line 134, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/u/dssc/valinsogna/.local/lib/python3.8/site-packages/torch/distributed/launcher/api.py", line 250, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+========================================================
+train.py FAILED
+--------------------------------------------------------
+Failures:
+[1]:
+  time      : 2023-07-13_14:01:31
+  host      : dgx001.hpc
+  rank      : 7 (local_rank: 7)
+  exitcode  : -9 (pid: 2201248)
+  error_file: <N/A>
+  traceback : Signal 9 (SIGKILL) received by PID 2201248
+--------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2023-07-13_14:01:31
+  host      : dgx001.hpc
+  rank      : 6 (local_rank: 6)
+  exitcode  : -9 (pid: 2201247)
+  error_file: <N/A>
+  traceback : Signal 9 (SIGKILL) received by PID 2201247
+========================================================
+slurmstepd: error: Detected 2 oom-kill event(s) in StepId=17885.batch. Some of your processes may have been killed by the cgroup out-of-memory handler.

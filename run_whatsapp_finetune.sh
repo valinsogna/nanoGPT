@@ -7,6 +7,7 @@
 #SBATCH --time=02:00:00
 #SBATCH --job-name=finetuneWhatsApp
 #SBATCH --output=my_job_%j.out
+#SBATCH --mem=100G
 
 # Change directory
 cd /u/dssc/valinsogna/nanoGPT
